@@ -277,7 +277,7 @@ function zywhm() {
                     var rulejs = request('https://github.moeyy.xyz/https://raw.githubusercontent.com/xyq254245/HikerRule/main/zywcj.js', {});
                     //var parsejs = request('https://github.moeyy.xyz/https://raw.githubusercontent.com/xyq254245/HikerRule/main/parse.js', {});
                     eval(rulejs);
-                    if (filter(base64Decode('5peg56CB')) && /CryptoJS/.test(parsejs)) {
+                    if (filter(base64Decode('5peg56CB'))) {
                         writeFile("hiker://files/rules/xyq/zywcj.js", rulejs);
                         //writeFile("hiker://files/libs/1e7db6906ccc9c8dd92ca42cba0fc3ff.js", parsejs);
                         back(true);
