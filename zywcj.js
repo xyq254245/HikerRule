@@ -558,7 +558,7 @@ function zywsea() {
     var ssmode = JSON.parse(fetch('hiker://files/rules/xyq/zywset.json', {})).ssmode;
     //setError(skey)
     var src = fetch(getItem('zylink', 'hiker://files/rules/xyq/ZYWCJ.txt'), {});
-    //var src = fetch('https://codeberg.org/lzk23559/PublicRule/raw/branch/master/ZYWCJ.txt', {});
+    //var src = fetch('https://github.moeyy.xyz/https://raw.githubusercontent.com/xyq254245/HikerRule/main//ZYWCJ.txt', {});
     var arrs = src.indexOf('http') != -1 ? src.match(/#[\s\S]*?#/g) : base64Decode(src).match(/#[\s\S]*?#/g);
     //var cc = src.indexOf('http') != -1 ? src.match(/[\S]*?,.*?[\s]/g) : base64Decode(src).match(/[\S]*?,.*?[\s]/g);
     if (ssmode == '1' || MY_TYPE == "home") {

@@ -263,14 +263,14 @@ function hikhmrule() {
                 url: $('').lazyRule(() => {
                     var rulejs = fetch('https://agit.ai/lzk23559/CloudRule/raw/branch/master/hikermovie.js', {dns: "152.32.170.60"});
                     if (rulejs.search(/lazyRule/) == -1) {
-                        rulejs = fetch('https://codeberg.org/lzk23559/cloudrule/raw/branch/master/hikermovie.js', {});
+                        rulejs = fetch('https://github.moeyy.xyz/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.js', {});
                     }
                     if (rulejs.search(/lazyRule/) != -1) {
                         writeFile("hiker://files/rules/xyq/hikermovie.js", rulejs);
                     }
                     var rulejson = fetch('https://agit.ai/lzk23559/CloudRule/raw/branch/master/hikermovie.json', {dns: "152.32.170.60"});
                     if (rulejson.search(/\"vodhref\"/) == -1) {
-                        rulejson = fetch('https://codeberg.org/lzk23559/cloudrule/raw/branch/master/hikermovie.json', {});
+                        rulejson = fetch('https://github.moeyy.xyz/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.json', {});
                     }
                     if (rulejson.search(/\"vodhref\"/) != -1) {
                         writeFile("hiker://files/rules/xyq/hikermovie.json", rulejson);
