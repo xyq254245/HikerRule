@@ -1,0 +1,243 @@
+{
+    "note": " 声明 ",
+    "content": "<h4 style='text-align: center;'>免责声明</h4>1、本规则收集的内容来至互联网，经软件对原网页源码重新排版后显示，本规则不提供原始数据，显示的所有内容，其版权均归原作者所有。<br>2、本规则代码内容仅供写源爱好者学习交流使用，禁止用于其他用途，请务必在导入24小时之内删除！<br>3、因使用此规则产生的版权问题，软件开发者与本规则作者概不负责。<br>4、请勿相信网页或者视频中的任何广告，切记！！！",
+    "version": "7",
+    "data": [
+        {
+            "type": "影视",
+            "list": [
+                {
+                    "title": "农民影视",
+                    "vodtype": "电影&连续剧&综艺&动漫&短剧",
+                    "vodhref": "1&2&3&4&26",
+                    "ico": "https://txc.gtimg.com/data/2198/2022/0414/c97425b6570f2a9dc9d09b9c25cf2c4a.png",
+                    "url": "https://m.cnmcom.com"
+                },
+                {
+                    "title": "555影视",
+                    "vodtype": "电影&电视剧&动漫&综艺&热门电视剧&港台剧&日韩剧&欧美剧",
+                    "vodhref": "1&2&4&3&13&15&44&45",
+                    "ico": "https://t1.szrtcpa.com/2022/07/12/88c2f1613357e.png",
+                    "url": "https://www.555yy7.com"
+                },
+                {
+                    "title": "996影视",
+                    "vodtype": "电影&连续剧&动漫",
+                    "vodhref": "1&2&3",
+                    "ico": "https://www.cs1369.com/template/chen996/img/logo_min_f.png",
+                    "url": "https://www.cs1369.com"
+                },
+                {
+                    "title": "看看剧",
+                    "vodtype": "电影&电视剧&综艺&动漫&纪录片&动作片&喜剧片&爱情片&科幻片&恐怖片&剧情片&战争片&动画片&国产剧&港台剧&日韩剧&欧美剧&泰国剧",
+                    "vodhref": "dianying&dianshiju&zongyi&dongman&jilupian&dongzuopian&xijupian&aiqingpian&kehuanpian&kongbupian&juqingpian&zhanzhengpian&donghua&guochanju&gangtaiju&rihanju&oumeiju&taiguoju",
+                    "ico": "https://www.kankanju.cc/template/jianbai/statics/img/logo.png",
+                    "url": "https://www.kankanju.cc"
+                },
+                {
+                    "title": "疯狗影视",
+                    "vodtype": "电影&连续剧&综艺&动漫",
+                    "vodhref": "1&2&4&3",
+                    "ico": "https://m.fenggoudy3.com/favicon.ico",
+                    "url": "https://m.fenggoudy3.com"
+                },
+                {
+                    "title": "TVB云播",
+                    "vodtype": "电影&电视剧&综艺&动漫&动作片&喜剧片&爱情片&科幻片&恐怖片&剧情片&战争片&国产剧&港台剧&日韩剧&欧美剧",
+                    "vodhref": "1&2&3&4&6&7&8&9&10&11&12&13&14&15&16",
+                    "ico": "http://www.tvyb03.com/logo.png",
+                    "url": "http://www.tvyb03.com"
+                },
+                {
+                    "title": "往往影视",
+                    "vodtype": "电影&电视剧&综艺&动漫&纪录片&体育",
+                    "vodhref": "dianying&dianshiju&zongyi&dongman&jilupian&tiyu",
+                    "ico": "https://ys.ccpsr.top/img/logo.png",
+                    "url": "https://ys.ccpsr.top"
+                },
+                {
+                    "title": "星影",
+                    "vodtype": "电影&连续剧&动漫&综艺&短剧",
+                    "vodhref": "1&2&3&4&30",
+                    "ico": "https://i.imgtg.com/2023/06/05/O5oKjK.png",
+                    "url": "https://www.xy1080.net"
+                },
+                {
+                    "title": "毛驴影视",
+                    "vodtype": "电影&连续剧&动漫&综艺",
+                    "vodhref": "1&2&4&3",
+                    "ico": "https://www.maolvys.com/upload/site/20230802-1/139008173518a42523a8bafe49c1259e.png",
+                    "url": "https://www.maolvys.com"
+                },
+                {
+                    "title": "NyaFun",
+                    "vodtype": "新旧番剧&剧场版",
+                    "vodhref": "Ippppw&wppppw",
+                    "ico": "https://www.nyafun.net/image/NyaFun_logo.png",
+                    "url": "https://www.nyafun.net"
+                },
+                {
+                    "title": "嗷呜动漫",
+                    "vodtype": "新剧&番剧&剧场",
+                    "vodhref": "32&20&33",
+                    "ico": "https://www.moefun.net/upload/site/20231009-1/223ec5606cf2b1d2e541b3ef930cb79c.png",
+                    "url": "https://www.moefun.net"
+                },
+                {
+                    "title": "鸭奈飞",
+                    "vodtype": "电影&连续剧&综艺&动漫",
+                    "vodhref": "1&2&3&4",
+                    "ico": "https://www.yanaifei.tv/upload/mxprocms/20230331-1/1362b3640334c876948d91690f850f80.png",
+                    "url": "https://www.yanaifei.tv"
+                },{
+                    "title": "奈落影视",
+                    "vodtype": "电影&电视剧&综艺&动漫&动作片&喜剧片&爱情片&科幻片&恐怖片&剧情片&战争片&动画片&国产剧&港台剧&欧美剧&日韩剧&海外剧&国漫&日漫&欧漫&童漫&国产综艺&日韩综艺&欧美综艺&港台综艺",
+                    "vodhref": "1&2&4&3&7&8&9&6&10&11&12&20&13&14&16&15&21&22&25&23&24&28&30&29&31",
+                    "ico": "https://newfii.com/template/mxone/mxstatic/picture/logo.png",
+                    "url": "https://www.newfii.com"
+                },
+                {
+                    "title": "骚火影视",
+                    "vodtype": "电影&电视剧&动漫&喜剧&爱情&恐怖&动作&科幻&战争&犯罪&动画&奇幻&剧情&冒险&悬疑&惊悚&其它片&大陆&TVB&韩剧&美剧&日剧&英剧&台剧&其它剧",
+                    "vodhref": "1&2&4&6&7&8&9&10&11&12&13&14&15&16&17&18&19&20&21&22&23&24&25&26&27",
+                    "ico": "https://shdy2.com/favicon.ico",
+                    "url": "https://shdy2.com"
+                },
+                {
+                    "title": "77影视大全",
+                    "vodtype": "电影&电视剧&综艺&动漫",
+                    "vodhref": "1&2&3&4",
+                    "ico": "https://thumb2.jfcdns.com/thumb/n131p31s12k2a/16f5e24097ed3428_100_100.png",
+                    "url": "https://api.tyun77.cn/api.php/provide"
+                },
+                {
+                    "title": "在线之家",
+                    "vodtype": "电影&美剧&韩剧&日剧&泰剧&动漫",
+                    "vodhref": "1&2&3&4&5&6",
+                    "ico": "https://zxzjbackup.oss-cn-shenzhen.aliyuncs.com/logo_min.png",
+                    "url": "https://www.zxzj.pro"
+                },
+                {
+                    "title": "干饭影视",
+                    "vodtype": "电影&电视剧&综艺&动漫",
+                    "vodhref": "1&2&3&4",
+                    "ico": "https://gfysys.cc/template/jianbai/statics/img/favicon.ico",
+                    "url": "https://gfysys.cc"
+                },
+                {
+                    "title": "Auete",
+                    "vodtype": "电影&电视剧&综艺&动漫",
+                    "vodhref": "Movie&Tv&Zy&Dm",
+                    "ico": "https://haozhansou.com/static/picture/logo.png",
+                    "url": "https://haozhansou.com"
+                },
+                {
+                    "title": "COKEMV",
+                    "vodtype": "电影&电视剧&综艺&动漫",
+                    "vodhref": "1&2&4&3",
+                    "ico": "https://www.cokemv.fun/mxtheme/images/favicon.png",
+                    "url": "https://www.cokemv.fun"
+                },
+                {
+                    "title": "LIBVIO",
+                    "vodtype": "电影&连续剧&动漫&日韩剧&欧美剧&即将上线",
+                    "vodhref": "1&2&4&15&16&27",
+                    "ico": "https://xiaoxiaojia.oss-accelerate.aliyuncs.com/statics/img/favicon.ico",
+                    "url": "https://www.libvio.me"
+                },
+                {
+                    "title": "影视工场",
+                    "vodtype": "电影&电视剧&综艺&动漫&纪录片&电视直播&动作片&喜剧片&爱情片&科幻片&恐怖片&悬疑片&剧情片&战争片&动画片&国产剧&港台剧&日韩剧",
+                    "vodhref": "1&2&3&4&24&30&6&7&8&9&10&28&11&12&25&13&14&15",
+                    "ico": "https://www.ysgc.fun/template/mytheme/statics/image/20230123/1764f5143.ico",
+                    "url": "https://www.ysgc.fun"
+                },
+                {
+                    "title": "耐看点播",
+                    "vodtype": "电影&剧集&综艺&动漫&动作片&喜剧片&爱情片&科幻片&恐怖片&剧情片&战争片&国产剧&港台剧&日韩剧&欧美剧&其它剧",
+                    "vodhref": "1&2&3&4&6&7&8&9&10&11&12&13&14&15&16&20",
+                    "ico": "https://www.nkvod.com/mxtheme/images/logo.png",
+                    "url": "https://www.nkvod.com"
+                },
+                {
+                    "title": "看一看",
+                    "vodtype": "电影&连续剧&综艺&动漫&动作片&喜剧片&爱情片&科幻片&恐怖片&剧情片&战争片&纪录片&微电影&惊悚片&悬疑片&国产剧&港台剧&日韩剧&欧美剧&泰剧&海外剧&TV综艺&音乐MV&TV版&电影版&剧场版&国语经典",
+                    "vodhref": "1&2&3&4&5&6&7&8&9&10&11&16&18&20&21&12&13&14&15&19&32&26&31&23&24&25&36",
+                    "ico": "https://www.kanyk.net/template/blank/Images/logo.png",
+                    "url": "https://www.kanyk.net"
+                },
+                {
+                    "title": "剧看看",
+                    "vodtype": "电影&连续剧&综艺&动漫",
+                    "vodhref": "1&2&3&4",
+                    "ico": "https://www.jukankan.cc/template/jukankan/statics/img/logo_min_f.png",
+                    "url": "https://www.jukankan.cc"
+                },
+                {
+                    "title": "✈️大师兄影视",
+                    "vodtype": "电影&连续剧&综艺&动漫&动作片&喜剧片&爱情片&科幻片&奇幻片&恐怖片&剧情片&战争片&记录片&悬疑片&冒险片&犯罪片&国产剧&港台剧&日韩剧",
+                    "vodhref": "1&2&3&4&6&7&8&9&38&10&11&12&22&44&45&46&13&14&15",
+                    "ico": "https://dsxys.pro/favicon.ico",
+                    "url": "https://dsxys.pro"
+                },
+                {
+                    "title": "素白白影视",
+                    "vodtype": "电影&电视剧&热门电影&高分电影&动漫电影&香港经典电影&国产剧&欧美剧&韩剧&动漫剧&POP流行&传记&儿童&冒险&剧情&动作&动漫&动画&历史&古装&古风&同性&喜剧&奇幻&家庭&恐怖&悬疑&ERO情&惊悚&戏曲&战争&拉丁&搞笑&校园&歌舞&武侠&灾难&爱情&犯罪&玄幻&真人秀&短片&科幻&纪录片&脱口秀&舞台艺术&西部&运动&青春&音乐&鬼怪&黑色电影",
+                    "vodhref": "new-movie&tv-drama&hot-month&high-movie&cartoon-movie&hongkong-movie&domestic-drama&american-drama&korean-drama&anime-drama&movie_bt_tags/pop-popular&movie_bt_tags/biography&movie_bt_tags/child&movie_bt_tags/adventure&movie_bt_tags/plot&movie_bt_tags/action&movie_bt_tags/anime&movie_bt_tags/animation&movie_bt_tags/history&movie_bt_tags/costume&movie_bt_tags/antiquity&movie_bt_tags/homosexual&movie_bt_tags/comedy&movie_bt_tags/fantasy&movie_bt_tags/family&movie_bt_tags/terror&movie_bt_tags/suspense&movie_bt_tags/erotic&movie_bt_tags/thriller&movie_bt_tags/drama&movie_bt_tags/war&movie_bt_tags/latin&movie_bt_tags/funny&movie_bt_tags/campus&movie_bt_tags/song-and-dance&movie_bt_tags/martial-arts&movie_bt_tags/disaster&movie_bt_tags/love&movie_bt_tags/crime&movie_bt_tags/fancy&movie_bt_tags/reality-show&movie_bt_tags/short-film&movie_bt_tags/kehuan&movie_bt_tags/documentary&movie_bt_tags/talkshow&movie_bt_tags/stageart&movie_bt_tags/west&movie_bt_tags/sport&movie_bt_tags/youth&movie_bt_tags/music&movie_bt_tags/ghost&movie_bt_tags/black-film",
+                    "ico": "https://www.subaibaiys.com/wp-content/themes/mibt/assets/img/logo.png",
+                    "url": "https://www.subaibaiys.com"
+                },
+                {
+                    "title": "哔嘀影视",
+                    "vodtype": "不限&电影&电视剧",
+                    "vodhref": "&?type=0&?type=1",
+                    "ico": "https://www.bdys10.com/images/favicon.ico",
+                    "url": "https://www.bdys10.com"
+                },
+                {
+                    "title": "厂长资源",
+                    "vodtype": "全部&高分影视&最新电影&电视剧&国产剧&美剧&韩剧&番剧&动漫&会员专区&俄罗斯电影&加拿大电影&动画&华语电影&印度电影&国产剧&日剧&日本电影&欧美电影&法国电影&海外剧（其他）&电影&电视剧&站长推荐&美剧&英国电影&韩剧&韩国电影",
+                    "vodhref": "movie_bt&zuixindianying/gaofenyingshi&zuixindianying&dsj&gcj&meijutt&hanjutv&fanju&dm&movie_bt_series/huiyuanzhuanqu&movie_bt_series/eluosidianying&movie_bt_series/jianadadianying&movie_bt_series/dohua&movie_bt_series/huayudianying&movie_bt_series/yindudianying&movie_bt_series/guochanju&movie_bt_series/rj&movie_bt_series/ribendianying&movie_bt_series/meiguodianying&movie_bt_series/faguodianying&movie_bt_series/hwj&movie_bt_series/dyy&movie_bt_series/dianshiju&movie_bt_series/zhanchangtuijian&movie_bt_series/mj&movie_bt_series/yingguodianying&movie_bt_series/hj&movie_bt_series/hanguodianying",
+                    "ico": "https://img.py1080p.com/2020/05/cropped-90b07fe57d6142-192x192.png",
+                    "url": "https://www.czzy33.com"
+                },
+                {
+                    "title": "奈菲影视",
+                    "vodtype": "全部&动画&动画电影&日剧&泰剧&电影&电视剧&真人秀&纪录片&美剧&美漫&英剧&西班牙剧&韩剧",
+                    "vodhref": "movie_bt&movie_bt_series/%e5%8a%a8%e7%94%bb&movie_bt_series/%e5%8a%a8%e7%94%bb%e7%94%b5%e5%bd%b1&movie_bt_series/riju&movie_bt_series/taiju&movie_bt_series/dianying&movie_bt_series/dianshiju&movie_bt_series/%e7%9c%9f%e4%ba%ba%e7%a7%80&movie_bt_series/jilupian&movie_bt_series/meiju&movie_bt_series/%e7%be%8e%e6%bc%ab/&movie_bt_series/%e8%8b%b1%e5%89%a7&movie_bt_series/xibanyaju&movie_bt_series/hanju",
+                    "ico": "https://www.nfyingshi.com/wp-content/themes/mibt/favicon.ico",
+                    "url": "https://www.nfyingshi.com"
+                },
+                {
+                    "title": "短剧网",
+                    "vodtype": "逆袭片库&甜宠片库&虐恋片库&穿越片库&重生片库",
+                    "vodhref": "nixi&tianchong&nuelian&chuanyue&chongsheng",
+                    "ico": "https://www.duanju5.com/upload/mxcms/20230623-1/be69977253d0731a11df5f7a99feaf42.png",
+                    "url": "https://www.duanju5.com"
+                },
+                {
+                    "title": "去看吧",
+                    "vodtype": "高清原碟&日漫&女频&劇場&漫画&国漫&美漫",
+                    "vodhref": "33&21&50&24&55&51&22",
+                    "ico": "https://qkan8.com/klogo.png",
+                    "url": "https://qkan8.com"
+                },
+                {
+                    "title": "異世界動漫",
+                    "vodtype": "新番&完结&日剧",
+                    "vodhref": "22&20&21",
+                    "ico": "https://www.sbdm.net/template/conch/asset/img/favicon.png",
+                    "url": "https://www.sbdm.net"
+                },
+                {
+                    "title": "动漫巴士",
+                    "vodtype": "国产动漫&日本动漫&欧美动漫&电影",
+                    "vodhref": "1&2&3&4",
+                    "ico": "https://dm84.tv/favicon.ico",
+                    "url": "https://dm84.tv"
+                }
+            ]
+        }
+    ],
+    "uplink": ""
+}
