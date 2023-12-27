@@ -260,7 +260,7 @@ function zywhm() {
             d.push({
                 title: '更新ZYWCJ.txt(接口文件)',
                 url: "confirm://确认更新此文件，会覆盖自添加接口哟？.js:" + $.toString(() => {
-                    var ruletxt = fetch('https://codeberg.org/lzk23559/PublicRule/raw/branch/master/ZYWCJ.txt', {});
+                    var ruletxt = fetch('https://github.moeyy.xyz/https://raw.githubusercontent.com/xyq254245/HikerRule/main/ZYWCJ.txt', {});
                     if (ruletxt.search(/provide/) != -1) {
                         writeFile("hiker://files/rules/xyq/ZYWCJ.txt", ruletxt);
                         return 'toast://更新成功。'
@@ -274,12 +274,12 @@ function zywhm() {
             d.push({
                 title: '更新zywcj.js(规则核心文件)',
                 url: $().lazyRule(() => {
-                    var rulejs = request('https://codeberg.org/lzk23559/PublicRule/raw/branch/master/zywcj.js', {});
-                    var parsejs = request('https://codeberg.org/lzk23559/PublicRule/raw/branch/master/parse.js', {});
+                    var rulejs = request('https://github.moeyy.xyz/https://raw.githubusercontent.com/xyq254245/HikerRule/main/zywcj.js', {});
+                    //var parsejs = request('https://github.moeyy.xyz/https://raw.githubusercontent.com/xyq254245/HikerRule/main/parse.js', {});
                     eval(rulejs);
                     if (filter(base64Decode('5peg56CB')) && /CryptoJS/.test(parsejs)) {
                         writeFile("hiker://files/rules/xyq/zywcj.js", rulejs);
-                        writeFile("hiker://files/libs/1e7db6906ccc9c8dd92ca42cba0fc3ff.js", parsejs);
+                        //writeFile("hiker://files/libs/1e7db6906ccc9c8dd92ca42cba0fc3ff.js", parsejs);
                         back(true);
                         return 'toast://应该是最新了吧。';
                     } else {
@@ -1455,22 +1455,22 @@ return suffix(src);
             "Referer": "https://www.shenma4480.com"
         }
     }).match(/url:.*?[\'\"](.*?)[\'\"]/)[1].replace(/[+]/g, "%20");
-} else if (src.indexOf("mlkioiy") != -1) {
+} /*else if (src.indexOf("mlkioiy") != -1) {
     if (src.indexOf("ShowVideo") != -1) {
         var mlki = parseDomForHtml(fetch(src, {}), "body&&#dplayer&&result");
-        var fileUrl = "https://cdn.jsdelivr.net/gh/lzk23559/rulehouse/pako-min.js";
+        var fileUrl = "https://github.moeyy.xyz/https://raw.githubusercontent.com/xyq254245/HikerRule/main/pako-min.js";
         eval(request(fileUrl, {}));
         return realUrl;
     } else {
         return src + "#isVideo=true#"
     };
-} else if (src.indexOf("ddyunp") != -1 || src.indexOf("90mm.me") != -1) {
+} */else if (src.indexOf("ddyunp") != -1 || src.indexOf("90mm.me") != -1) {
     eval(getCryptoJS());
     var id = src + 'duoduo' + 'l' + (Math.floor(new Date().getTime() / 100000) * 100).toString();
     var dat = CryptoJS.MD5(id).toString(CryptoJS.enc.Hex);
     var purl = 'https://hls.90mm.me/ddyun/' + src + '/l/' + dat + '/playlist.m3u8';
     return purl;
-} else if (src.indexOf("xsp1") != -1) {
+} /*else if (src.indexOf("xsp1") != -1) {
     var pli = parseDomForHtml(fetch(src, {
         headers: {
             "User-Agent": MOBILE_UA,
@@ -1478,14 +1478,14 @@ return suffix(src);
         }
     }), "body&&iframe&&src").split("url=")[1];
     try {
-    var fileUrl = fetchCache("https://codeberg.org/lzk23559/PublicRule/raw/branch/master/parse.js",24);
+    var fileUrl = fetchCache("https://github.moeyy.xyz/https://raw.githubusercontent.com/xyq254245/HikerRule/main/parse.js",24);
     } catch (e) {
      fileUrl = fetch("hiker://files/libs/1e7db6906ccc9c8dd92ca42cba0fc3ff.js");
      }
     eval(fileUrl);
     var play = yqjx.toUrl(pli);
     return play != "" ? play : getUrl(pli);
-} else if (src.indexOf("kudian6.com") != -1) {
+} */else if (src.indexOf("kudian6.com") != -1) {
     var html = request(src);
     return html.match(/url\":.*?[\'\"](.*?)[\'\"]/)[1];
 } else if (/ujuba/.test(src)) {
