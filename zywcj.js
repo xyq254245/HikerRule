@@ -1195,7 +1195,7 @@ function x5rule(srcurl) {
                                toast('尝试去除视频广告中，请稍等。');
                                let f = cacheM3u8(input);
                                let c = readFile(f.split("##")[0]);
-                               c = c.replace(/#EXTINF.*?\s+.*?116977.*?\.ts\s+|#EXTINF.*?\s+.*?117020.*?\.ts\s+|#EXTINF.*?\s+.*?1o.*?\.ts\s+|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+|#EXTINF.*?\s+.*?\/video\/original.*?\.ts\s+/g,'');
+                               c = c.replace(/#EXTINF.*?\s+.*?116977.*?\.ts\s+|#EXTINF.*?\s+.*?1170(20|32).*?\.ts\s+|#EXTINF.*?\s+.*?1o.*?\.ts\s+|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+|#EXTINF.*?\s+.*?\/video\/original.*?\.ts\s+/g,'');
                                writeFile(f.split("##")[0], c);
                                return f;
                              }))
@@ -1616,7 +1616,7 @@ function clearM3u8(url) {
     }
     let f = cacheM3u8(url);
     let c = readFile(f.split("##")[0]);
-    c = c.replace(/#EXTINF.*?\s+.*?116977.*?\.ts\s+|#EXTINF.*?\s+.*?117020.*?\.ts\s+|#EXTINF.*?\s+.*?1o.*?\.ts\s+|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+|#EXTINF.*?\s+.*?\/video\/original.*?\.ts\s+/g,'');
+    c = c.replace(/#EXTINF.*?\s+.*?116977.*?\.ts\s+|#EXTINF.*?\s+.*?1170(20|32).*?\.ts\s+|#EXTINF.*?\s+.*?1o.*?\.ts\s+|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+|#EXTINF.*?\s+.*?\/video\/original.*?\.ts\s+/g,'');
     writeFile(f.split("##")[0], c);
     return f;
 }
