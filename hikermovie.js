@@ -394,7 +394,7 @@ function hikhmerj() {
                     var url = spl + '/vod__________________________type/' + clsu[i] + '-fypage.html';
                 } else if (/fenggou/.test(spl)) {
                     var url = spl + '/list-select-id-' + clsu[i] + '-type--area--year--star--state--order--p-fypage.html'
-                } else if (/xiangdao|emsdn|nmddd|cnmcom/.test(spl)) {
+                } else if (/nmvod|emsdn|nmddd|cnmcom/.test(spl)) {
                     var url = spl + '/vod-list-id-' + clsu[i] + '-pg-fypage-order--by-time-class-0-year-0-letter--area--lang-.html'
                 } else if (/kanyk/.test(spl)) {
                     var url = spl + '/index.php?m=vod-list-id-'+clsu[i]+'-pg-fypage-order--by-time-class-0-year-0-letter--area--lang-.html'
@@ -695,7 +695,7 @@ function hikhmerj() {
                 //图片
                 //log(list[j]);
                 try {
-                    if (/auete|haozhansou|xiangdao|emsdn|nmddd|cnmcom/.test(spl)) {
+                    if (/auete|haozhansou|nmvod|emsdn|nmddd|cnmcom/.test(spl)) {
                         var img = pdfh(list[j], 'img&&data-src||src');
                     } else if (/kunyu77|tyun77/.test(spl)) {
                         var img = list[j].vod_pic;
@@ -1107,7 +1107,7 @@ function clsrule() {
     for (var i = 0; i < list.length; i++) {
         //图片
         try {
-            if (/auete|haozhansou|xiangdao|emsdn|nmddd|cnmcom|bdys/.test(MY_URL)) {
+            if (/auete|haozhansou|nmvod|emsdn|nmddd|cnmcom|bdys/.test(MY_URL)) {
                 var img = pdfh(list[i], 'img&&src');
             } else if (/kunyu77|tyun77/.test(MY_URL)) {
                 var img = list[i].videoCover;
@@ -1370,7 +1370,7 @@ function hiksearch() {
             url = url + '/vod__________________________search/' + spl[2] + '----------fypage---.html';
         } else if (/fenggou/.test(url)) {
             url = url + '/vod-search-wd-' + spl[2] + '-p-fypage.html';
-        } else if (/xiangdao|emsdn|nmddd|cnmcom/.test(url)) {
+        } else if (/nmvod|emsdn|nmddd|cnmcom/.test(url)) {
             url = url + '/index.php？？m=vod-search?wd=' + spl[2];
         } else if (/kanyk/.test(url)) {
             url = url + '/index.php?m=vod-search-pg-fypage-wd-'+spl[2]+'.html';
@@ -1455,7 +1455,7 @@ function hiksearch() {
                                             timeout: tout
                                         }
                                     });
-                                } else if (/xiangdao|emsdn|nmddd|cnmcom/.test(Url)) {
+                                } else if (/nmvod|emsdn|nmddd|cnmcom/.test(Url)) {
                                     Data.push({
                                         url: Url.split('?')[0].replace('？？', '?'),
                                         options: {
@@ -1545,7 +1545,7 @@ function hiksearch() {
                                                 //"Cookie": cook
                                             }
                                         });
-                                    } else if (html.search(/请输入验证码|首次搜索需要输入验证码|此数据需要输入验证码|验证后查看搜索结果|访问此数据需要输入验|正确的验证码继续访问|需要先输入验证码/) != -1 && !/xiangdao|emsdn|nmddd|cnmcom/.test(param.it.url)) {
+                                    } else if (html.search(/请输入验证码|首次搜索需要输入验证码|此数据需要输入验证码|验证后查看搜索结果|访问此数据需要输入验|正确的验证码继续访问|需要先输入验证码/) != -1 && !/nmvod|emsdn|nmddd|cnmcom/.test(param.it.url)) {
                                         if (html.search(/验证后查看搜索结果/) != -1) {
                                             d.push({
                                                 title: param.tit.tit + ' ' + '有搜索验证，点击进入原网页搜索',
@@ -1784,7 +1784,7 @@ function hiksearch() {
                     var link = url + ';get;utf-8;{User-Agent@.js:MOBILE_UA&&Cookie@.js:fetch("hiker://files/rules/xyq/xqyscookie/' + list[j].title + 'cookie.txt", {})}';
                 } else if (/kunyu77|tyun77/.test(url)) {
                     var link = 'hiker://empty'+url;
-                } else if (/xiangdao|emsdn|nmddd|cnmcom/.test(url)) {
+                } else if (/nmvod|emsdn|nmddd|cnmcom/.test(url)) {
                     var link = url + ';post;utf-8;{User-Agent@.js:MOBILE_UA}';
                 } else if (/555yy7/.test(url)) {
                     var link = url + ';get;utf-8;{User-Agent@.js:MOBILE_UA&&Cookie@searchneed=ok}';
@@ -2291,7 +2291,7 @@ function hikseaerji() {
     };
     //log(spl);
     //处理搜索验证
-    if (html.search(/请输入验证码|验证后查看搜索结果|首次搜索需要输入验证码|访问此数据需要输入验|正确的验证码继续访问|需要先输入验证码/) != -1 && !/xiangdao|emsdn|nmddd|cnmcom/.test(spl)) {
+    if (html.search(/请输入验证码|验证后查看搜索结果|首次搜索需要输入验证码|访问此数据需要输入验|正确的验证码继续访问|需要先输入验证码/) != -1 && !/nmvod|emsdn|nmddd|cnmcom/.test(spl)) {
         //滑块验证x5处理
         //log(spl);
         if (spl.search(/zhenbuka|ikandy|nkvod/) != -1) {
@@ -2571,7 +2571,7 @@ function omerj() {
     } else if (/saohuo|shdy3|shdy2/.test(omdomin)) {
         var tabs = pdfa(html, 'body&&.from_list&&li');
         var conts = pdfa(html, 'body&&#play_link&&li');
-    } else if (/xiangdao|emsdn|nmddd|cnmcom/.test(omdomin)) {
+    } else if (/nmvod|emsdn|nmddd|cnmcom/.test(omdomin)) {
         var tabs = pdfa(html, '#leftTabBox&&ul&&li');
         var conts = pdfa(html, '#leftTabBox&&.numList');
     } else if (/hy-play-list/.test(html) && /tab-content/.test(html)) {
@@ -2727,7 +2727,7 @@ function omerj() {
                 var list = pdfa(conts[i], 'body&&a:not(a:contains(展开全部))');
             }
 
-            if (/xiangdao|emsdn|nmddd|cnmcom|lezhutv|saohuo|shdy3|shdy2/.test(omdomin)) {
+            if (/nmvod|emsdn|nmddd|cnmcom|lezhutv|saohuo|shdy3|shdy2/.test(omdomin)) {
                 list = list.reverse();
             }
 
@@ -3041,7 +3041,7 @@ function hikchapter() {
             var conts = pdfa(html, 'body&&.anthology-list-play');
         } else if (/saohuo|shdy3|shdy2/.test(omdomin)) {
             var conts = pdfa(html, 'body&&#play_link&&li');
-        } else if (/xiangdao|emsdn|nmddd|cnmcom/.test(omdomin)) {
+        } else if (/nmvod|emsdn|nmddd|cnmcom/.test(omdomin)) {
             var conts = pdfa(html, '#leftTabBox&&.numList');
         } else if (/hy-play-list/.test(html) && /tab-content/.test(html)) {
             var conts = pdfa(html, '.tab-content&&.playlist');
@@ -3405,7 +3405,7 @@ function omlazy() {
             return "toast://请等待加载选集！";
         } else if (srcurl.indexOf("/share/") != -1) {
             return zywyun(srcurl);
-        } else if (/555yy7|aiyy|xiangdao|emsdn|nmddd|cnmcom|shigys|v\.t-ui|dadou|kanyk|oftens|ccpsr|nkvod/.test(myurl)) {
+        } else if (/555yy7|aiyy|nmvod|emsdn|nmddd|cnmcom|shigys|v\.t-ui|dadou|kanyk|oftens|ccpsr|nkvod/.test(myurl)) {
             //直接网页嗅探
             return x5rule(srcurl, srcurl);
         } else if(/bdys|newfii/.test(myurl)){
