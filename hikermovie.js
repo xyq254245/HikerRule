@@ -3410,6 +3410,8 @@ function omlazy() {
             return x5rule(srcurl, srcurl);
         } else if(/bdys|newfii/.test(myurl)){
             return 'video://'+srcurl;
+        } else if(/duanju/.test(myurl)){
+          return singlepush(srcurl+ ';{Referer@https://m.duanju5.com/}');
         }
         //77影视
         else if (/kunyu77|tyun77/.test(myurl)) {
