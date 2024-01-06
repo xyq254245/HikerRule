@@ -2786,7 +2786,7 @@ function omerj() {
                     var link = list[j].split('$')[1].split('<')[0].replace('amp;', '');
                 } else if(/duanju/.test(omdomin)){
                     var title = pdfh(list[j], "a&&Text");
-                    var link = djqian + cent.replace(/\d+/,[parseInt(ncent)+j].toString()) + djhou;
+                    var link = djqian + cent.replace(/\d+/,[parseInt(ncent)+j].toString()) + djhou + ';{Referer@https://m.duanju5.com/}';
                 } else {
                     var title = pdfh(list[j], "a&&Text");
                     var link = pd(list[j], "a&&href");
@@ -3411,7 +3411,7 @@ function omlazy() {
         } else if(/bdys|newfii/.test(myurl)){
             return 'video://'+srcurl;
         } else if(/duanju/.test(myurl)){
-          return singlepush(srcurl+ ';{Referer@https://m.duanju5.com/}');
+          return singlepush(srcurl);
         }
         //77影视
         else if (/kunyu77|tyun77/.test(myurl)) {
