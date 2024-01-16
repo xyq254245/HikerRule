@@ -352,7 +352,7 @@ function hikhmerj() {
                     var url = spl + '/list-' + clsu[i] + '-fypage.html';
                 } else if (/czzzu|czys|cz01|czzy|magedn|subaibai|nfyingshi/.test(spl)) {
                     var url = spl + '/' + clsu[i] + '/page/fypage[firstPage=' + spl + '/' + clsu[i] + ']';
-                } else if (/auete|haozhansou/.test(spl)) {
+                } else if (/auete|haozhansou|7xdy/.test(spl)) {
                     var url = spl + '/' + clsu[i] + '/indexfypage.html[firstPage=' + spl + '/' + clsu[i] + '/index.html]';
                 } else if (/1231d|smdyy|cokemv/.test(spl)) {
                     var url = spl + '/show/' + clsu[i] + '--------fypage---.html';
@@ -1352,7 +1352,7 @@ function hiksearch() {
             url = url + '/index.php/vod/search/page/fypage/wd/' + spl[2] + '.html';
         } else if (/dsxys/.test(url)) {
             url = url + '/sb/kemksmaksdl7nhZe3c1' + spl[2] + '-/page/fypage.html';
-        } else if (/saohuo|shdy3|shdy2/.test(url)) {
+        } else if (/saohuo|shdy3|shdy2|7xdy/.test(url)) {
             url = url + '/search.php?page=fypage&searchword=' + spl[2] + '&searchtype=';
         } else if (/lezhutv/.test(url)) {
             url = url + '/search-pg-fypage-wd-'+spl[2]+'.html';
@@ -1780,7 +1780,7 @@ function hiksearch() {
             for (var j = 0; j < list.length; j++) {
                 var url = list[j].url;
                 eval(urlph);
-                if (/zhenbuka|ikandy|3443|cokemv|tvyb|saohuo|shdy3|shdy2|kanju77|tegouys|tkznp|ak1080|lezhutv|nkvod/.test(url)) {
+                if (/zhenbuka|ikandy|3443|cokemv|tvyb|saohuo|shdy3|shdy2|kanju77|tegouys|tkznp|ak1080|lezhutv|nkvod|7xdy/.test(url)) {
                     var link = url + ';get;utf-8;{User-Agent@.js:MOBILE_UA&&Cookie@.js:fetch("hiker://files/rules/xyq/xqyscookie/' + list[j].title + 'cookie.txt", {})}';
                 } else if (/kunyu77|tyun77/.test(url)) {
                     var link = 'hiker://empty'+url;
@@ -2337,7 +2337,7 @@ function hikseaerji() {
         else {
             if (spl.search(/98bbw|cokemv/) != -1) {
                 var imglin = spl + '/verify/index.html?' + Math.random();
-            } else if (spl.search(/saohuo|shdy3|shdy2|auete|haozhansou/) != -1) {
+            } else if (spl.search(/saohuo|shdy3|shdy2|auete|haozhansou|7xdy/) != -1) {
                 var imglin = spl + '/include/vdimgck.php?get=' + new Date();
             } else if (spl.search(/bdys/) != -1) {
                 var imglin = spl + '/search/verifyCode?t=' + new Date();
@@ -2389,7 +2389,7 @@ function hikseaerji() {
                             body: 'vod_search_verify_code=' + cod,
                             method: 'POST'
                         });
-                    } else if (spl.search(/saohuo|shdy3|shdy2|auete|haozhansou/) != -1) {
+                    } else if (spl.search(/saohuo|shdy3|shdy2|auete|haozhansou|7xdy/) != -1) {
                         var html = fetch(spl + '/search.php?scheckAC=check&page=&searchtype=&order=&tid=&area=&year=&letter=&yuyan=&state=&money=&ver=&jq=', {
                             headers: {
                                 'User-Agent': MOBILE_UA,
@@ -2432,7 +2432,7 @@ function hikseaerji() {
                             refreshPage();
                             return "toast://验证成功。"
                         }
-                    } else if (spl.search(/saohuo|shdy3|shdy2|auete|haozhansou/) != -1) {
+                    } else if (spl.search(/saohuo|shdy3|shdy2|auete|haozhansou|7xdy/) != -1) {
                         if (html.indexOf('正确的验证码继续访问') > 0) {
                             return "toast://验证失败。"
                         } else {
@@ -3308,7 +3308,7 @@ function omlazy() {
                     } else {
                         fba.log('网页加载日志检索' + window.__count + '');
                         for (var i in urls) {
-                            if (urls[i].match(/miued\.com\/m3|dycdn\-tos\.pstatp|\.m3u8|\.mp4|\.flv|netease\.com|video_mp4|type\=m3u8|\/video\/tos\/|item\/video|stariverpan\.com\:9096\/ipfs|vod\.shihuocdn\./) && !urls[i].match(/html|\.m3u8\.|\.m3u8zy\.fun|\&next|ac\=dm|\=http|https\:\/\/[\d]\.m3u8|\?url\=\/m3u8|name\=fyjson/)&&!urls[i].match(/banyung/)) {
+                            if (urls[i].match(/miued\.com\/m3|dycdn\-tos\.pstatp|\.m3u8|\.mp4|\.flv|netease\.com|video_mp4|type\=m3u8|\?pt\=m3u8|\/video\/tos\/|item\/video|stariverpan\.com\:9096\/ipfs|vod\.shihuocdn\./) && !urls[i].match(/html|\.m3u8\.|\.m3u8zy\.fun|\&next|ac\=dm|\=http|https\:\/\/[\d]\.m3u8|\?url\=\/m3u8|name\=fyjson/)&&!urls[i].match(/banyung/)) {
                                 fy_bridge_app.log(urls[i])
                                 fba.hideLoading();
                                 if (fy_bridge_app.getHeaderUrl) {
@@ -3405,7 +3405,7 @@ function omlazy() {
             return "toast://请等待加载选集！";
         } else if (srcurl.indexOf("/share/") != -1) {
             return zywyun(srcurl);
-        } else if (/555yy7|aiyy|nmvod|emsdn|nmddd|cnmcom|shigys|v\.t-ui|dadou|kanyk|oftens|ccpsr|nkvod/.test(myurl)) {
+        } else if (/555yy7|aiyy|nmvod|emsdn|nmddd|cnmcom|shigys|v\.t-ui|dadou|kanyk|oftens|ccpsr|nkvod|7xdy/.test(myurl)) {
             //直接网页嗅探
             return x5rule(srcurl, srcurl);
         } else if(/bdys|newfii/.test(myurl)){

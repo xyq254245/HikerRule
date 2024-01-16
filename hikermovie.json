@@ -167,11 +167,11 @@
                     "url": "https://www.kanyk.net"
                 },
                 {
-                    "title": "剧看看",
-                    "vodtype": "电影&连续剧&综艺&动漫",
-                    "vodhref": "1&2&3&4",
-                    "ico": "https://www.jukankan.cc/template/jukankan/statics/img/logo_min_f.png",
-                    "url": "https://www.jukankan.cc"
+                    "title": "七新电影",
+                    "vodtype": "电影&连续剧&综艺&动漫&动作片&爱情片&科幻片&恐怖片&战争片&喜剧片&纪录片&剧情片&国产剧&港台剧&欧美剧&日韩剧",
+                    "vodhref": "dianyingpian&dianshiju&zongyi&dongman&dongzuopian&aiqingpian&kehuanpian&kongbupian&zhanzhengpian&xijupian&jilupian&juqingpian&guochanju&gangtaiju&oumeiju&rihanju",
+                    "ico": "https://www.7xdy.com/statics/img/logo.png",
+                    "url": "http://www.7xdy.com"
                 },
                 {
                     "title": "✈️大师兄影视",
