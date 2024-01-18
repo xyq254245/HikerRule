@@ -17,14 +17,14 @@
                     "title": "555影视",
                     "vodtype": "电影&电视剧&动漫&综艺&热门电视剧&港台剧&日韩剧&欧美剧",
                     "vodhref": "1&2&4&3&13&15&44&45",
-                    "ico": "https://t1.szrtcpa.com/2022/07/12/88c2f1613357e.png",
+                    "ico": "https://t1.021huaying.com/2022/07/12/88c2f1613357e.png",
                     "url": "https://www.555yy7.com"
                 },
                 {
                     "title": "996影视",
                     "vodtype": "电影&连续剧&动漫",
                     "vodhref": "1&2&3",
-                    "ico": "https://www.cs1369.com/template/chen996/img/logo_min_f.png",
+                    "ico": "https://www.cs1369.com/template/chen996/img/logo.png",
                     "url": "https://www.cs1369.com"
                 },
                 {
@@ -47,13 +47,6 @@
                     "vodhref": "1&2&3&4&6&7&8&9&10&11&12&13&14&15&16",
                     "ico": "http://www.tvyb03.com/logo.png",
                     "url": "http://www.tvyb03.com"
-                },
-                {
-                    "title": "往往影视",
-                    "vodtype": "电影&电视剧&综艺&动漫&纪录片&体育",
-                    "vodhref": "dianying&dianshiju&zongyi&dongman&jilupian&tiyu",
-                    "ico": "https://ys.ccpsr.top/img/logo.png",
-                    "url": "https://ys.ccpsr.top"
                 },
                 {
                     "title": "星影",
@@ -93,7 +86,7 @@
                     "title": "奈落影视",
                     "vodtype": "电影&电视剧&综艺&动漫&动作片&喜剧片&爱情片&科幻片&恐怖片&剧情片&战争片&动画片&国产剧&港台剧&欧美剧&日韩剧&海外剧&国漫&日漫&欧漫&童漫&国产综艺&日韩综艺&欧美综艺&港台综艺",
                     "vodhref": "1&2&4&3&7&8&9&6&10&11&12&20&13&14&16&15&21&22&25&23&24&28&30&29&31",
-                    "ico": "https://newfii.com/template/mxone/mxstatic/picture/logo.png",
+                    "ico": "https://www.newfii.com/template/mxone/mxstatic/picture/logo.png",
                     "url": "https://www.newfii.com"
                 },
                 {
@@ -121,8 +114,8 @@
                     "title": "干饭影视",
                     "vodtype": "电影&电视剧&综艺&动漫",
                     "vodhref": "1&2&3&4",
-                    "ico": "https://gfysys.cc/template/jianbai/statics/img/favicon.ico",
-                    "url": "https://gfysys.cc"
+                    "ico": "https://gfvod.com/static/images/logo.jpg",
+                    "url": "https://gfvod.com"
                 },
                 {
                     "title": "Auete",
@@ -174,13 +167,6 @@
                     "url": "http://www.7xdy.com"
                 },
                 {
-                    "title": "✈️大师兄影视",
-                    "vodtype": "电影&连续剧&综艺&动漫&动作片&喜剧片&爱情片&科幻片&奇幻片&恐怖片&剧情片&战争片&记录片&悬疑片&冒险片&犯罪片&国产剧&港台剧&日韩剧",
-                    "vodhref": "1&2&3&4&6&7&8&9&38&10&11&12&22&44&45&46&13&14&15",
-                    "ico": "https://dsxys.pro/favicon.ico",
-                    "url": "https://dsxys.pro"
-                },
-                {
                     "title": "素白白影视",
                     "vodtype": "电影&电视剧&热门电影&高分电影&动漫电影&香港经典电影&国产剧&欧美剧&韩剧&动漫剧&POP流行&传记&儿童&冒险&剧情&动作&动漫&动画&历史&古装&古风&同性&喜剧&奇幻&家庭&恐怖&悬疑&ERO情&惊悚&戏曲&战争&拉丁&搞笑&校园&歌舞&武侠&灾难&爱情&犯罪&玄幻&真人秀&短片&科幻&纪录片&脱口秀&舞台艺术&西部&运动&青春&音乐&鬼怪&黑色电影",
                     "vodhref": "new-movie&tv-drama&hot-month&high-movie&cartoon-movie&hongkong-movie&domestic-drama&american-drama&korean-drama&anime-drama&movie_bt_tags/pop-popular&movie_bt_tags/biography&movie_bt_tags/child&movie_bt_tags/adventure&movie_bt_tags/plot&movie_bt_tags/action&movie_bt_tags/anime&movie_bt_tags/animation&movie_bt_tags/history&movie_bt_tags/costume&movie_bt_tags/antiquity&movie_bt_tags/homosexual&movie_bt_tags/comedy&movie_bt_tags/fantasy&movie_bt_tags/family&movie_bt_tags/terror&movie_bt_tags/suspense&movie_bt_tags/erotic&movie_bt_tags/thriller&movie_bt_tags/drama&movie_bt_tags/war&movie_bt_tags/latin&movie_bt_tags/funny&movie_bt_tags/campus&movie_bt_tags/song-and-dance&movie_bt_tags/martial-arts&movie_bt_tags/disaster&movie_bt_tags/love&movie_bt_tags/crime&movie_bt_tags/fancy&movie_bt_tags/reality-show&movie_bt_tags/short-film&movie_bt_tags/kehuan&movie_bt_tags/documentary&movie_bt_tags/talkshow&movie_bt_tags/stageart&movie_bt_tags/west&movie_bt_tags/sport&movie_bt_tags/youth&movie_bt_tags/music&movie_bt_tags/ghost&movie_bt_tags/black-film",
@@ -191,7 +177,7 @@
                     "title": "哔嘀影视",
                     "vodtype": "不限&电影&电视剧",
                     "vodhref": "&?type=0&?type=1",
-                    "ico": "https://www.bdys10.com/images/favicon.ico",
+                    "ico": "https://wecounty-1300407952.file.myqcloud.com/app/svg/2022/5/20220523150310196THO.svg?images_logo1_svg",
                     "url": "https://www.bdys10.com"
                 },
                 {
