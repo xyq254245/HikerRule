@@ -49,6 +49,13 @@
                     "url": "http://www.tvyb03.com"
                 },
                 {
+                    "title": "往往影视",
+                    "vodtype": "电影&电视剧&综艺&动漫&纪录片&体育",
+                    "vodhref": "dianying&dianshiju&zongyi&dongman&jilupian&tiyu",
+                    "ico": "https://www.wwys.pro/img/logo.png",
+                    "url": "https://www.wwys.pro"
+                },
+                {
                     "title": "星影",
                     "vodtype": "电影&连续剧&动漫&综艺&短剧",
                     "vodhref": "1&2&3&4&30",
