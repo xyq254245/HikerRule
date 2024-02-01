@@ -56,13 +56,6 @@
                     "url": "https://www.wwys.pro"
                 },
                 {
-                    "title": "星影",
-                    "vodtype": "电影&连续剧&动漫&综艺&短剧",
-                    "vodhref": "1&2&3&4&30",
-                    "ico": "https://i.imgtg.com/2023/06/05/O5oKjK.png",
-                    "url": "https://www.xy1080.net"
-                },
-                {
                     "title": "毛驴影视",
                     "vodtype": "电影&连续剧&动漫&综艺",
                     "vodhref": "1&2&4&3",
@@ -207,6 +200,13 @@
                     "vodhref": "nixi&tianchong&nuelian&chuanyue&chongsheng",
                     "ico": "https://www.duanju5.com/upload/mxcms/20230623-1/be69977253d0731a11df5f7a99feaf42.png",
                     "url": "https://www.duanju5.com"
+                },
+                {
+                    "title": "爱短剧",
+                    "vodtype": "都市片库&逆袭片库&穿越片库&虐恋片库&重生片库&抖剧片库&快剧片库&其他片库",
+                    "vodhref": "3&25&26&27&28&1&2&32",
+                    "ico": "https://aiduanju.vip/upload/mxcms/20231219-1/44f90b0982aba955dfcc5675b89b47b9.png",
+                    "url": "https://aiduanju.vip"
                 },
                 {
                     "title": "去看吧",

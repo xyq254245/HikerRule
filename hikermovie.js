@@ -2010,7 +2010,7 @@ function ssjiex() {
                     } else if (/hgyx/.test(spl)) {
                         var zykurl = pdfh(list[i], "a&&href");
                         var url = spl + zykurl.replace('/detail/', '/play/').replace('.html', '/sid/1/nid/1.html');
-                    } else if(/duanju/.test(spl)){
+                    } else if(/duanju5/.test(spl)){
                         var url = pdfh(list[i], 'h3&&a&&href');
                     } else {
                         var url = pdfh(list[i], 'a&&href');
@@ -2700,7 +2700,7 @@ function omerj() {
     }
 
     //setError(conts);
-    if(/duanju/.test(omdomin)){
+    if(/duanju5/.test(omdomin)){
     let phtml = request(parseDom(html, '.video-info-play&&href'), {});
     eval(parseDomForHtml(phtml, ".player-box-main&&script&&Html").replace(/player_.*?={/, 'player_data={'));
     let djurll = unescape(base64Decode(player_data.url));
@@ -2784,7 +2784,7 @@ function omerj() {
                 } else if (/renrenmi/.test(omdomin)) {
                     var title = list[j].split('copy_text\">')[1].split('<')[0];
                     var link = list[j].split('$')[1].split('<')[0].replace('amp;', '');
-                } else if(/duanju/.test(omdomin)){
+                } else if(/duanju5/.test(omdomin)){
                     var title = pdfh(list[j], "a&&Text");
                     var link = djqian + cent.replace(/\d+/,[parseInt(ncent)+j].toString()) + djhou + ';{Referer@https://m.duanju5.com/}';
                 } else {
@@ -2797,7 +2797,7 @@ function omerj() {
                     title = title
                 }
                 if(/duanju/.test(omdomin)){
-                title = title.replace('VIP','');
+                title = title.replace('VIP','').replace('最新','');
                 }
                 //setError(MY_URL);
                 //显示选集
@@ -3410,7 +3410,7 @@ function omlazy() {
             return x5rule(srcurl, srcurl);
         } else if(/bdys|newfii/.test(myurl)){
             return 'video://'+srcurl;
-        } else if(/duanju/.test(myurl)){
+        } else if(/duanju5/.test(myurl)){
           return singlepush(srcurl);
         }
         //77影视
@@ -3840,7 +3840,7 @@ function omlazy() {
             return x5rule(jiek + urll, srcurl);
         }
         //大师兄&BD电影&思古&爱迪&极品&迪迪&九州&饭团
-        else if (/dsxys|unss|xifanys|kanju77|vipmv|zjdr\.vip|zhuijudr|cccu|haokanju|yingkuya|98bbw|1090ys|miniku|1080p|ysgc|3443|ak1080|tkznp|4kcz|smdyy|tegouys|lekkan|gfvod|bulei|sbdm|xy1080|moefun|jukankan|cs1369/.test(myurl)) {
+        else if (/dsxys|unss|xifanys|kanju77|vipmv|zjdr\.vip|zhuijudr|cccu|haokanju|yingkuya|98bbw|1090ys|miniku|1080p|ysgc|3443|ak1080|tkznp|4kcz|smdyy|tegouys|lekkan|gfvod|bulei|sbdm|xy1080|moefun|jukankan|cs1369|aiduanju/.test(myurl)) {
             var phtml = fetch(srcurl, {
                 headers: {
                     "accept":"text/html",
