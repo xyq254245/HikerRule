@@ -3840,7 +3840,7 @@ function omlazy() {
             return x5rule(jiek + urll, srcurl);
         }
         //大师兄&BD电影&思古&爱迪&极品&迪迪&九州&饭团
-        else if (/dsxys|unss|xifanys|kanju77|vipmv|zjdr\.vip|zhuijudr|cccu|haokanju|yingkuya|98bbw|1090ys|miniku|1080p|ysgc|3443|ak1080|tkznp|4kcz|smdyy|tegouys|lekkan|gfvod|bulei|sbdm|xy1080|moefun|jukankan|cs1369|aiduanju/.test(myurl)) {
+        else if (/dsxys|unss|xifanys|kanju77|vipmv|zjdr\.vip|zhuijudr|cccu|haokanju|yingkuya|98bbw|1090ys|miniku|1080p|ysgc|3443|ak1080|tkznp|4kcz|smdyy|tegouys|lekkan|gfvod|bulei|sbdm|xy1080|moefun|jukankan|cs1369|duanju/.test(myurl)) {
             var phtml = fetch(srcurl, {
                 headers: {
                     "accept":"text/html",

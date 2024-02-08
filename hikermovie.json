@@ -108,7 +108,7 @@
                     "vodtype": "电影&美剧&韩剧&日剧&泰剧&动漫",
                     "vodhref": "1&2&3&4&5&6",
                     "ico": "https://zxzjbackup.oss-cn-shenzhen.aliyuncs.com/logo_min.png",
-                    "url": "https://www.zxzj.pro"
+                    "url": "https://www.zxzja.com"
                 },
                 {
                     "title": "干饭影视",
@@ -207,6 +207,13 @@
                     "vodhref": "3&25&26&27&28&1&2&32",
                     "ico": "https://aiduanju.vip/upload/mxcms/20231219-1/44f90b0982aba955dfcc5675b89b47b9.png",
                     "url": "https://aiduanju.vip"
+                },
+                {
+                    "title": "榜一短剧",
+                    "vodtype": "抖剧片库&快剧片库&都市片库&穿越片库&逆袭片库&虐恋片库&重生片库&其他片库",
+                    "vodhref": "1&2&3&26&25&27&28&32",
+                    "ico": "https://duanju.one/template/mxone/mxstatic/picture/logo.png",
+                    "url": "https://duanju.one"
                 },
                 {
                     "title": "去看吧",
