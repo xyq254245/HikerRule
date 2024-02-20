@@ -3188,7 +3188,7 @@ function omlazy() {
             let f = cacheM3u8(url);
             let c = readFile(f.split("##")[0]);
             //非凡，量子，索尼
-            c = c.replace(/#EXTINF.*?\s+.*?1170(20|32).*?\.ts\s+|#EXTINF.*?\s+.*?116977.*?\.ts\s+|#EXTINF.*?\s+.*?1o.*?\.ts\s+|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+/g,'');
+            c = c.replace(/#EXTINF.*?\s+.*?1170(20|32).*?\.ts\s+|#EXTINF.*?\s+.*?116977.*?\.ts\s+|#EXTINF.*?\s+.*?1o.*?\.ts\s+|#EXT-X-DISCONTINUITY\r*\n*#EXTINF\:(4\.700000|5\.720000)\,[\s\S]*?#EXT-X-DISCONTINUITY|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+/g,'');
             //c = c.replace(/#EXT-X-DISCONTINUITY\r*\n*#EXTINF\:(7\.400000|6\.666667)\,[\s\S]*?#EXT-X-DISCONTINUITY|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+|#EXTINF.*?\s+.*?\/video\/original.*?\.ts\s+/g,'');
             writeFile(f.split("##")[0], c);
             return f;
@@ -3333,7 +3333,7 @@ function omlazy() {
                                                 toast('尝试去除视频广告中，请稍等。');
                                                 let f = cacheM3u8(input);
                                                 let c = readFile(f.split("##")[0]);
-                                                c = c.replace(/#EXTINF.*?\s+.*?1170(20|32).*?\.ts\s+|#EXTINF.*?\s+.*?116977.*?\.ts\s+|#EXTINF.*?\s+.*?1o.*?\.ts\s+|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+/g,'');
+                                                c = c.replace(/#EXTINF.*?\s+.*?1170(20|32).*?\.ts\s+|#EXTINF.*?\s+.*?116977.*?\.ts\s+|#EXTINF.*?\s+.*?1o.*?\.ts\s+|#EXT-X-DISCONTINUITY\r*\n*#EXTINF\:(4\.700000|5\.720000)\,[\s\S]*?#EXT-X-DISCONTINUITY|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+/g,'');
                                                 //c = c.replace(/#EXT-X-DISCONTINUITY\r*\n*#EXTINF\:(7\.400000|6\.666667)\,[\s\S]*?#EXT-X-DISCONTINUITY|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+|#EXTINF.*?\s+.*?\/video\/original.*?\.ts\s+/g,'');
                                                 writeFile(f.split("##")[0], c);
                                                 return f;
