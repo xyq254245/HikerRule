@@ -2701,9 +2701,11 @@ function omerj() {
 
     //setError(conts);
     if(/duanju5/.test(omdomin)){
-    let phtml = request(parseDom(html, '.video-info-play&&href'), {});
-    eval(parseDomForHtml(phtml, ".player-box-main&&script&&Html").replace(/player_.*?={/, 'player_data={'));
-    let djurll = unescape(base64Decode(player_data.url));
+    let nnn=MY_URL.match(/voddetail\/(.*?)\.htm/)[1];
+    let phtml = request(omdomin+'/txt/'+nnn+'.txt', {});
+    //eval(parseDomForHtml(phtml, ".player-box-main&&script&&Html").replace(/player_.*?={/, 'player_data={'));
+    //let djurll = unescape(base64Decode(player_data.url));
+    let djurll=phtml.split('\n')[0];
     var djqian = djurll.substring(0, djurll.lastIndexOf('/') + 1);
     var djhou = djurll.substring(djurll.lastIndexOf('.'));
     var cent = djurll.split(djqian)[1].split(djhou)[0];
