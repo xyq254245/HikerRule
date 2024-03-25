@@ -1191,14 +1191,15 @@ function x5rule(srcurl) {
                                let houz=m3u8.split("\n")[2];
                                url=urls[i].replace("index.m3u8",houz);
                              }
-                             return fy_bridge_app.parseLazyRule($$$(url).lazyRule(()=>{
-                               toast('尝试去除视频广告中，请稍等。');
-                               let f = cacheM3u8(input);
-                               let c = readFile(f.split("##")[0]);
-                               c = c.replace(/#EXTINF.*?\s+.*?116977.*?\.ts\s+|#EXTINF.*?\s+.*?1170(20|32).*?\.ts\s+|#EXTINF.*?\s+.*?1o.*?\.ts\s+|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+|#EXTINF.*?\s+.*?\/video\/original.*?\.ts\s+/g,'');
-                               writeFile(f.split("##")[0], c);
-                               return f;
-                             }))
+                             // return fy_bridge_app.parseLazyRule($$$(url).lazyRule(()=>{
+                               // toast('尝试去除视频广告中，请稍等。');
+                               // let f = cacheM3u8(input);
+                               // let c = readFile(f.split("##")[0]);
+                               // c = c.replace(/#EXTINF.*?\s+.*?116977.*?\.ts\s+|#EXTINF.*?\s+.*?1170(20|32).*?\.ts\s+|#EXTINF.*?\s+.*?1o.*?\.ts\s+|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+|#EXTINF.*?\s+.*?\/video\/original.*?\.ts\s+/g,'');
+                               // writeFile(f.split("##")[0], c);
+                               // return f;
+                             // }))
+                             return url;
                          }
                         }
                         return fy_bridge_app.getHeaderUrl(urls[i]).replace(";{", "#ignoreImg=true##isVideo=true#;{");
@@ -1346,7 +1347,7 @@ if (src.indexOf("xmflv") != -1) {
         if((play.includes("vip.ffzy")||play.includes("vip.lz")||play.includes("hd.lz")||play.includes(".cdnlz")||play.includes("suonizy")) && play.includes("index.m3u8")){
             let houz=request(play).split("\n")[2];
             play=play.replace("index.m3u8",houz);
-            play=clearM3u8(play);
+            //play=clearM3u8(play);
         }
         return play;
     } catch (e) {
@@ -1595,7 +1596,7 @@ danmufun(src);
 if((src.includes("vip.ffzy")||src.includes("vip.lz")||src.includes("hd.lz")||src.includes(".cdnlz")||src.includes("suonizy")) && src.includes("index.m3u8")){
     let houz=request(src).split("\n")[2];
     src=src.replace("index.m3u8",houz);
-    src=clearM3u8(src);
+    //src=clearM3u8(src);
 }
 
 return JSON.stringify({
