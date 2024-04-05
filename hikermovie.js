@@ -2519,7 +2519,7 @@ function omerj() {
         },
         col_type: 'flex_button'
     });
-        
+        //log(MY_URL);
     var html = getResCode().replace(/<!--([\S\s]*?)-->/g,'');
     if (MY_URL.includes("kunyu77")||MY_URL.includes("tyun77")) {
         MY_URL = html.split("##")[1] + "/";
@@ -2534,6 +2534,10 @@ function omerj() {
                 "TK": qqtok
             }
         }); 
+    }
+    if(MY_URL.includes("nmvod")){
+    html=request(parseDom(html,'.page-btn&&a&&href'));
+    eval(pdfh(html,'.detailPosterIntro&&script&&Html'));
     }
     if (html.indexOf('检测中') != -1) {
         /*let cook = JSON.parse(fetchCookie(MY_URL, {
@@ -2728,8 +2732,12 @@ function omerj() {
             } else {
                 var list = pdfa(conts[i], 'body&&a:not(a:contains(展开全部))');
             }
+            
+            if(/nmvod/.test(omdomin)){
+            list=mac_url.split('#');
+            }
 
-            if (/nmvod|emsdn|nmddd|cnmcom|lezhutv|saohuo|shdy3|shdy2/.test(omdomin)) {
+            if (/lezhutv|saohuo|shdy3|shdy2/.test(omdomin)) {
                 list = list.reverse();
             }
 
@@ -2789,6 +2797,9 @@ function omerj() {
                 } else if(/duanju5/.test(omdomin)){
                     var title = pdfh(list[j], "a&&Text");
                     var link = djqian + cent.replace(/\d+/,[parseInt(ncent)+j].toString()) + djhou + ';{Referer@https://m.duanju5.com/}';
+                } else if(/nmvod/.test(omdomin)){
+                var title=list[j].split('$')[0];
+                var link='https://api.cnmcom.com/webcloud/c1.php?vid='+list[j].split('$')[1];
                 } else {
                     var title = pdfh(list[j], "a&&Text");
                     var link = pd(list[j], "a&&href");
