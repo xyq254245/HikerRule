@@ -2799,7 +2799,7 @@ function omerj() {
                     var link = djqian + cent.replace(/\d+/,[parseInt(ncent)+j].toString()) + djhou + ';{Referer@https://m.duanju5.com/}';
                 } else if(/nmvod/.test(omdomin)){
                 var title=list[j].split('$')[0];
-                var link='https://api.cnmcom.com/webcloud/c1.php?vid='+list[j].split('$')[1];
+                var link='https://api.cnmcom.com/webcloud/nmm.php?url='+list[j].split('$')[1];
                 } else {
                     var title = pdfh(list[j], "a&&Text");
                     var link = pd(list[j], "a&&href");
@@ -3418,11 +3418,34 @@ function omlazy() {
             return "toast://请等待加载选集！";
         } else if (srcurl.indexOf("/share/") != -1) {
             return zywyun(srcurl);
-        } else if (/5moov|aiyy|nmvod|emsdn|nmddd|cnmcom|shigys|v\.t-ui|dadou|kanyk|oftens|wwys|nkvod|7xdy/.test(myurl)) {
+        } else if (/5moov|aiyy|shigys|v\.t-ui|dadou|kanyk|oftens|wwys|nkvod|7xdy/.test(myurl)) {
             //直接网页嗅探
             return x5rule(srcurl, srcurl);
         } else if(/bdys|newfii/.test(myurl)){
             return 'video://'+srcurl;
+        } else if(/nmvod|emsdn|nmddd|cnmcom/.test(myurl)){
+        let aaa=request(srcurl);
+        let list = parseDomForArray(aaa, '#lines&&a');
+        let url = [];
+        let nma = [];
+        for (let i = 0; i < list.length; i++) {
+            //if (html[i].shareLock != 1) {
+                url.push('video://' + parseDomForHtml(list[i],'a&&id'));
+                nma.push(parseDomForHtml(list[i],'a&&Text'));
+            //}
+        }
+        let play = JSON.stringify({
+            urls: url,
+            names: nma
+        });
+        if (singpush) {
+          return 'hiker://page/push?rule=XYQ推送&pushurl=' + encodeURIComponent(JSON.stringify({
+                  //"name": pgt,
+                  "url": play.replace(/video\:\/\//g, '')
+              }));
+        } else {
+            return play
+        }
         } else if(/duanju5/.test(myurl)){
           return singlepush(srcurl);
         }
