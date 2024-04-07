@@ -3425,7 +3425,7 @@ function omlazy() {
             return 'video://'+srcurl;
         } else if(/nmvod|emsdn|nmddd|cnmcom/.test(myurl)){
         let aaa=request(srcurl);
-        let list = parseDomForArray(aaa, '#lines&&a');
+        let list = parseDomForArray(aaa, '.player&&ul&&a');
         let url = [];
         let nma = [];
         for (let i = 0; i < list.length; i++) {
