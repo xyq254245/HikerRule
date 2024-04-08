@@ -2832,7 +2832,7 @@ function omerj() {
                     extra: {
                         blockRules: ['.css', '.gif', '.jpeg', '.png', '.ico', 'cnzz', '.51.la', 'google', 'xn--*:*', 'hm.baidu.com', '/ads/*.js'],
                         referer: omdomin,
-                        js:"if(/maolvys|g5t2pn47dj2h/.test(window.location.host)){document.getElementsByClassName('swal-button swal-button--confirm')[0].click()}",
+                        js:"if(/maolvys|g5t2pn47dj2h/.test(window.location.host)){document.getElementsByClassName('swal-button swal-button--confirm')[0].click()};if(/api\\.cnmcom/.test(window.location.host)){document.getElementsByClassName('line')[0].onclick()}",
                         id: 'hiker://empty$$$' + omdomin + '$$$' + link + '$$$' + title + '$$$',
                         longClick:[{
                                    title: (getItem('singlepush', '') == '1' ? '已开单推' : '已关单推'),
@@ -3426,34 +3426,11 @@ function omlazy() {
             return "toast://请等待加载选集！";
         } else if (srcurl.indexOf("/share/") != -1) {
             return zywyun(srcurl);
-        } else if (/5moov|aiyy|shigys|v\.t-ui|dadou|kanyk|oftens|wwys|nkvod|7xdy/.test(myurl)) {
+        } else if (/nmvod|emsdn|nmddd|cnmcom|5moov|aiyy|shigys|v\.t-ui|dadou|kanyk|oftens|wwys|nkvod|7xdy/.test(myurl)) {
             //直接网页嗅探
             return x5rule(srcurl, srcurl);
         } else if(/bdys|newfii/.test(myurl)){
             return 'video://'+srcurl;
-        } else if(/nmvod|emsdn|nmddd|cnmcom/.test(myurl)){
-        let aaa=request(srcurl);
-        let list = parseDomForArray(aaa, '.player&&ul&&a');
-        let url = [];
-        let nma = [];
-        for (let i = 0; i < list.length; i++) {
-            //if (html[i].shareLock != 1) {
-                url.push('video://' + parseDomForHtml(list[i],'a&&id'));
-                nma.push(parseDomForHtml(list[i],'a&&Text'));
-            //}
-        }
-        let play = JSON.stringify({
-            urls: url,
-            names: nma
-        });
-        if (singpush) {
-          return 'hiker://page/push?rule=XYQ推送&pushurl=' + encodeURIComponent(JSON.stringify({
-                  //"name": pgt,
-                  "url": play.replace(/video\:\/\//g, '')
-              }));
-        } else {
-            return play
-        }
         } else if(/duanju5/.test(myurl)){
           return singlepush(srcurl);
         }
