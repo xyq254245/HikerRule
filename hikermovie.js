@@ -432,22 +432,24 @@ function hikhmerj() {
           var html="";
           if(pn == 1){
            function shuaxin(qqtime){
-            let qqtok1 = md5("/api.php/provide/getDomainrealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android" +"24010110003"+ qqtime +"android10"+"2.3.9"+ qqtime +"XSpeUFjJ");
-            fetch(spl + "/getDomain?pcode=010110003&version=2.3.9&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
+            let qqtok1 = md5("/api.php/provide/getDomainrealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android" +"24010110003"+ qqtime +"android10"+"2.3.6"+ qqtime +"XSpeUFjJ");
+            fetch(spl + "/getDomain?pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
                 headers: {
                     "User-Agent": "okhttp/3.12.0",
                     "t": qqtime,
-                    "TK": qqtok1
+                    "TK": qqtok1,
+                    "oaid":"b29c7a601c6f0657"
                 }
             });
           }
           function getvcl(qqtime){
-          let qqtok = md5("/api.php/provide/videoChannelListrealme04ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android010110003"+ qqtime +"android10"+"0" +"2.3.9"+ qqtime +"XSpeUFjJ");
-          html = fetch(spl + "/videoChannelList?type=0&business=0&pcode=010110003&version=2.3.9&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
+          let qqtok = md5("/api.php/provide/videoChannelListrealme04ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android010110003"+ qqtime +"android10"+"0" +"2.3.6"+ qqtime +"XSpeUFjJ");
+          html = fetch(spl + "/videoChannelList?type=0&business=0&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
               headers: {
                   "User-Agent": "okhttp/3.12.0",
                   "t": qqtime,
-                  "TK": qqtok
+                  "TK": qqtok,
+                  "oaid":"b29c7a601c6f0657"
               }
           });
           }
@@ -903,12 +905,13 @@ function clsrule() {
         MY_URL = getResCode();
         let tid=MY_URL.split("&rate")[0].split("channel=")[1];
         let qqtime = parseInt(new Date().getTime() / 1000) + '';
-        let qqtok = md5("/go/playtoprealme"+tid+"4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android"+ MY_PAGE +"21010110003"+ qqtime +"android102.3.9"+ qqtime +"XSpeUFjJ");
-        var html = fetch(MY_URL.replace("/api.php/provide","/go") + "&pcode=010110003&version=2.3.9&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
+        let qqtok = md5("/go/playtoprealme"+tid+"4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android"+ MY_PAGE +"21010110003"+ qqtime +"android102.3.6"+ qqtime +"XSpeUFjJ");
+        var html = fetch(MY_URL.replace("/api.php/provide","/go") + "&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
             headers: {
                 "User-Agent": "okhttp/3.12.0",
                 "t": qqtime,
-                "TK": qqtok
+                "TK": qqtok,
+                "oaid":"b29c7a601c6f0657"
             }
         });
     }
@@ -1410,14 +1413,15 @@ function hiksearch() {
                                 if (/kunyu77|tyun77/.test(Url)) {
                                     let key = Url.split("&pg=")[0].split("searchName=")[1];
                                     let qqtime = parseInt(new Date().getTime() / 1000) + '';
-                                    let qqtok = md5("/api.php/provide/searchVideorealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android"+ "010110003"+"1"+encodeURIComponent(key)+qqtime +"android10"+"2.3.9"+ qqtime +"XSpeUFjJ");
+                                    let qqtok = md5("/api.php/provide/searchVideorealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android"+ "010110003"+"1"+encodeURIComponent(key)+qqtime +"android10"+"2.3.6"+ qqtime +"XSpeUFjJ");
                                     Data.push({
-                                        url: Url+"&pcode=010110003&version=2.3.9&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime,
+                                        url: Url+"&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime,
                                         options: {
                                             headers: {
                                                 "User-Agent": 'okhttp/3.12.0',
                                                 "t": qqtime,
-                                                "TK": qqtok
+                                                "TK": qqtok,
+                                                "oaid":"b29c7a601c6f0657"
                                             },
                                             timeout: tout
                                         }
@@ -2114,21 +2118,23 @@ function hikseaerji() {
         let key = MY_URL.split("&pg=")[0].split("searchName=")[1];
         let qqtime = parseInt(new Date().getTime() / 1000) + '';
         if(MY_PAGE == 1){
-          let qqtok1 = md5("/api.php/provide/getDomainrealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android" +"24010110003"+ qqtime +"android10"+"2.3.9"+ qqtime +"XSpeUFjJ");
-          fetch(spl + "/getDomain?pcode=010110003&version=2.3.9&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
+          let qqtok1 = md5("/api.php/provide/getDomainrealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android" +"24010110003"+ qqtime +"android10"+"2.3.6"+ qqtime +"XSpeUFjJ");
+          fetch(spl + "/getDomain?pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
               headers: {
                   "User-Agent": "okhttp/3.12.0",
                   "t": qqtime,
-                  "TK": qqtok1
+                  "TK": qqtok1,
+                  "oaid":"b29c7a601c6f0657"
               }
           });
         }
-        let qqtok = md5("/api.php/provide/searchVideorealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android"+ "010110003"+MY_PAGE+encodeURIComponent(key)+qqtime +"android10"+"2.3.9"+ qqtime +"XSpeUFjJ");
-        var html = fetch(MY_URL +"&pcode=010110003&version=2.3.9&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime,{
+        let qqtok = md5("/api.php/provide/searchVideorealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android"+ "010110003"+MY_PAGE+encodeURIComponent(key)+qqtime +"android10"+"2.3.6"+ qqtime +"XSpeUFjJ");
+        var html = fetch(MY_URL +"&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime,{
             headers: {
                 "User-Agent": 'okhttp/3.12.0',
                 "t": qqtime,
-                "TK": qqtok
+                "TK": qqtok,
+                "oaid":"b29c7a601c6f0657"
             }
         });
     }
@@ -2526,12 +2532,13 @@ function omerj() {
         //log(MY_URL);
         let vid = html.split("##")[2];
         let qqtime = parseInt(new Date().getTime() / 1000) + '';
-        let qqtok = md5('/api.php/provide/videoPlaylistrealme4ac3fe96a6133de96904b8d3c8cfe16d'+vid+'RMX1931com.sevenVideo.app.android010110003'+ qqtime +'android102.3.9'+ qqtime +'XSpeUFjJ');
-        html = fetch(MY_URL+"videoPlaylist?ids="+vid+"&pcode=010110003&version=2.3.9&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
+        let qqtok = md5('/api.php/provide/videoPlaylistrealme4ac3fe96a6133de96904b8d3c8cfe16d'+vid+'RMX1931com.sevenVideo.app.android010110003'+ qqtime +'android102.3.6'+ qqtime +'XSpeUFjJ');
+        html = fetch(MY_URL+"videoPlaylist?ids="+vid+"&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
             headers: {
                 "User-Agent": "okhttp/3.12.0",
                 "t": qqtime,
-                "TK": qqtok
+                "TK": qqtok,
+                "oaid":"b29c7a601c6f0657"
             }
         }); 
     }
@@ -3008,12 +3015,13 @@ function hikchapter() {
             MY_URL = html.split("##")[1] + "/";
             let vid = html.split("##")[2];
             let qqtime = parseInt(new Date().getTime() / 1000) + '';
-            let qqtok = md5('/api.php/provide/videoPlaylistrealme4ac3fe96a6133de96904b8d3c8cfe16d'+vid+'RMX1931com.sevenVideo.app.android010110003'+ qqtime +'android102.3.9'+ qqtime +'XSpeUFjJ');
-            html = fetch(MY_URL+"videoPlaylist?ids="+vid+"&pcode=010110003&version=2.3.9&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
+            let qqtok = md5('/api.php/provide/videoPlaylistrealme4ac3fe96a6133de96904b8d3c8cfe16d'+vid+'RMX1931com.sevenVideo.app.android010110003'+ qqtime +'android102.3.6'+ qqtime +'XSpeUFjJ');
+            html = fetch(MY_URL+"videoPlaylist?ids="+vid+"&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
                 headers: {
                     "User-Agent": "okhttp/3.12.0",
                     "t": qqtime,
-                    "TK": qqtok
+                    "TK": qqtok,
+                    "oaid":"b29c7a601c6f0657"
                 }
             }); 
         }
@@ -3466,12 +3474,13 @@ function omlazy() {
                     }else{
                     let parurl = myurl + "/api.php/provide/parseDicturl";
                     let qqtime = parseInt(new Date().getTime() / 1000) + '';
-                    let qqtok = md5('/api.php/provide/parseDicturlrealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android010110003'+ qqtime +'android10'+playurl+'2.3.9'+ qqtime +'XSpeUFjJ');
-                    let html = fetch(parurl+"?url="+playurl+"&pcode=010110003&version=2.3.9&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
+                    let qqtok = md5('/api.php/provide/parseDicturlrealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android010110003'+ qqtime +'android10'+playurl+'2.3.6'+ qqtime +'XSpeUFjJ');
+                    let html = fetch(parurl+"?url="+playurl+"&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
                         headers: {
                             "User-Agent": "okhttp/3.12.0",
                             "t": qqtime,
-                            "TK": qqtok
+                            "TK": qqtok,
+                            "oaid":"b29c7a601c6f0657"
                         }
                     });
                     playurl=JSON.parse(html).url;
@@ -3479,12 +3488,13 @@ function omlazy() {
                     }else{
                     let parurl = myurl + "/api.php/provide/parseFirsturl";
                     let qqtime = parseInt(new Date().getTime() / 1000) + '';
-                    let qqtok = md5('/api.php/provide/parseFirsturlrealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android010110003'+ qqtime +'android10'+playurl+'2.3.9'+ qqtime +'XSpeUFjJ');
-                    let html = fetch(parurl+"?url="+playurl+"&pcode=010110003&version=2.3.9&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
+                    let qqtok = md5('/api.php/provide/parseFirsturlrealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android010110003'+ qqtime +'android10'+playurl+'2.3.6'+ qqtime +'XSpeUFjJ');
+                    let html = fetch(parurl+"?url="+playurl+"&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
                         headers: {
                             "User-Agent": "okhttp/3.12.0",
                             "t": qqtime,
-                            "TK": qqtok
+                            "TK": qqtok,
+                            "oaid":"b29c7a601c6f0657"
                         }
                     });
                     playurl=JSON.parse(html).url;
