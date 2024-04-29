@@ -398,7 +398,7 @@ function hikhmerj() {
                     var url = spl + '/vod-list-id-' + clsu[i] + '-pg-fypage-order--by-time-class-0-year-0-letter--area--lang-.html'
                 } else if (/kanyk/.test(spl)) {
                     var url = spl + '/index.php?m=vod-list-id-'+clsu[i]+'-pg-fypage-order--by-time-class-0-year-0-letter--area--lang-.html'
-                } else if (/bdys/.test(spl)) {
+                } else if (/bdys|yjys\.me/.test(spl)) {
                     var url = spl + '/s/all/fypage'+clsu[i]
                 }
 
@@ -1110,7 +1110,7 @@ function clsrule() {
     for (var i = 0; i < list.length; i++) {
         //图片
         try {
-            if (/auete|haozhansou|nmvod|emsdn|nmddd|cnmcom|bdys/.test(MY_URL)) {
+            if (/auete|haozhansou|nmvod|emsdn|nmddd|cnmcom|bdys|yjys\.me/.test(MY_URL)) {
                 var img = pdfh(list[i], 'img&&src');
             } else if (/kunyu77|tyun77/.test(MY_URL)) {
                 var img = list[i].videoCover;
@@ -1152,7 +1152,7 @@ function clsrule() {
         } catch (e) {}
 
         //标题
-        if (/czzzu|czys|cz01|czzy|magedn|subaibai|nfyingshi|renrenmi|bdys/.test(MY_URL)) {
+        if (/czzzu|czys|cz01|czzy|magedn|subaibai|nfyingshi|renrenmi|bdys|yjys\.me/.test(MY_URL)) {
             var title = pdfh(list[i], "h3&&Text");
         } else if (/kunyu77|tyun77/.test(MY_URL)) {
             var title = list[i].title;
@@ -1377,7 +1377,7 @@ function hiksearch() {
             url = url + '/index.php？？m=vod-search?wd=' + spl[2];
         } else if (/kanyk/.test(url)) {
             url = url + '/index.php?m=vod-search-pg-fypage-wd-'+spl[2]+'.html';
-        } else if (/bdys/.test(url)) {
+        } else if (/bdys|yjys\.me/.test(url)) {
             url = url + '/search/'+spl[2]+'/fypage';
         }
     });
@@ -2345,7 +2345,7 @@ function hikseaerji() {
                 var imglin = spl + '/verify/index.html?' + Math.random();
             } else if (spl.search(/saohuo|shdy3|shdy2|auete|haozhansou|7xdy/) != -1) {
                 var imglin = spl + '/include/vdimgck.php?get=' + new Date();
-            } else if (spl.search(/bdys/) != -1) {
+            } else if (spl.search(/bdys|yjys\.me/) != -1) {
                 var imglin = spl + '/search/verifyCode?t=' + new Date();
             } else if (spl.search(/lezhu/) != -1) {
                 var imglin = spl + '/inc/common/code.php?a=search&s=' + Math.random();
@@ -2404,7 +2404,7 @@ function hikseaerji() {
                             body: 'validate=' + cod + '&searchword=',
                             method: 'POST'
                         });
-                    } else if (spl.search(/bdys/) != -1) {
+                    } else if (spl.search(/bdys|yjys\.me/) != -1) {
                         var html = fetch(input + '?code='+cod, {
                             headers: {
                                 'User-Agent': MOBILE_UA,
@@ -2446,7 +2446,7 @@ function hikseaerji() {
                             refreshPage();
                             return "toast://验证成功。"
                         }
-                    } else if (spl.search(/bdys/) != -1) {
+                    } else if (spl.search(/bdys|yjys\.me/) != -1) {
                         if (html.indexOf('首次搜索需要输入验证码') > 0) {
                             return "toast://验证失败。"
                         } else {
@@ -2912,7 +2912,7 @@ function omerj() {
         }
     } //end 下载
     //哔嘀显示下载线路
-    if (/bdys/.test(omdomin)) {
+    if (/bdys|yjys\.me/.test(omdomin)) {
         if (html.indexOf('id="download-list') != -1) {
             d.push({
                 title: '下载地址',
@@ -2947,7 +2947,7 @@ function omerj() {
                 d.push({
                     title: pdfh(dnli[i], "a&&Text"),
                     col_type: 'text_center_1',
-                    url: pd(dnli[i], "a&&href")+";{Referer@https://www.bdys03.com}"
+                    url: pd(dnli[i], "a&&href")+";{Referer@https://www.yjys.me/}"
                 });
             }
         }
@@ -3429,7 +3429,7 @@ function omlazy() {
         } else if (/nmvod|emsdn|nmddd|cnmcom|5moov|aiyy|shigys|v\.t-ui|dadou|kanyk|oftens|wwys|nkvod|7xdy/.test(myurl)) {
             //直接网页嗅探
             return x5rule(srcurl, srcurl);
-        } else if(/bdys|newfii/.test(myurl)){
+        } else if(/bdys|yjys\.me|newfii/.test(myurl)){
             return 'video://'+srcurl;
         } else if(/duanju5/.test(myurl)){
           return singlepush(srcurl);
