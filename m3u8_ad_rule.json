@@ -1,0 +1,80 @@
+[
+    {
+        "name": "暴风",
+        "hosts": [
+            "bfzy",
+            "bfbfvip",
+            "bfengbf"
+        ],
+        "regex": [
+            "#EXTINF.*?\\s+.*?adjump.*?\\.ts"
+        ]
+    },
+    {
+        "name": "量子",
+        "hosts": [
+            "vip.lz",
+            "hd.lz",
+            ".cdnlz"
+        ],
+        "regex": [
+            "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:7\\.166667,[\\s\\S]*?#EXT-X-DISCONTINUITY",
+            "17.19"
+        ]
+    },
+    {
+        "name": "非凡",
+        "hosts": [
+            "vip.ffzy",
+            "hd.ffzy"
+        ],
+        "regex": [
+            "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:6\\.400000,[\\s\\S]*?#EXT-X-DISCONTINUITY",
+            "#EXTINF.*?\\s+.*?1171(057).*?\\.ts",
+            "17.99"
+        ]
+    },
+    {
+        "name": "索尼",
+        "hosts": [
+            "suonizy"
+        ],
+        "regex": [
+            "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:1\\.000000,[\\s\\S]*?#EXT-X-DISCONTINUITY",
+            "#EXTINF.*?\\s+.*?p1ayer.*?\\.ts",
+            "#EXTINF.*?\\s+.*?\\/video\\/original.*?\\.ts"
+        ]
+    },
+    {
+        "name": "快看",
+        "hosts": [
+            "kuaikan"
+        ],
+        "regex": [
+            "#EXT-X-KEY:METHOD=NONE\\r*\\n*#EXTINF:5,[\\s\\S]*?#EXT-X-DISCONTINUITY",
+            "#EXT-X-KEY:METHOD=NONE\\r*\\n*#EXTINF:2\\.4,[\\s\\S]*?#EXT-X-DISCONTINUITY"
+        ]
+    },
+    {
+        "name": "555DM",
+        "hosts": [
+            "cqxfjz"
+        ],
+        "regex": [
+            "10.56"
+        ]
+    },
+    {
+        "name": "海外看",
+        "hosts": [
+            "haiwaikan"
+        ],
+        "regex": [
+            "10.0099",
+            "10.3333",
+            "16.0599",
+            "8.1748",
+            "10.85"
+        ]
+    }
+]
