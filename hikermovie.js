@@ -2992,7 +2992,7 @@ function omerj() {
         let check = fetch("hiker://home@XYQ推送");
         if (!check || check.length <= 5) {
             let ru = $.toString(() => {
-                return "海阔视界，XYQ推送￥home_rule_url￥https://agit.ai/lzk23559/PublicRule/raw/branch/master/XYQ%e6%8e%a8%e9%80%81.json"
+                return "海阔视界，XYQ推送￥home_rule_url￥https://github.moeyy.xyz/https://raw.githubusercontent.com/xyq254245/HikerRule/main/XYQ%e6%8e%a8%e9%80%81.json"
             });
             confirm({
                 title: MY_RULE.title + '提示',
