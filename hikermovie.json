@@ -21,20 +21,6 @@
                     "url": "https://5moov.vip"
                 },
                 {
-                    "title": "996影视",
-                    "vodtype": "电影&连续剧&动漫",
-                    "vodhref": "1&2&3",
-                    "ico": "https://www.cs1369.com/template/chen996/img/logo.png",
-                    "url": "https://www.cs1369.com"
-                },
-                {
-                    "title": "疯狗影视",
-                    "vodtype": "电影&连续剧&综艺&动漫",
-                    "vodhref": "1&2&4&3",
-                    "ico": "https://m.fenggoudy3.com/favicon.ico",
-                    "url": "https://m.fenggoudy3.com"
-                },
-                {
                     "title": "往往影视",
                     "vodtype": "电影&电视剧&综艺&动漫&纪录片&体育&动作片&喜剧片&爱情片&恐怖片&悬疑片&科幻片&惊悚片&犯罪片&剧情片&冒险片&奇幻片&武侠片&战争片&动画片&国产剧&日韩剧&港台剧&欧美剧&泰国剧&其他剧",
                     "vodhref": "dianying&dianshiju&zongyi&dongman&jilupian&tiyu&dongzuopian&xijupian&aiqingpian&kongbupian&xuanyipian&kehuanpian&jingsongpian&fanzuipian&juqingpian&maoxianpian&qihuanpian&wuxiapian&zhanzhengpian&donghuapian&guochanju&rihanju&gangtaiju&oumeiju&taiguoju&qitaju",
@@ -66,8 +52,8 @@
                     "title": "嗷呜动漫",
                     "vodtype": "新剧&番剧&剧场",
                     "vodhref": "32&20&33",
-                    "ico": "https://www.moefun.net/upload/site/20231009-1/223ec5606cf2b1d2e541b3ef930cb79c.png",
-                    "url": "https://www.moefun.net"
+                    "ico": "https://www.aowu.tv/upload/site/20231009-1/223ec5606cf2b1d2e541b3ef930cb79c.png",
+                    "url": "https://www.aowu.tv"
                 },
                 {
                     "title": "鸭奈飞",
@@ -90,13 +76,6 @@
                     "url": "https://shdy2.com"
                 },
                 {
-                    "title": "77影视大全",
-                    "vodtype": "电影&电视剧&综艺&动漫",
-                    "vodhref": "1&2&3&4",
-                    "ico": "https://thumb2.jfcdns.com/thumb/n131p31s12k2a/16f5e24097ed3428_100_100.png",
-                    "url": "https://b.api.tyun77.cn/api.php/provide"
-                },
-                {
                     "title": "在线之家",
                     "vodtype": "电影&美剧&韩剧&日剧&泰剧&动漫",
                     "vodhref": "1&2&3&4&5&6",
@@ -109,13 +88,6 @@
                     "vodhref": "Movie&Tv&Zy&Dm",
                     "ico": "https://auete.pro/statics/picture/logo.png",
                     "url": "https://auete.pro"
-                },
-                {
-                    "title": "COKEMV",
-                    "vodtype": "电影&电视剧&综艺&动漫",
-                    "vodhref": "1&2&4&3",
-                    "ico": "https://www.cokemv.fun/mxtheme/images/favicon.png",
-                    "url": "https://www.cokemv.fun"
                 },
                 {
                     "title": "LIBVIO",
@@ -179,13 +151,6 @@
                     "vodhref": "movie_bt&movie_bt_series/%e5%8a%a8%e7%94%bb&movie_bt_series/%e5%8a%a8%e7%94%bb%e7%94%b5%e5%bd%b1&movie_bt_series/riju&movie_bt_series/taiju&movie_bt_series/dianying&movie_bt_series/dianshiju&movie_bt_series/%e7%9c%9f%e4%ba%ba%e7%a7%80&movie_bt_series/jilupian&movie_bt_series/meiju&movie_bt_series/%e7%be%8e%e6%bc%ab/&movie_bt_series/%e8%8b%b1%e5%89%a7&movie_bt_series/xibanyaju&movie_bt_series/hanju",
                     "ico": "https://www.nfyingshi.com/wp-content/themes/mibt/favicon.ico",
                     "url": "https://www.nfyingshi.com"
-                },
-                {
-                    "title": "短剧网",
-                    "vodtype": "逆袭片库&甜宠片库&虐恋片库&穿越片库&重生片库",
-                    "vodhref": "nixi&tianchong&nuelian&chuanyue&chongsheng",
-                    "ico": "https://www.duanju5.com/upload/mxcms/20230623-1/be69977253d0731a11df5f7a99feaf42.png",
-                    "url": "https://www.duanju5.com"
                 },
                 {
                     "title": "去看吧",

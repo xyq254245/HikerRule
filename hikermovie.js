@@ -388,7 +388,7 @@ function hikhmerj() {
                     var url = spl + '/type/'+clsu[i]+'-fypage.html;get;utf-8;{User-Agent@.js:MOBILE_UA&&Cookie@filter_robot_dd=301}';
                 } else if (/jiuku|v\.t-ui|dadou/.test(spl)) {
                     var url = 'hiker://empty' + spl + '/index.php/api/vod?type=' + clsu[i] + '&page=fypage&time=timestam&key=md5key';
-                } else if (/moefun/.test(spl)) {
+                } else if (/moefun|aowu/.test(spl)) {
                     var url = 'hiker://empty' + spl + '/index.php/api/vod?type=' + clsu[i] + '&class=&area=&lang=&version=&state=&letter=&page=fypage&time=timestam&key=md5key';
                 } else if (/fositv/.test(spl)) {
                     var url = spl + '/vod__________________________type/' + clsu[i] + '-fypage.html';
@@ -543,7 +543,7 @@ function hikhmerj() {
                       "Referer": spl
                   }
               });
-        } else if (/moefun/.test(spl)&&html.includes('_guard/auto.js')) {
+        } else if (/moefun|aowu/.test(spl)&&html.includes('_guard/auto.js')) {
             //log(getCookie(MY_URL));
             var cook = "";
             var aa = getCookie(spl);
@@ -993,7 +993,7 @@ function clsrule() {
             }
         });
     };
-    if (/moefun/.test(MY_URL)&&html.includes('_guard/auto.js')) {
+    if (/moefun|aowu/.test(MY_URL)&&html.includes('_guard/auto.js')) {
         //log(getCookie(MY_URL));
         var cook = "";
         var aa = getCookie(MY_URL);
@@ -1177,7 +1177,7 @@ function clsrule() {
             //var url = 'http://api.kunyu77.com/api.php/provide/videoPlaylist?ids=' + list[i].id;
             var url = 'hiker://empty##' + spl + '/api.php/provide##' + list[i].id;
         } else if (/md5key/.test(MY_URL)) {
-            if(/nyafun|moefun/.test(spl)){
+            if(/nyafun|moefun|aowu/.test(spl)){
             var url = spl + '/bangumi/' + list[i].vod_id + '.html';
             }/*else if(/xy1080/.test(spl)){
             var url = spl + '/voddetail/' + list[i].vod_id + '/';
@@ -1325,7 +1325,7 @@ function hiksearch() {
             url = url + '/search-' + spl[2] + '----------fypage---.html';
         } else if (/kankanju/.test(url)) {
             url = url + '/vodsearch'+spl[2]+'/page/fypage.html';
-        } else if (/libvio|moefun/.test(url)) {
+        } else if (/libvio|moefun|aowu/.test(url)) {
             url = url + '/search/' + spl[2] + '----------fypage---.html';
         } else if (/oftens|wwys/.test(url)) {
             url = url + '/oftenssearch/' + spl[2] + '----------fypage---.html';
@@ -1627,7 +1627,7 @@ function hiksearch() {
                                                 }
                                             });
                                         };
-                                        if (/moefun/.test(param.it.url)&&html.includes('_guard/auto.js')) {
+                                        if (/moefun|aowu/.test(param.it.url)&&html.includes('_guard/auto.js')) {
                                             //log(getCookie(MY_URL));
                                             var cook = "";
                                             var aa = getCookie(param.it.url);
@@ -2214,7 +2214,7 @@ function hikseaerji() {
             }
         });
     };
-    if (/moefun/.test(MY_URL)&&html.includes('_guard/auto.js')) {
+    if (/moefun|aowu/.test(MY_URL)&&html.includes('_guard/auto.js')) {
         //log(getCookie(MY_URL));
         var cook = "";
         var aa = getCookie(MY_URL);
@@ -3863,7 +3863,7 @@ function omlazy() {
             return x5rule(jiek + urll, srcurl);
         }
         //大师兄&BD电影&思古&爱迪&极品&迪迪&九州&饭团
-        else if (/dsxys|unss|xifanys|kanju77|vipmv|zjdr\.vip|zhuijudr|cccu|haokanju|yingkuya|98bbw|1090ys|miniku|1080p|ysgc|3443|ak1080|tkznp|4kcz|smdyy|tegouys|lekkan|gfvod|bulei|sbdm|xy1080|moefun|jukankan|cs1369|duanju/.test(myurl)) {
+        else if (/dsxys|unss|xifanys|kanju77|vipmv|zjdr\.vip|zhuijudr|cccu|haokanju|yingkuya|98bbw|1090ys|miniku|1080p|ysgc|3443|ak1080|tkznp|4kcz|smdyy|tegouys|lekkan|gfvod|bulei|sbdm|xy1080|moefun|aowu|jukankan|cs1369|duanju/.test(myurl)) {
             var phtml = fetch(srcurl, {
                 headers: {
                     "accept":"text/html",
