@@ -11,6 +11,15 @@
         ]
     },
     {
+        "name": "牛牛",
+        "hosts": [
+            "qdhdcate"
+        ],
+        "regex": [
+            "#EXTINF.*?\\s+.*?\\/yyv10\\/ts.*?\\.ts"
+        ]
+    },
+    {
         "name": "量子",
         "hosts": [
             "vip.lz",
@@ -19,6 +28,7 @@
         ],
         "regex": [
             "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:7\\.166667,[\\s\\S]*?#EXT-X-DISCONTINUITY",
+            "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:4\\.066667,[\\s\\S]*?#EXT-X-DISCONTINUITY",
             "17.19"
         ]
     },
@@ -35,7 +45,8 @@
             "#EXTINF.*?\\s+.*?1171(057).*?\\.ts",
             "#EXTINF.*?\\s+.*?6d7b(077).*?\\.ts",
             "#EXTINF.*?\\s+.*?6718a(403).*?\\.ts",
-            "17.99"
+            "17.99",
+            "14.45"
         ]
     },
     {
@@ -67,6 +78,16 @@
         ],
         "regex": [
             "15.92"
+        ]
+    },
+    {
+        "name": "1080zyk",
+        "hosts": [
+            "high24-playback",
+            "high20-playback"
+        ],
+        "regex": [
+            "16.63"
         ]
     },
     {
