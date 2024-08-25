@@ -3206,13 +3206,14 @@ function omlazy() {
         }
         //非凡，量子，索尼去广告函数
         function clearM3u8(url) {
-            let f = cacheM3u8(url);
-            let c = readFile(f.split("##")[0]);
-            //非凡，量子，索尼
-            c = c.replace(/#EXTINF.*?\s+.*?1170(20|32).*?\.ts\s+|#EXTINF.*?\s+.*?116977.*?\.ts\s+|#EXTINF.*?\s+.*?1o.*?\.ts\s+|#EXT-X-DISCONTINUITY\r*\n*#EXTINF\:(6\.400000|7\.166667)\,[\s\S]*?#EXT-X-DISCONTINUITY|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+/g,'');
-            //c = c.replace(/#EXT-X-DISCONTINUITY\r*\n*#EXTINF\:(7\.400000|6\.666667)\,[\s\S]*?#EXT-X-DISCONTINUITY|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+|#EXTINF.*?\s+.*?\/video\/original.*?\.ts\s+/g,'');
-            writeFile(f.split("##")[0], c);
-            return f;
+            // let f = cacheM3u8(url);
+            // let c = readFile(f.split("##")[0]);
+            // //非凡，量子，索尼
+            // c = c.replace(/#EXTINF.*?\s+.*?1170(20|32).*?\.ts\s+|#EXTINF.*?\s+.*?116977.*?\.ts\s+|#EXTINF.*?\s+.*?1o.*?\.ts\s+|#EXT-X-DISCONTINUITY\r*\n*#EXTINF\:(6\.400000|7\.166667)\,[\s\S]*?#EXT-X-DISCONTINUITY|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+/g,'');
+            // //c = c.replace(/#EXT-X-DISCONTINUITY\r*\n*#EXTINF\:(7\.400000|6\.666667)\,[\s\S]*?#EXT-X-DISCONTINUITY|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+|#EXTINF.*?\s+.*?\/video\/original.*?\.ts\s+/g,'');
+            // writeFile(f.split("##")[0], c);
+            // return f;
+            return url;
         }
         //资源网yun
         function zywyun(srcurl) {
@@ -3343,22 +3344,23 @@ function omlazy() {
                                         //为新版函数占个坑
                                         if(fy_bridge_app.clearM3u8Ad){
                                          if((urls[i].includes("vip.ffzy")||urls[i].includes("vip.lz")||urls[i].includes("hd.lz")||urls[i].includes(".cdnlz")||urls[i].includes("suonizy")) && urls[i].includes("index.m3u8")&&!urls[i].includes("=http")){
-                                             fy_bridge_app.log("尝试去视频广告");
+                                             //fy_bridge_app.log("尝试去视频广告");
                                              let url = urls[i];
                                              let m3u8 = fba.fetch(url);
                                              if(m3u8.includes('EXT-X-STREAM-INF')){
                                                let houz = m3u8.split("\n")[2];
                                                url = urls[i].replace("index.m3u8",houz);
                                              }
-                                             return fy_bridge_app.parseLazyRule($$$(url).lazyRule(()=>{
-                                                toast('尝试去除视频广告中，请稍等。');
-                                                let f = cacheM3u8(input);
-                                                let c = readFile(f.split("##")[0]);
-                                                c = c.replace(/#EXTINF.*?\s+.*?1170(20|32).*?\.ts\s+|#EXTINF.*?\s+.*?116977.*?\.ts\s+|#EXTINF.*?\s+.*?1o.*?\.ts\s+|#EXT-X-DISCONTINUITY\r*\n*#EXTINF\:(7\.166667|6\.400000)\,[\s\S]*?#EXT-X-DISCONTINUITY|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+/g,'');
-                                                //c = c.replace(/#EXT-X-DISCONTINUITY\r*\n*#EXTINF\:(7\.400000|6\.666667)\,[\s\S]*?#EXT-X-DISCONTINUITY|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+|#EXTINF.*?\s+.*?\/video\/original.*?\.ts\s+/g,'');
-                                                writeFile(f.split("##")[0], c);
-                                                return f;
-                                             }))
+                                             // return fy_bridge_app.parseLazyRule($$$(url).lazyRule(()=>{
+                                                // toast('尝试去除视频广告中，请稍等。');
+                                                // let f = cacheM3u8(input);
+                                                // let c = readFile(f.split("##")[0]);
+                                                // c = c.replace(/#EXTINF.*?\s+.*?1170(20|32).*?\.ts\s+|#EXTINF.*?\s+.*?116977.*?\.ts\s+|#EXTINF.*?\s+.*?1o.*?\.ts\s+|#EXT-X-DISCONTINUITY\r*\n*#EXTINF\:(7\.166667|6\.400000)\,[\s\S]*?#EXT-X-DISCONTINUITY|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+/g,'');
+                                                // //c = c.replace(/#EXT-X-DISCONTINUITY\r*\n*#EXTINF\:(7\.400000|6\.666667)\,[\s\S]*?#EXT-X-DISCONTINUITY|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+|#EXTINF.*?\s+.*?\/video\/original.*?\.ts\s+/g,'');
+                                                // writeFile(f.split("##")[0], c);
+                                                // return f;
+                                             // }));
+                                             return url;
                                          }
                                         }
                                         return fy_bridge_app.getHeaderUrl(urls[i]).replace(";{", "#ignoreImg=true##isVideo=true#;{");
