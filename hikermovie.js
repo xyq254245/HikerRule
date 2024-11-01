@@ -261,14 +261,14 @@ function hikhmrule() {
             d.push({
                 title: '更新规则核心文件',
                 url: $('').lazyRule(() => {
-                    var rulejs = fetch('http://fastgit.cc/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.js', {dns: "152.32.170.60"});
+                    var rulejs = fetch('http://fastgit.cc/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.js', {dns: "https://dns.alidns.com/dns-query"});
                     if (rulejs.search(/lazyRule/) == -1) {
                         rulejs = fetch('https://github.moeyy.xyz/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.js', {});
                     }
                     if (rulejs.search(/lazyRule/) != -1) {
                         writeFile("hiker://files/rules/xyq/hikermovie.js", rulejs);
                     }
-                    var rulejson = fetch('http://fastgit.cc/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.json', {dns: "152.32.170.60"});
+                    var rulejson = fetch('http://fastgit.cc/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.json', {dns: "https://dns.alidns.com/dns-query"});
                     if (rulejson.search(/\"vodhref\"/) == -1) {
                         rulejson = fetch('https://github.moeyy.xyz/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.json', {});
                     }
