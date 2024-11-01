@@ -170,7 +170,7 @@ function hikhmrule() {
             if (md.length > 5) {
                 return 'hiker://home@资源网采集.xyq';
             } else {
-                let rule=request('https://agit.ai/lzk23559/Rulehouse/raw/branch/master/资源网采集口令.txt',{});
+                let rule=request('http://fastgit.cc/https://raw.githubusercontent.com/xyq254245/HikerRule/main/资源网采集口令.txt',{});
                 return rule
             }
         }),
@@ -261,14 +261,14 @@ function hikhmrule() {
             d.push({
                 title: '更新规则核心文件',
                 url: $('').lazyRule(() => {
-                    var rulejs = fetch('https://agit.ai/lzk23559/CloudRule/raw/branch/master/hikermovie.js', {dns: "152.32.170.60"});
+                    var rulejs = fetch('http://fastgit.cc/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.js', {dns: "152.32.170.60"});
                     if (rulejs.search(/lazyRule/) == -1) {
                         rulejs = fetch('https://github.moeyy.xyz/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.js', {});
                     }
                     if (rulejs.search(/lazyRule/) != -1) {
                         writeFile("hiker://files/rules/xyq/hikermovie.js", rulejs);
                     }
-                    var rulejson = fetch('https://agit.ai/lzk23559/CloudRule/raw/branch/master/hikermovie.json', {dns: "152.32.170.60"});
+                    var rulejson = fetch('http://fastgit.cc/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.json', {dns: "152.32.170.60"});
                     if (rulejson.search(/\"vodhref\"/) == -1) {
                         rulejson = fetch('https://github.moeyy.xyz/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.json', {});
                     }
