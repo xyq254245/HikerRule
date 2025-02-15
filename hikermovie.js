@@ -358,7 +358,7 @@ function hikhmerj() {
                     var url = spl + '/show/' + clsu[i] + '--------fypage---.html';
                 } else if (/oftens|wwys/.test(spl)) {
                     var url = spl + '/oftensshow/' + clsu[i] + '--------fypage---.html';
-                } else if (/yanaifei/.test(spl)) {
+                } else if (/netflixgc/.test(spl)) {
                     var url = spl + '/vod/show/' + clsu[i] + '--------fypage---.html';
                 } else if (/nkvod/.test(spl)) {
                     var url = spl + '/show/' + clsu[i] + '--------fypage---.html';
@@ -396,7 +396,7 @@ function hikhmerj() {
                     var url = spl + '/list-select-id-' + clsu[i] + '-type--area--year--star--state--order--p-fypage.html'
                 } else if (/wwgz/.test(spl)) {
                     var url = spl + '/vod-list-id-' + clsu[i] + '-pg-fypage-order--by-time-class-0-year-0-letter--area--lang-.html'
-                } else if (/kanyk/.test(spl)) {
+                } else if (/kykhd/.test(spl)) {
                     var url = spl + '/index.php?m=vod-list-id-'+clsu[i]+'-pg-fypage-order--by-time-class-0-year-0-letter--area--lang-.html'
                 } else if (/bdys|xlys/.test(spl)) {
                     var url = spl + '/s/all/fypage'+clsu[i]
@@ -1339,7 +1339,7 @@ function hiksearch() {
             url = url + '/s-' + spl[2] + '---------fypage.html';
         } else if (/tvyun|vipmv|zjdr\.vip|zhuijudr|9eguoyu/.test(url)) {
             url = url + '/vod/search/page/fypage/wd/' + spl[2] + '.html';
-        } else if (/yanaifei/.test(url)) {
+        } else if (/netflixgc/.test(url)) {
             url = url + '/vod/search/'+spl[2]+'----------fypage---.html';
         } else if (/nkvod/.test(url)) {
             url = url + '/nk/'+spl[2]+'----------fypage---.html';
@@ -1375,7 +1375,7 @@ function hiksearch() {
             url = url + '/vod-search-wd-' + spl[2] + '-p-fypage.html';
         } else if (/wwgz/.test(url)) {
             url = url + '/index.php？？m=vod-search?wd=' + spl[2];
-        } else if (/kanyk/.test(url)) {
+        } else if (/kykhd/.test(url)) {
             url = url + '/index.php?m=vod-search-pg-fypage-wd-'+spl[2]+'.html';
         } else if (/bdys|xlys/.test(url)) {
             url = url + '/search/'+spl[2]+'/fypage';
@@ -3428,7 +3428,7 @@ function omlazy() {
             return "toast://请等待加载选集！";
         } else if (srcurl.indexOf("/share/") != -1) {
             return zywyun(srcurl);
-        } else if (/wwgz|wuwuabc|aiyy|shigys|v\.t-ui|dadou|kanyk|oftens|wwys|nkvod|7xdy/.test(myurl)) {
+        } else if (/wwgz|wuwuabc|aiyy|shigys|v\.t-ui|dadou|kykhd|oftens|wwys|nkvod|7xdy/.test(myurl)) {
             //直接网页嗅探
             return x5rule(srcurl, srcurl);
         } else if(/bdys|xlys|newfii/.test(myurl)){
@@ -3988,7 +3988,7 @@ function omlazy() {
             //结束加接口
         }
         //孤单&TVB云播&追剧
-        else if (/tvyun|9eguoyu|kkju|cokemv|libvio|zxzj|fantuanhd|juhuang|xmaomi|fositv|dianyi\.ng|jiuku|nyafun|1010dy|yanaifei|maolvys/.test(myurl)) {
+        else if (/tvyun|9eguoyu|kkju|cokemv|libvio|zxzj|fantuanhd|juhuang|xmaomi|fositv|dianyi\.ng|jiuku|nyafun|1010dy|netflixgc|maolvys/.test(myurl)) {
             var phtml = fetch(srcurl, {
                 headers: {
                     "User-Agent": MOBILE_UA,

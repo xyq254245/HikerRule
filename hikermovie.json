@@ -14,18 +14,11 @@
                     "url": "https://www.wwgz.cn"
                 },
                 {
-                    "title": "555影视",
-                    "vodtype": "电影&电视剧&动漫&综艺&热门电视剧&港台剧&日韩剧&欧美剧",
-                    "vodhref": "1&2&4&3&13&15&44&45",
-                    "ico": "https://t1.021huaying.com/2022/07/12/88c2f1613357e.png",
-                    "url": "https://wuwuabc.life"
-                },
-                {
                     "title": "TVB云播",
                     "vodtype": "电影&电视剧&综艺&动漫&动作片&喜剧片&爱情片&科幻片&恐怖片&剧情片&战争片&国产剧&港台剧&日韩剧&欧美剧&短剧",
                     "vodhref": "1&2&3&4&6&7&8&9&10&11&12&13&14&15&16&19",
-                    "ico": "http://www.tvyun01.com/logo.png",
-                    "url": "http://www.tvyun01.com"
+                    "ico": "http://www.tvyun06.com/logo.png",
+                    "url": "http://www.tvyun06.com"
                 },
                 {
                     "title": "NyaFun",
@@ -45,8 +38,8 @@
                     "title": "鸭奈飞",
                     "vodtype": "电影&连续剧&综艺&动漫",
                     "vodhref": "1&2&3&4",
-                    "ico": "https://www.yanaifei.tv/upload/mxprocms/20230331-1/1362b3640334c876948d91690f850f80.png",
-                    "url": "https://www.yanaifei.tv"
+                    "ico": "https://www.netflixgc.com/upload/mxprocms/20230331-1/1362b3640334c876948d91690f850f80.png",
+                    "url": "https://www.netflixgc.com"
                 },{
                     "title": "奈落影视",
                     "vodtype": "电影&电视剧&综艺&动漫&动作片&喜剧片&爱情片&科幻片&恐怖片&剧情片&战争片&动画片&国产剧&港台剧&欧美剧&日韩剧&海外剧&国漫&日漫&欧漫&童漫&国产综艺&日韩综艺&欧美综艺&港台综艺",
@@ -80,7 +73,7 @@
                     "vodtype": "电影&连续剧&动漫&日韩剧&欧美剧&即将上线",
                     "vodhref": "1&2&4&15&16&27",
                     "ico": "https://xiaoxiaojia.oss-accelerate.aliyuncs.com/statics/img/favicon.ico",
-                    "url": "https://www.libvio.vip"
+                    "url": "https://www.libvio.fun"
                 },
                 {
                     "title": "影视工场",
@@ -100,8 +93,8 @@
                     "title": "看一看",
                     "vodtype": "电影&连续剧&综艺&动漫&动作片&喜剧片&爱情片&科幻片&恐怖片&剧情片&战争片&纪录片&微电影&惊悚片&悬疑片&国产剧&港台剧&日韩剧&欧美剧&泰剧&海外剧&TV综艺&音乐MV&TV版&电影版&剧场版&国语经典",
                     "vodhref": "1&2&3&4&5&6&7&8&9&10&11&16&18&20&21&12&13&14&15&19&32&26&31&23&24&25&36",
-                    "ico": "https://www.kanyk.net/template/blank/Images/logo.png",
-                    "url": "https://www.kanyk.net"
+                    "ico": "https://www.kykhd.cc/template/blank/Images/logo.png",
+                    "url": "https://www.kykhd.cc"
                 },
                 {
                     "title": "七新电影",
@@ -144,13 +137,6 @@
                     "vodhref": "33&21&50&24&55&51&22",
                     "ico": "https://qkan8.com/klogo.png",
                     "url": "https://qkan8.com"
-                },
-                {
-                    "title": "異世界動漫",
-                    "vodtype": "新番&完结&日剧",
-                    "vodhref": "22&20&21",
-                    "ico": "https://www.sbdm.net/template/conch/asset/img/favicon.png",
-                    "url": "https://www.sbdm.net"
                 },
                 {
                     "title": "动漫巴士",
