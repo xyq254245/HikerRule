@@ -4061,12 +4061,17 @@ function omlazy() {
             } else if (/iframe|line3|line5|lep|ty[\d+]/.test(fro) && /libvio|zxzj/.test(myurl)) {
                 var ifrwy = fetch(urll, {
                     headers: {
-                        "User-Agent": MOBILE_UA,
-                        "Referer": myurl
+                        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36",
+                        'accept': 'text/html',
+                        "Referer": myurl,
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-dest": "iframe"
                     }
                 });
                 //log(ifrwy);
-                let code = ifrwy.match(/var url = '(.*?)'/)[1].split('').reverse().join('')
+                let resultv2 = ifrwy.match(/var result_v2 = {(.*?)};/)[1];
+                let data = JSON.parse('{' + resultv2 + '}').data;
+                let code = data.split('').reverse().join('')
                     let temp = ''
                     for (let i = 0x0; i < code.length; i = i + 0x2) {
                         temp += String.fromCharCode(parseInt(code[i] + code[i + 0x1], 0x10))
