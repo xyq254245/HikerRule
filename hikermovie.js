@@ -1355,9 +1355,11 @@ function hiksearch() {
             url = url + '/index.php/vod/search/page/fypage/wd/' + spl[2] + '.html';
         } else if (/dsxys/.test(url)) {
             url = url + '/sb/kemksmaksdl7nhZe3c1' + spl[2] + '-/page/fypage.html';
-        } else if (/saohuo|shdy3|shdy2|7xdy/.test(url)) {
+        } else if (/saohuo|shdy3|shdy2/.test(url)) {
             url = url + '/s-'+spl[2]+'---------fypage.html';
-        } else if (/lezhutv/.test(url)) {
+        } else if(/7xdy/.test(url)){
+        url=url+'/search.php?page=fypage&searchword='+spl[2]+'&searchtype=';
+        }else if (/lezhutv/.test(url)) {
             url = url + '/search-pg-fypage-wd-'+spl[2]+'.html';
         } else if (/auete|haozhansou/.test(url)) {
             url = url + '/auete4so.php?searchword=' + spl[2];
