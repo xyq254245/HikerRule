@@ -1236,7 +1236,7 @@ function danmufun(src) {
         //var json = JSON.parse(request("https://dmku.byteamone.cn/dmku/?ac=dm&id=" + md5(src.split('"')[0].split('?')[0]).slice(12)+ ' P', {}));
         //https://dmku.byteamone.cn/dmku/?ac=dm&id=45a5b77906d67d0bb261%20P
         //parwix解析弹幕接口
-        var json = JSON.parse(request("https://dmku.thefilehosting.com/?ac=dm&url=" + src.split('"')[0].split('?')[0], {}));
+        var json = JSON.parse(request("https://dmku.hls.one/?ac=dm&url=" + src.split('"')[0].split('?')[0], {}));
         if (json.danmuku) {
             for (let i = 0; i < json.danmuku.length; i++) {
                 danmu.push({
@@ -1273,7 +1273,7 @@ for (var i in realurl) {
             danmufun(src)
             }
             let link = src.split('"')[0].split('?')[0];
-            var jiexik = ['https://jx.jsonplayer.com/player/?url=','https://jx.xyflv.com/?url=','https://jx.quankan.app/?url=','https://jx.xmflv.com/?url=','https://www.pangujiexi.cc/jiexi.php?url='];
+            var jiexik = ['https://yemu.xyz/?url=','https://jx.zui.cm/?url=','https://jx.hls.one/?url=','https://jx.xmflv.com/?url=','https://jx.77flv.cc/?url='];
             let play=[];
             for (var j in jiexik) {
               play.push('video://'+jiexik[j]+link);
