@@ -3607,11 +3607,12 @@ function omlazy() {
                 eval(scrpt.replace(/md5/g, 'CryptoJS').replace('eval', 'var data = '));
                 var UL = data.match(/url:.*?[\'\"](.*?)[\'\"]/)[1];
                 if (UL.search(/\.m3u8|\.mp4/) != -1) {
-                    return singlepush(UL.replace('https://wy', 'http://wy') + "#isVideo=true#" + ';{Referer@' + myurl + '}');
+                    return singlepush(UL.replace('https://wy', 'http://wy') + "#isVideo=true#" + ';{Origin@'+myurl+'&&Cookie@myannoun=1}');
                 } else {
                     return refreshX5WebView(UL)
                 };
             } else {
+                /*
                 var ifrsrc = pdfh(ohtml, "body&&iframe&&src");
                 if(ifrsrc.includes("/Cloud/Down/")){
                     var ifrwy = fetch(ifrsrc, {
@@ -3629,7 +3630,8 @@ function omlazy() {
                     return temp.substring(0x0, (temp.length - 0x7) / 0x2) + temp.substring((temp.length - 0x7) / 0x2 + 0x7);
 
                 }
-                return refreshX5WebView(ifrsrc)
+                return refreshX5WebView(ifrsrc)*/
+                return x5rule(srcurl, srcurl)
             }
         }
         //真不卡影视
