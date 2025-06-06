@@ -374,7 +374,7 @@ function hikhmerj() {
                     var url = spl + '/vod/show/id/' + clsu[i] + '/page/fypage/';
                 } else if (/qkan8|unss/.test(spl)) {
                     var url = spl + '/index.php/vod/type/id/' + clsu[i] + '/page/fypage.html';
-                } else if (/aiyy|bulei|sbdm|shigys/.test(spl)) {
+                } else if (/aiyy|bulei|sbdm|shigys|xxjio/.test(spl)) {
                     var url = spl + '/index.php/vod/show/id/' + clsu[i] + '/page/fypage.html';
                 } else if (/xifanys/.test(spl)) {
                     var url = spl + '/yingpianshow/' + clsu[i] + '--------fypage---.html';
@@ -1353,7 +1353,7 @@ function hiksearch() {
            url = url + '/search.html?wd='+spl[2];
         } else if (/1010dy/.test(url)) {
             url = url + '/search/page/fypage/wd/'+spl[2]+'/';
-        } else if (/qkan8|unss|aiyy|jiuku|shigys|v\.t-ui|bulei|sbdm/.test(url)) {
+        } else if (/qkan8|unss|aiyy|jiuku|shigys|v\.t-ui|bulei|sbdm|xxjio/.test(url)) {
             url = url + '/index.php/vod/search/page/fypage/wd/' + spl[2] + '.html';
         } else if (/dsxys/.test(url)) {
             url = url + '/sb/kemksmaksdl7nhZe3c1' + spl[2] + '-/page/fypage.html';
@@ -3872,7 +3872,7 @@ function omlazy() {
             return x5rule(jiek + urll, srcurl);
         }
         //大师兄&BD电影&思古&爱迪&极品&迪迪&九州&饭团
-        else if (/dsxys|unss|xifanys|kanju77|vipmv|zjdr\.vip|zhuijudr|cccu|haokanju|yingkuya|98bbw|1090ys|miniku|1080p|ysgc|3443|ak1080|tkznp|4kcz|smdyy|tegouys|lekkan|gfvod|bulei|sbdm|xy1080|moefun|aowu|jukankan|cs1369|duanju|dmla/.test(myurl)) {
+        else if (/dsxys|unss|xifanys|kanju77|vipmv|zjdr\.vip|zhuijudr|cccu|haokanju|yingkuya|98bbw|1090ys|miniku|1080p|ysgc|3443|ak1080|tkznp|4kcz|smdyy|tegouys|lekkan|gfvod|bulei|sbdm|xy1080|moefun|aowu|jukankan|cs1369|duanju|dmla|xxjio/.test(myurl)) {
             var phtml = fetch(srcurl, {
                 headers: {
                     "accept":"text/html",
