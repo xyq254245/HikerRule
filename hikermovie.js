@@ -2332,7 +2332,7 @@ function hikseaerji() {
                                 fy_bridge_app.refreshPage(false);
                             }
                         }else if (/nkvod/.test(window.location.host)) {
-                            if (document.querySelector('div.content').innerHTML.indexOf('xqysnkvod') >= 0) {
+                            if (document.querySelector('div.head-search').innerHTML.indexOf('xqysnkvod') >= 0) {
                                 fy_bridge_app.writeFile('hiker://files/rules/xyq/xqyscookie/nkvodcookie.txt', document.cookie);
                                 fy_bridge_app.writeFile('hiker://files/rules/xyq/xqyscookie/耐看点播cookie.txt', document.cookie);
                                 fy_bridge_app.refreshPage(false);
