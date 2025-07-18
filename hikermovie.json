@@ -17,15 +17,8 @@
                     "title": "TVB云播",
                     "vodtype": "电影&电视剧&综艺&动漫&动作片&喜剧片&爱情片&科幻片&恐怖片&剧情片&战争片&国产剧&港台剧&日韩剧&欧美剧&短剧",
                     "vodhref": "1&2&3&4&6&7&8&9&10&11&12&13&14&15&16&19",
-                    "ico": "http://www.tvyun10.com/logo.png",
-                    "url": "http://www.tvyun10.com"
-                },
-                {
-                    "title": "NyaFun",
-                    "vodtype": "新旧番剧&剧场版",
-                    "vodhref": "Ippppw&wppppw",
-                    "ico": "https://www.nyafun.net/image/NyaFun_logo.png",
-                    "url": "https://www.nyafun.net"
+                    "ico": "http://www.viptv03.com//logo.png",
+                    "url": "http://www.viptv03.com/"
                 },
                 {
                     "title": "嗷呜动漫",
