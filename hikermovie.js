@@ -165,24 +165,24 @@ function hikhmrule() {
     d.unshift({
         title: '资源网',
         //url: 'hiker://home@资源网采集.xyq||https://agit.ai/lzk23559/Rulehouse/raw/branch/master/资源网采集口令.txt',
-        url:$('hiker://empty').lazyRule(() => {
+        url: $('hiker://empty').lazyRule(() => {
             var md = fetch("hiker://home@资源网采集.xyq");
             if (md.length > 5) {
                 return 'hiker://home@资源网采集.xyq';
             } else {
-                let rule=request('http://fastgit.cc/https://raw.githubusercontent.com/xyq254245/HikerRule/main/资源网采集口令.txt',{});
+                let rule = request('http://fastgit.cc/https://raw.githubusercontent.com/xyq254245/HikerRule/main/资源网采集口令.txt', {});
                 return rule
             }
         }),
         col_type: 'scroll_button'
     });
-/*
-    d.unshift({
-        title: 'APP影视',
-        url: 'hiker://home@APP影视(P)||https://agit.ai/lzk23559/Rulehouse/raw/branch/master/APP影视口令.txt',
-        col_type: 'scroll_button'
-    });
-*/
+    /*
+        d.unshift({
+            title: 'APP影视',
+            url: 'hiker://home@APP影视(P)||https://agit.ai/lzk23559/Rulehouse/raw/branch/master/APP影视口令.txt',
+            col_type: 'scroll_button'
+        });
+    */
     d.unshift({
         title: '🔍设置' + '(' + (ssmd == 1 ? '聚' + ssxc : '列') + ')',
         url: $('hiker://empty#noRecordHistory#').rule(() => {
@@ -261,14 +261,18 @@ function hikhmrule() {
             d.push({
                 title: '更新规则核心文件',
                 url: $('').lazyRule(() => {
-                    var rulejs = fetch('http://fastgit.cc/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.js', {dns: "https://dns.alidns.com/dns-query"});
+                    var rulejs = fetch('http://fastgit.cc/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.js', {
+                        dns: "https://dns.alidns.com/dns-query"
+                    });
                     if (rulejs.search(/lazyRule/) == -1) {
                         rulejs = fetch('https://github.moeyy.xyz/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.js', {});
                     }
                     if (rulejs.search(/lazyRule/) != -1) {
                         writeFile("hiker://files/rules/xyq/hikermovie.js", rulejs);
                     }
-                    var rulejson = fetch('http://fastgit.cc/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.json', {dns: "https://dns.alidns.com/dns-query"});
+                    var rulejson = fetch('http://fastgit.cc/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.json', {
+                        dns: "https://dns.alidns.com/dns-query"
+                    });
                     if (rulejson.search(/\"vodhref\"/) == -1) {
                         rulejson = fetch('https://github.moeyy.xyz/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.json', {});
                     }
@@ -308,7 +312,7 @@ function hikhmrule() {
 function hikhmerj() {
     var res = {};
     var d = [];
-    let ypj = fetch("hiker://home@云盘君(推送)").length <= 5 ?'云盘君':'云盘君(推送)';
+    let ypj = fetch("hiker://home@云盘君(推送)").length <= 5 ? '云盘君' : '云盘君(推送)';
     var spl = MY_URL.split('$$')[1];
     var pn = MY_URL.split('$$')[2];
     var vtype = MY_URL.split('$$')[3];
@@ -341,7 +345,7 @@ function hikhmerj() {
                 } else if (/zjdr\.vip|zhuijudr/.test(spl)) {
                     var url = spl + '/vodshow/id/' + clsu[i] + '/page/fypage.html';
                 } else if (/fantuanhd/.test(spl)) {
-                    var url = spl + '/type/'+clsu[i]+'-fypage.html';
+                    var url = spl + '/type/' + clsu[i] + '-fypage.html';
                 } else if (/xmaomi/.test(spl)) {
                     var url = spl + '/vod___________________show/' + clsu[i] + '--------fypage---.html';
                 } else if (/saohuo|shdy3|shdy2|zxzj/.test(spl)) {
@@ -358,16 +362,18 @@ function hikhmerj() {
                     var url = spl + '/show/' + clsu[i] + '--------fypage---.html';
                 } else if (/oftens|wwys/.test(spl)) {
                     var url = spl + '/oftensshow/' + clsu[i] + '--------fypage---.html';
-                } /*else if (/netflixgc/.test(spl)) {
-                    var url = spl + '/vod/show/' + clsu[i] + '--------fypage---.html';
-                } */else if (/nkvod/.test(spl)) {
+                }
+                /*else if (/netflixgc/.test(spl)) {
+                                   var url = spl + '/vod/show/' + clsu[i] + '--------fypage---.html';
+                               } */
+                else if (/nkvod/.test(spl)) {
                     var url = spl + '/show/' + clsu[i] + '--------fypage---.html';
                 } else if (/1010dy/.test(spl)) {
-                    var url = spl + '/show/'+clsu[i]+'/page/fypage/';
+                    var url = spl + '/show/' + clsu[i] + '/page/fypage/';
                 } else if (/nyafun/.test(spl)) {
-                    var url = spl + '/show/'+clsu[i]+'/page/fypage.html';
+                    var url = spl + '/show/' + clsu[i] + '/page/fypage.html';
                 } else if (/cs1369/.test(spl)) {
-                    var url = spl + '/show/id/'+clsu[i]+'/page/fypage.html';
+                    var url = spl + '/show/id/' + clsu[i] + '/page/fypage.html';
                 } else if (/viptv/.test(spl)) {
                     var url = spl + '/vod/type/id/' + clsu[i] + '/page/fypage.html';
                 } else if (/maolvys/.test(spl)) {
@@ -387,7 +393,7 @@ function hikhmerj() {
                 } else if (/kanju77/.test(spl)) {
                     var url = spl + '/ve/' + clsu[i] + '-fypage/';
                 } else if (/kankanju/.test(spl)) {
-                    var url = spl + '/type/'+clsu[i]+'-fypage.html;get;utf-8;{User-Agent@.js:MOBILE_UA&&Cookie@filter_robot_dd=301}';
+                    var url = spl + '/type/' + clsu[i] + '-fypage.html;get;utf-8;{User-Agent@.js:MOBILE_UA&&Cookie@filter_robot_dd=301}';
                 } else if (/jiuku|v\.t-ui|dadou/.test(spl)) {
                     var url = 'hiker://empty' + spl + '/index.php/api/vod?type=' + clsu[i] + '&page=fypage&time=timestam&key=md5key';
                 } else if (/moefun|aowu|netflixgc/.test(spl)) {
@@ -398,10 +404,10 @@ function hikhmerj() {
                     var url = spl + '/list-select-id-' + clsu[i] + '-type--area--year--star--state--order--p-fypage.html'
                 } else if (/wwgz/.test(spl)) {
                     var url = spl + '/vod-list-id-' + clsu[i] + '-pg-fypage-order--by-time-class-0-year-0-letter--area--lang-.html'
-                } else if (/kykyy/.test(spl)) {
-                    var url = spl + '/index.php?m=vod-list-id-'+clsu[i]+'-pg-fypage-order--by-time-class-0-year-0-letter--area--lang-.html'
+                } else if (/kykyy|kanyikanys/.test(spl)) {
+                    var url = spl + '/index.php?m=vod-list-id-' + clsu[i] + '-pg-fypage-order--by-time-class-0-year-0-letter--area--lang-.html;get;utf-8;{User-Agent@.js:MOBILE_UA&&Cookie@.js:fetch("hiker://files/rules/xyq/xqyscookie/看一看cookie.txt", {})}'
                 } else if (/bdys|xlys/.test(spl)) {
-                    var url = spl + '/s/all/fypage'+clsu[i]
+                    var url = spl + '/s/all/fypage' + clsu[i]
                 }
 
                 //显示分类
@@ -430,59 +436,60 @@ function hikhmerj() {
                 }
             });
         } else if (/kunyu77|tyun77/.test(spl)) {
-          let qqtime = parseInt(new Date().getTime() / 1000) + '';
-          var html="";
-          if(pn == 1){
-           function shuaxin(qqtime){
-            let qqtok1 = md5("/api.php/provide/getDomainrealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android" +"24010110003"+ qqtime +"android10"+"2.3.6"+ qqtime +"XSpeUFjJ");
-            fetch(spl + "/getDomain?pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
-                headers: {
-                    "User-Agent": "okhttp/3.12.0",
-                    "t": qqtime,
-                    "TK": qqtok1,
-                    "oaid":"b29c7a601c6f0657"
+            let qqtime = parseInt(new Date().getTime() / 1000) + '';
+            var html = "";
+            if (pn == 1) {
+                function shuaxin(qqtime) {
+                    let qqtok1 = md5("/api.php/provide/getDomainrealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android" + "24010110003" + qqtime + "android10" + "2.3.6" + qqtime + "XSpeUFjJ");
+                    fetch(spl + "/getDomain?pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj=" + qqtime, {
+                        headers: {
+                            "User-Agent": "okhttp/3.12.0",
+                            "t": qqtime,
+                            "TK": qqtok1,
+                            "oaid": "b29c7a601c6f0657"
+                        }
+                    });
                 }
-            });
-          }
-          function getvcl(qqtime){
-          let qqtok = md5("/api.php/provide/videoChannelListrealme04ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android010110003"+ qqtime +"android10"+"0" +"2.3.6"+ qqtime +"XSpeUFjJ");
-          html = fetch(spl + "/videoChannelList?type=0&business=0&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
-              headers: {
-                  "User-Agent": "okhttp/3.12.0",
-                  "t": qqtime,
-                  "TK": qqtok,
-                  "oaid":"b29c7a601c6f0657"
-              }
-          });
-          }
-          getvcl(qqtime);
-          if(!html.includes("content")){
-          shuaxin(qqtime);
-          getvcl(qqtime);
-          }
-          }
+
+                function getvcl(qqtime) {
+                    let qqtok = md5("/api.php/provide/videoChannelListrealme04ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android010110003" + qqtime + "android10" + "0" + "2.3.6" + qqtime + "XSpeUFjJ");
+                    html = fetch(spl + "/videoChannelList?type=0&business=0&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj=" + qqtime, {
+                        headers: {
+                            "User-Agent": "okhttp/3.12.0",
+                            "t": qqtime,
+                            "TK": qqtok,
+                            "oaid": "b29c7a601c6f0657"
+                        }
+                    });
+                }
+                getvcl(qqtime);
+                if (!html.includes("content")) {
+                    shuaxin(qqtime);
+                    getvcl(qqtime);
+                }
+            }
         } else {
             if (pn == 1) {
                 //通用取源码
-                if(/kankanju/.test(spl)){
-                  var html = request(spl, {
-                    headers: {
-                        'Cookie': 'filter_robot_dd=301'
-                    }
-                  });
-                }else if(/xy1080|ysgc|jukankan/.test(spl)){
-                var html = request(spl, {
-                    headers: {
-                        'accept': 'text/html'
-                    }
-                  });
-                
-                }else{
-                  var html = request(spl, {});
+                if (/kankanju/.test(spl)) {
+                    var html = request(spl, {
+                        headers: {
+                            'Cookie': 'filter_robot_dd=301'
+                        }
+                    });
+                } else if (/xy1080|ysgc|jukankan/.test(spl)) {
+                    var html = request(spl, {
+                        headers: {
+                            'accept': 'text/html'
+                        }
+                    });
+
+                } else {
+                    var html = request(spl, {});
                 }
             }
         }
-        
+
         if (html.indexOf('检测中') != -1) {
             /*
             let cook = JSON.parse(fetchCookie(spl, {
@@ -506,49 +513,51 @@ function hikhmerj() {
                     "Referer": spl
                 }
             });
-        } else if (html.includes("请稍等5秒钟左右")&&html.includes("提供DDoS防护")){
-          eval(pdfh(html,'head&&script&&Html').split('function')[0]);
-          function loadFunc() {
-              var e = getCookie(spl);
-              //log(e);
-              if (null != e) {
-                  for (var t = e.toString().split(";"), n = "", o = 0; o < t.length; o++) {
-                      var i = (e = t[o].trim()).split("=");
-                      if (2 == i.length && i[0] == cpk) {
-                          n = i[1];
-                          break
-                      }
-                  }
-                  if (0 != n.length) {
-                      for (var a = 0, o = 0; o < n.length; o++) {
-                          var d = n[o];
-                          /^[a-zA-Z0-9]$/.test(d) && (a += n.charCodeAt(o) * (nonce + o))
-                      }
-                      //log("sum=" + a + "&nonce=" + nonce);
-                      let jum = request(spl, {
-                          headers: {
-                              'X-GE-UA-Step': step,
-                              'Referer': spl,
-                              'Cookie': 'ge_ua_p='+n
-                          },
-                          body: "sum=" + a + "&nonce=" + nonce,
-                          method: 'POST'
-                      });
-                      log(jum);
-                  }
-              }
-          }
-          loadFunc();
-          html = request(spl, {
-                  headers: {
-                      "Cookie": getCookie(spl),
-                      "Referer": spl
-                  }
-              });
-        } else if (/moefun|aowu/.test(spl)&&html.includes('_guard/auto.js')) {
+        } else if (html.includes("请稍等5秒钟左右") && html.includes("提供DDoS防护")) {
+            eval(pdfh(html, 'head&&script&&Html').split('function')[0]);
+
+            function loadFunc() {
+                var e = getCookie(spl);
+                //log(e);
+                if (null != e) {
+                    for (var t = e.toString().split(";"), n = "", o = 0; o < t.length; o++) {
+                        var i = (e = t[o].trim()).split("=");
+                        if (2 == i.length && i[0] == cpk) {
+                            n = i[1];
+                            break
+                        }
+                    }
+                    if (0 != n.length) {
+                        for (var a = 0, o = 0; o < n.length; o++) {
+                            var d = n[o];
+                            /^[a-zA-Z0-9]$/.test(d) && (a += n.charCodeAt(o) * (nonce + o))
+                        }
+                        //log("sum=" + a + "&nonce=" + nonce);
+                        let jum = request(spl, {
+                            headers: {
+                                'X-GE-UA-Step': step,
+                                'Referer': spl,
+                                'Cookie': 'ge_ua_p=' + n
+                            },
+                            body: "sum=" + a + "&nonce=" + nonce,
+                            method: 'POST'
+                        });
+                        log(jum);
+                    }
+                }
+            }
+            loadFunc();
+            html = request(spl, {
+                headers: {
+                    "Cookie": getCookie(spl),
+                    "Referer": spl
+                }
+            });
+        } else if (/moefun|aowu/.test(spl) && html.includes('_guard/auto.js')) {
             //log(getCookie(MY_URL));
             var cook = "";
             var aa = getCookie(spl);
+
             function setRet(guard) {
                 let jsf = request(spl + "/_guard/encrypt.js");
                 eval(jsf);
@@ -565,7 +574,7 @@ function hikhmerj() {
                 });
                 cook = "guardret=" + _0x92c9xd.toString();
             }
-    
+
             function t() {
                 //var co = JSON.parse(aa).toString().split("guard=");
                 var co = aa.split("guard=");
@@ -652,7 +661,7 @@ function hikhmerj() {
             var conts = pdfa(html, 'body&&.globalPicList');
         } else if (/gen-movie-img/.test(html) && /public-list-box/.test(html)) {
             var conts = pdfa(html, 'body&&.fadeInUp:has(.gen-movie-img)');
-        }else if (/align-items-center/.test(html) && /card-link/.test(html)) {
+        } else if (/align-items-center/.test(html) && /card-link/.test(html)) {
             var conts = pdfa(html, 'body&&.container:has(.card-link)');
         }
 
@@ -771,12 +780,12 @@ function hikhmerj() {
                 } else {
                     var url = pdfh(list[j], 'a&&href')
                 }
-                
+
                 if (/kankanju/.test(spl)) {
-                   url = url + ';get;utf-8;{User-Agent@.js:MOBILE_UA&&Cookie@filter_robot_dd=301}';
-                }else if(/xy1080|ysgc/.test(spl)){
-                url = url + ';get;utf-8;{User-Agent@.js:MOBILE_UA&&accept@text/html}';
-                } 
+                    url = url + ';get;utf-8;{User-Agent@.js:MOBILE_UA&&Cookie@filter_robot_dd=301}';
+                } else if (/xy1080|ysgc/.test(spl)) {
+                    url = url + ';get;utf-8;{User-Agent@.js:MOBILE_UA&&accept@text/html}';
+                }
 
                 //首页无图的
                 if (!img) {
@@ -784,25 +793,24 @@ function hikhmerj() {
                         title: title,
                         url: ((url.substring(0, 4) == 'http' || url.substring(0, 4) == 'hike') ? url : spl + url) + `@rule=js:eval(fetch('hiker://files/rules/xyq/hikermovie.js'));omerj();`,
                         desc: desc,
-                        extra: { 
-                            longClick: [
-                                {
-                                    title: (ypj)+'搜索', 
-                                    js: $.toString((title,ypj)=>{ 
+                        extra: {
+                            longClick: [{
+                                    title: (ypj) + '搜索',
+                                    js: $.toString((title, ypj) => {
                                         //return 'hiker://search?s=' + title + '&rule='+(ypj.length <= 5 ?'云盘君':'云盘君(推送)')
-                                        return $('hiker://empty#noRecordHistory#').lazyRule((title,ypj)=>{
-                                            return 'hiker://page/soup?p=fypage&rule='+(ypj)+'&pageTitle=搜索 '+title
-                                        },title,ypj);
-                                    
-                                    },title,ypj),
-                                    extra:{
+                                        return $('hiker://empty#noRecordHistory#').lazyRule((title, ypj) => {
+                                            return 'hiker://page/soup?p=fypage&rule=' + (ypj) + '&pageTitle=搜索 ' + title
+                                        }, title, ypj);
+
+                                    }, title, ypj),
+                                    extra: {
                                         pageTitle: "搜索 " + title,
                                         key: title
                                     }
                                 },
                                 {
-                                    title: JSON.parse(getRule()).title+'搜索', 
-                                    js: $.toString((title)=>{ 
+                                    title: JSON.parse(getRule()).title + '搜索',
+                                    js: $.toString((title) => {
                                         //return 'hiker://search?s=' + title + '&rule='+JSON.parse(getRule()).title
                                         var link = 'hiker://empty#noRecordHistory#$$$hiker://files/rules/xyq/hikermovie.json$$$' + title + '$$$fypage$$$';
                                         //log(link);
@@ -811,13 +819,13 @@ function hikhmerj() {
                                             eval(fetch('hiker://files/rules/xyq/hikermovie.js'));
                                             hiksearch();
                                         });
-                                    },title),
-                                    extra:{
+                                    }, title),
+                                    extra: {
                                         pageTitle: "搜索"
                                     }
-                                }       
-                           ],
-                           key: title
+                                }
+                            ],
+                            key: title
                         },
                         col_type: 'text_center_1'
                     });
@@ -836,28 +844,30 @@ function hikhmerj() {
                     d.push({
                         title: title,
                         //url: ((url.substring(0, 4) == 'http' || url.substring(0, 4) == 'hike') ? url : spl + url) + `@rule=js:eval(fetch('hiker://files/rules/xyq/hikermovie.js'));omerj();`,
-                        url:$(((url.substring(0, 4) == 'http' || url.substring(0, 4) == 'hike') ? url : spl + url)).rule((MOVtitle)=>{eval(fetch('hiker://files/rules/xyq/hikermovie.js'));omerj();},title),
+                        url: $(((url.substring(0, 4) == 'http' || url.substring(0, 4) == 'hike') ? url : spl + url)).rule((MOVtitle) => {
+                            eval(fetch('hiker://files/rules/xyq/hikermovie.js'));
+                            omerj();
+                        }, title),
                         pic_url: tup,
                         desc: desc,
-                        extra: { 
-                            longClick: [
-                                {
-                                    title: (ypj)+'搜索', 
-                                    js: $.toString((title,ypj)=>{ 
+                        extra: {
+                            longClick: [{
+                                    title: (ypj) + '搜索',
+                                    js: $.toString((title, ypj) => {
                                         //return 'hiker://search?s=' + title + '&rule='+(ypj.length <= 5 ?'云盘君':'云盘君(推送)')
-                                        return $('hiker://empty#noRecordHistory#').lazyRule((title,ypj)=>{
-                                            return 'hiker://page/soup?p=fypage&rule='+(ypj)+'&pageTitle=搜索 '+title
-                                        },title,ypj);
-                                    
-                                    },title,ypj),
-                                    extra:{
+                                        return $('hiker://empty#noRecordHistory#').lazyRule((title, ypj) => {
+                                            return 'hiker://page/soup?p=fypage&rule=' + (ypj) + '&pageTitle=搜索 ' + title
+                                        }, title, ypj);
+
+                                    }, title, ypj),
+                                    extra: {
                                         pageTitle: "搜索 " + title,
                                         key: title
                                     }
                                 },
                                 {
-                                    title: JSON.parse(getRule()).title+'搜索', 
-                                    js: $.toString((title)=>{ 
+                                    title: JSON.parse(getRule()).title + '搜索',
+                                    js: $.toString((title) => {
                                         //return 'hiker://search?s=' + title + '&rule='+JSON.parse(getRule()).title
                                         var link = 'hiker://empty#noRecordHistory#$$$hiker://files/rules/xyq/hikermovie.json$$$' + title + '$$$fypage$$$';
                                         //log(link);
@@ -866,13 +876,13 @@ function hikhmerj() {
                                             eval(fetch('hiker://files/rules/xyq/hikermovie.js'));
                                             hiksearch();
                                         });
-                                    },title),
-                                    extra:{
+                                    }, title),
+                                    extra: {
                                         pageTitle: "搜索"
                                     }
-                                }       
-                           ],
-                           key: title
+                                }
+                            ],
+                            key: title
                         },
                         col_type: 'movie_3_marquee'
                     });
@@ -891,29 +901,33 @@ function clsrule() {
     var res = {};
     var d = [];
     var html = getResCode();
-    let ypj = fetch("hiker://home@云盘君(推送)").length <= 5 ?'云盘君':'云盘君(推送)';
+    let ypj = fetch("hiker://home@云盘君(推送)").length <= 5 ? '云盘君' : '云盘君(推送)';
     var timesta = parseInt(new Date().getTime() / 1000) + '';
     var md5k = md5("DS" + timesta + "DCC147D11943AF75");
     if (/md5key/.test(MY_URL)) {
         MY_URL = getResCode();
         var spll = MY_URL.match(/([\S]*?:\/\/[\S]*?)\//)[1];
         html = request(spll + '/index.php/api/vod', {
-            headers:{'accept':'text/html','referer':spll,'x-requested-with':'XMLHttpRequest'},
+            headers: {
+                'accept': 'text/html',
+                'referer': spll,
+                'x-requested-with': 'XMLHttpRequest'
+            },
             body: MY_URL.split('vod?')[1].replace('timestam', timesta).replace('md5key', md5k),
             method: 'POST',
             timeout: 3000
         });
-    }else if(/kunyu77|tyun77/.test(MY_URL)){
+    } else if (/kunyu77|tyun77/.test(MY_URL)) {
         MY_URL = getResCode();
-        let tid=MY_URL.split("&rate")[0].split("channel=")[1];
+        let tid = MY_URL.split("&rate")[0].split("channel=")[1];
         let qqtime = parseInt(new Date().getTime() / 1000) + '';
-        let qqtok = md5("/go/playtoprealme"+tid+"4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android"+ MY_PAGE +"21010110003"+ qqtime +"android102.3.6"+ qqtime +"XSpeUFjJ");
-        var html = fetch(MY_URL.replace("/api.php/provide","/go") + "&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
+        let qqtok = md5("/go/playtoprealme" + tid + "4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android" + MY_PAGE + "21010110003" + qqtime + "android102.3.6" + qqtime + "XSpeUFjJ");
+        var html = fetch(MY_URL.replace("/api.php/provide", "/go") + "&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj=" + qqtime, {
             headers: {
                 "User-Agent": "okhttp/3.12.0",
                 "t": qqtime,
                 "TK": qqtok,
-                "oaid":"b29c7a601c6f0657"
+                "oaid": "b29c7a601c6f0657"
             }
         });
     }
@@ -948,7 +962,7 @@ function clsrule() {
         });
     };
     //点击按钮进入分类
-    if (html.includes('js=click_html')||html.includes('_guard/auto.js')) {
+    if (html.includes('js=click_html') || html.includes('_guard/auto.js')) {
         //log(getCookie(MY_URL));
         var _0x486ax7 = {
             "x": 616,
@@ -995,10 +1009,11 @@ function clsrule() {
             }
         });
     };
-    if (/moefun|aowu/.test(MY_URL)&&html.includes('_guard/auto.js')) {
+    if (/moefun|aowu/.test(MY_URL) && html.includes('_guard/auto.js')) {
         //log(getCookie(MY_URL));
         var cook = "";
         var aa = getCookie(MY_URL);
+
         function setRet(guard) {
             let jsf = request(spl + "/_guard/encrypt.js");
             eval(jsf);
@@ -1036,268 +1051,290 @@ function clsrule() {
             }
         });
     };
-    //else{
-    //取分类片单列表
-    if (/kunyu77|tyun77/.test(MY_URL)) {
-        var list = JSON.parse(html).data.list;
-    } else if (/md5key/.test(MY_URL)) {
-        var list = JSON.parse(html).list;
-    } else if (/czzzu|czys|cz01|czzy|magedn|subaibai|nfyingshi/.test(MY_URL)) {
-        var list = pdfa(html, '.bt_img&&li');
-    } else if (/myui-vodlist/.test(html) && /pic-tag|pic-text/.test(html)) {
-        var list = pdfa(html, ".myui-vodlist&&li:has(a)");
-    } else if (/stui-vodlist/.test(html) && /pic-text|pic-tag|<\/em>/.test(html)) {
-        var list = pdfa(html, ".stui-vodlist&&li:has(a)");
-    } else if (/stui-vodlist/.test(html) && /stui-vodlist__detail/.test(html)) {
-        var list = pdfa(html, ".stui-vodlist&&li:has(a)");
-    } else if (/ewave-vodlist/.test(html) && /ewave-vodlist__detail/.test(html)) {
-        var list = pdfa(html, ".ewave-vodlist&&li:has(a)");
-    } else if (/vodlist/.test(html) && /pack-ykpack/.test(html)) {
-        var list = pdfa(html, '.vodlist&&.pack-ykpack');
-    } else if (/vodlist/.test(html) && /vodlist_item/.test(html)) {
-        var list = pdfa(html, ".vodlist&&li");
-    } else if (/mo-part-round/.test(html) && /mo-situ-name/.test(html)) {
-        var list = pdfa(html, 'body&&.mo-part-round:has(.mo-situ-name)&&.mo-cols-info');
-    } else if (/mo-main-foot/.test(html) && /mo-list-wrap/.test(html)) {
-        var list = pdfa(html, 'body&&.mo-list-wrap:has(.mo-lazy-play)&&li');
-    } else if (/fed-list-info/.test(html)) {
-        var list = pdfa(html, '.fed-list-info&&li');
-    } else if (/list-unstyled/.test(html)) {
-        var list = pdfa(html, '.list-unstyled:has(.continu)&&li');
-    } else if (/row-cards/.test(html) && /card-link/.test(html)) {
-        var list = pdfa(html, '.row-cards&&.card');
-    } else if (/cards/.test(html) && /card/.test(html)) {
-        var list = pdfa(html, '.cards&&.card');
-    } else if (/class\=\"v_list/.test(html)) {
-        var list = pdfa(html, '.v_list&&li:has(a)');
-    } else if (/leo-video-item/.test(html)) {
-        var list = pdfa(html, 'body&&.leo-video-item');
-    } else if (/hy-video-list/.test(html) && /col-sm-3/.test(html)) {
-        var list = pdfa(html, '.hy-video-list&&.col-sm-3');
-    } else if (/hl-vod-list/.test(html) && /hl-list-item/.test(html)) {
-        var list = pdfa(html, '.hl-vod-list&&.hl-list-item');
-    } else if (/box-video-list/.test(html) && /col-sm-3/.test(html)) {
-        var list = pdfa(html, '.box-video-list&&.col-sm-3');
-    } else if (/forum_card_fid/.test(html) && /threadlist/.test(html)) {
-        var list = pdfa(html, 'body&&.threadlist&&li');
-    } else if (/index-area/.test(html) && /link-hover/.test(html)) {
-        var list = pdfa(html, 'body&&.main&&li:has(.link-hover)');
-    } else if (/search-class-list-common/.test(html) && /search-class-list-li/.test(html)) {
-        var list = pdfa(html, 'body&&.search-class-list-common&&li');
-    } else if (/module-list/.test(html) && /module-item/.test(html)) {
-        var list = pdfa(html, 'body&&.module-item');
-    } else if (/module-items/.test(html) && /module-poster-item-info/.test(html)) {
-        var list = pdfa(html, 'body&&.module-poster-item.module-item');
-    } else if (/module-class-items/.test(html) && /module-poster-item/.test(html)) {
-        var list = pdfa(html, 'body&&.module-item');
-    } else if (/menuBar/.test(html) && /movie-item/.test(html)) {
-        var list = pdfa(html, 'body&&.movie-item');
-    } else if (/data_list/.test(html) && /DianDian/.test(html)) {
-        var list = pdfa(html, 'body&&#data_list&&.DianDian');
-    } else if (/tbox_m2/.test(html) && /tbox_t/.test(html)) {
-        var list = pdfa(html, 'body&&.tbox_m2&&li');
-    } else if (/tbox_m/.test(html) && /tbox_t/.test(html)) {
-        var list = pdfa(html, 'body&&.tbox_m&&li');
-    } else if (/vod_list/.test(html) && /common-action/.test(html)) {
-        var list = pdfa(html, 'body&&#vod_list&&li');
-    } else if (/volistheightb/.test(html) && /volistwidthb/.test(html)) {
-        var list = pdfa(html, 'body&&.volistwidthb');
-    } else if (/resize_list/.test(html) && /globalPicList/.test(html)) {
-        var list = pdfa(html, '.globalPicList&&li');
-    } else if (/public-list-button/.test(html) && /public-list-box/.test(html)) {
-        var list = pdfa(html, '.list-vod||.border-box&&.public-list-box');
-    }
-    //setError(list.length);
-
-    for (var i = 0; i < list.length; i++) {
-        //图片
-        try {
-            if (/auete|haozhansou|wwgz|bdys|xlys/.test(MY_URL)) {
-                var img = pdfh(list[i], 'img&&src||data-echo');
-            } else if (/kunyu77|tyun77/.test(MY_URL)) {
-                var img = list[i].videoCover;
-            } else if (/md5key/.test(MY_URL)) {
-                var img = list[i].vod_pic.replace('mac://', 'https://');
-            } else if (/module-list/.test(html) && /module-item/.test(html)) {
-                var img = pdfh(list[i], ".lazyloaded||.lazyload||.lazy&&data-src||data-6.66a.vipal");
-            } else if (/vbox/.test(list[i]) && /vbox_t/.test(list[i])) {
-                var img = pdfh(list[i], "a&&style||data-6.66a.vipal");
-            } else {
-                var img = pd(list[i], '.lazy||.lazyload||.lazyloaded||.mo-situ-pics||.mo-lazy-load||.fed-list-pics||.img-responsive||.eclazy||.video-pic||.hl-lazy||.leo-lazy&&data-6.66a.vipal||data-src||data-bg||data-original');
+    if (html.includes('系统安全验证') && html.includes('mac_verify_img') && /kykyy|kanyikanys/.test(MY_URL)) {
+        d.push({
+            title: '',
+            desc: '100%&&float',
+            url: MY_URL,
+            col_type: 'x5_webview_single',
+            extra: {
+                ua: MOBILE_UA,
+                js: $.toString(() => {
+                    if (document.querySelector('div.main').innerHTML.indexOf('首页') >= 0) {
+                        fba.writeFile('hiker://files/rules/xyq/xqyscookie/看一看cookie.txt', fba.getCookie(window.location.href));
+                        //alert('搜索Cookie获取成功，点击确定后将刷新本页面。'),
+                        fba.refreshPage(false);
+                    }
+                })
             }
-            if (img.substring(0, 4) == 'http') {
-                img = img;
-            } else {
-                img = spl + img
-            }
-        } catch (e) {}
-
-        //描述
-        try {
-            if (/class="jidi"|class="hdinfo"|class="qr"/.test(list[i])) {
-                var desc = pdfh(list[i], '.jidi||.hdinfo||.qr&&Text');
-            } else if (/kunyu77|tyun77/.test(MY_URL)) {
-                var desc = list[i].msg;
-            } else if (/md5key/.test(MY_URL)) {
-                var desc = list[i].vod_remarks;
-            } else if (/class="type"|class="time"/.test(list[i])) {
-                var typ = pdfh(list[i], '.type&&Text');
-                var tim = pdfh(list[i], '.time&&Text');
-                var desc = typ + ' ' + tim;
-            } else if (/module-item-text/.test(list[i]) && /module-item-caption/.test(list[i])) {
-                var desc = pdfh(list[i], '.module-item-text&&Text');
-            } else if (/mo-lazy-wind/.test(list[i]) && /dc-west/.test(list[i])) {
-                var desc = pdfh(list[i], '.dc-west&&Text');
-            } else {
-                var desc = pdfh(list[i], '.pic-text||.pic_text||.mo-situ-rema||.fed-list-remarks||.continu||.newname||.v_note||.pack-prb||.note||.pic-tag-left||.pic-tag-top||.hl-pic-text||.hdtag||.other||.zhuangtai||.module-item-text||.module-item-caption||.module-item-note||.list-remarks||.sBottom||.public-list-prb||.ribbon-bookmark||span&&Text');
-            }
-        } catch (e) {}
-
-        //标题
-        if (/czzzu|czys|cz01|czzy|magedn|subaibai|nfyingshi|renrenmi|bdys|xlys/.test(MY_URL)) {
-            var title = pdfh(list[i], "h3&&Text");
-        } else if (/kunyu77|tyun77/.test(MY_URL)) {
-            var title = list[i].title;
-        } else if (/md5key/.test(MY_URL)) {
-            var title = list[i].vod_name;
-        } else if (/mo-situ-name/.test(list[i])) {
-            var title = pdfh(list[i], '.mo-situ-name&&Text');
-        } else if (/fed-list-title/.test(list[i])) {
-            var title = pdfh(list[i], '.fed-list-title&&Text');
-        } else if (/ff-text-right|cell_imform|zoomOverlay|mo-lazy-wind/.test(list[i])) {
-            var title = pdfh(list[i], 'img&&alt');
-        } else if (/video-model-title/.test(list[i])) {
-            var title = pdfh(list[i], '.video-model-title&&Text');
-        } else if (/txtA/.test(list[i])) {
-            var title = pdfh(list[i], '.txtA&&Text');
-        } else {
-            var title = pdfh(list[i], 'a[title]&&title');
-        }
-
-        //链接
+        });
+    } else {
+        refreshX5WebView("");
+        //取分类片单列表
         if (/kunyu77|tyun77/.test(MY_URL)) {
-            //var url = 'http://api.kunyu77.com/api.php/provide/videoPlaylist?ids=' + list[i].id;
-            var url = 'hiker://empty##' + spl + '/api.php/provide##' + list[i].id;
+            var list = JSON.parse(html).data.list;
         } else if (/md5key/.test(MY_URL)) {
-            if(/nyafun|moefun|aowu/.test(spl)){
-            var url = spl + '/bangumi/' + list[i].vod_id + '.html';
-            }else if(/netflixgc/.test(spl)){
-            var url = spl + '/detail/' + list[i].vod_id + '.html';
-            }else{
-            var url = spl + '/index.php/vod/detail/id/' + list[i].vod_id + '.html';
-            }
-        } else if (/hgyx/.test(spl)) {
-            var zykurl = pdfh(list[i], "a&&href");
-            var url = spl + zykurl.replace('/detail/', '/play/').replace('.html', '/sid/1/nid/1.html');
-        } else {
-            var url = pd(list[i], 'a&&href');
+            var list = JSON.parse(html).list;
+        } else if (/czzzu|czys|cz01|czzy|magedn|subaibai|nfyingshi/.test(MY_URL)) {
+            var list = pdfa(html, '.bt_img&&li');
+        } else if (/myui-vodlist/.test(html) && /pic-tag|pic-text/.test(html)) {
+            var list = pdfa(html, ".myui-vodlist&&li:has(a)");
+        } else if (/stui-vodlist/.test(html) && /pic-text|pic-tag|<\/em>/.test(html)) {
+            var list = pdfa(html, ".stui-vodlist&&li:has(a)");
+        } else if (/stui-vodlist/.test(html) && /stui-vodlist__detail/.test(html)) {
+            var list = pdfa(html, ".stui-vodlist&&li:has(a)");
+        } else if (/ewave-vodlist/.test(html) && /ewave-vodlist__detail/.test(html)) {
+            var list = pdfa(html, ".ewave-vodlist&&li:has(a)");
+        } else if (/vodlist/.test(html) && /pack-ykpack/.test(html)) {
+            var list = pdfa(html, '.vodlist&&.pack-ykpack');
+        } else if (/vodlist/.test(html) && /vodlist_item/.test(html)) {
+            var list = pdfa(html, ".vodlist&&li");
+        } else if (/mo-part-round/.test(html) && /mo-situ-name/.test(html)) {
+            var list = pdfa(html, 'body&&.mo-part-round:has(.mo-situ-name)&&.mo-cols-info');
+        } else if (/mo-main-foot/.test(html) && /mo-list-wrap/.test(html)) {
+            var list = pdfa(html, 'body&&.mo-list-wrap:has(.mo-lazy-play)&&li');
+        } else if (/fed-list-info/.test(html)) {
+            var list = pdfa(html, '.fed-list-info&&li');
+        } else if (/list-unstyled/.test(html)) {
+            var list = pdfa(html, '.list-unstyled:has(.continu)&&li');
+        } else if (/row-cards/.test(html) && /card-link/.test(html)) {
+            var list = pdfa(html, '.row-cards&&.card');
+        } else if (/cards/.test(html) && /card/.test(html)) {
+            var list = pdfa(html, '.cards&&.card');
+        } else if (/class\=\"v_list/.test(html)) {
+            var list = pdfa(html, '.v_list&&li:has(a)');
+        } else if (/leo-video-item/.test(html)) {
+            var list = pdfa(html, 'body&&.leo-video-item');
+        } else if (/hy-video-list/.test(html) && /col-sm-3/.test(html)) {
+            var list = pdfa(html, '.hy-video-list&&.col-sm-3');
+        } else if (/hl-vod-list/.test(html) && /hl-list-item/.test(html)) {
+            var list = pdfa(html, '.hl-vod-list&&.hl-list-item');
+        } else if (/box-video-list/.test(html) && /col-sm-3/.test(html)) {
+            var list = pdfa(html, '.box-video-list&&.col-sm-3');
+        } else if (/forum_card_fid/.test(html) && /threadlist/.test(html)) {
+            var list = pdfa(html, 'body&&.threadlist&&li');
+        } else if (/index-area/.test(html) && /link-hover/.test(html)) {
+            var list = pdfa(html, 'body&&.main&&li:has(.link-hover)');
+        } else if (/search-class-list-common/.test(html) && /search-class-list-li/.test(html)) {
+            var list = pdfa(html, 'body&&.search-class-list-common&&li');
+        } else if (/module-list/.test(html) && /module-item/.test(html)) {
+            var list = pdfa(html, 'body&&.module-item');
+        } else if (/module-items/.test(html) && /module-poster-item-info/.test(html)) {
+            var list = pdfa(html, 'body&&.module-poster-item.module-item');
+        } else if (/module-class-items/.test(html) && /module-poster-item/.test(html)) {
+            var list = pdfa(html, 'body&&.module-item');
+        } else if (/menuBar/.test(html) && /movie-item/.test(html)) {
+            var list = pdfa(html, 'body&&.movie-item');
+        } else if (/data_list/.test(html) && /DianDian/.test(html)) {
+            var list = pdfa(html, 'body&&#data_list&&.DianDian');
+        } else if (/tbox_m2/.test(html) && /tbox_t/.test(html)) {
+            var list = pdfa(html, 'body&&.tbox_m2&&li');
+        } else if (/tbox_m/.test(html) && /tbox_t/.test(html)) {
+            var list = pdfa(html, 'body&&.tbox_m&&li');
+        } else if (/vod_list/.test(html) && /common-action/.test(html)) {
+            var list = pdfa(html, 'body&&#vod_list&&li');
+        } else if (/volistheightb/.test(html) && /volistwidthb/.test(html)) {
+            var list = pdfa(html, 'body&&.volistwidthb');
+        } else if (/resize_list/.test(html) && /globalPicList/.test(html)) {
+            var list = pdfa(html, '.globalPicList&&li');
+        } else if (/public-list-button/.test(html) && /public-list-box/.test(html)) {
+            var list = pdfa(html, '.list-vod||.border-box&&.public-list-box');
         }
-        if(/xy1080|ysgc/.test(spl)){
-          url = url + ';get;utf-8;{User-Agent@.js:MOBILE_UA&&accept@text/html}';
-        }
-        //分类片单无图的
-        if (!img) {
-            d.push({
-                title: title,
-                //url: ((url.substring(0, 4) == 'http' || url.substring(0, 4) == 'hike') ? url : spl + url) + `@rule=js:eval(fetch('hiker://files/rules/xyq/hikermovie.js'));omerj();`,
-                url:$(((url.substring(0, 4) == 'http' || url.substring(0, 4) == 'hike') ? url : spl + url)).rule((MOVtitle)=>{eval(fetch('hiker://files/rules/xyq/hikermovie.js'));omerj();},title),
-                desc: desc,
-                extra: { 
-                        longClick: [
-                            {
-                                title: (ypj)+'搜索', 
-                                js: $.toString((title,ypj)=>{ 
-                                    //return 'hiker://search?s=' + title + '&rule='+(ypj.length <= 5 ?'云盘君':'云盘君(推送)')
-                                    return $('hiker://empty#noRecordHistory#').lazyRule((title,ypj)=>{
-                                        return 'hiker://page/soup?p=fypage&rule='+(ypj)+'&pageTitle=搜索 '+title
-                                    },title,ypj);
-                                
-                                },title,ypj),
-                                extra:{
-                                    pageTitle: "搜索 " + title,
-                                    key: title
-                                }
-                            },
-                            {
-                                title: JSON.parse(getRule()).title+'搜索', 
-                                js: $.toString((title)=>{ 
-                                    //return 'hiker://search?s=' + title + '&rule='+JSON.parse(getRule()).title
-                                    var link = 'hiker://empty#noRecordHistory#$$$hiker://files/rules/xyq/hikermovie.json$$$' + title + '$$$fypage$$$';
-                                    //log(link);
-                                    return $(link).rule(() => {
-                                        setPageTitle('搜索');
-                                        eval(fetch('hiker://files/rules/xyq/hikermovie.js'));
-                                        hiksearch();
-                                    });
-                                },title),
-                                extra:{
-                                    pageTitle: "搜索"
-                                }
-                            }       
-                       ],
-                       key: title
-                },
-                col_type: 'text_center_1'
-            });
-        }
-        //分类片单有图的
-        else {
-            if (/imgdb/.test(img)) {
-                var tup = img + '@Referer=';
-            } else if (/cocomanga/.test(spl)) {
-                var tup = img + '@Referer=' + spl + '@User-Agent=' + MOBILE_UA;
-            } else if (/look4you/.test(img)) {
-                var tup = img + '@Referer=' + spl;
-            } else {
-                var tup = img + '@Referer=' + img
-            }
-            d.push({
-                title: title,
-                pic_url: tup,
-                desc: desc,
-                //url: ((url.substring(0, 4) == 'http' || url.substring(0, 4) == 'hike') ? url : spl + url) + `@rule=js:eval(fetch('hiker://files/rules/xyq/hikermovie.js'));omerj();`,
-                url:$(((url.substring(0, 4) == 'http' || url.substring(0, 4) == 'hike') ? url : spl + url)).rule((MOVtitle)=>{eval(fetch('hiker://files/rules/xyq/hikermovie.js'));omerj();},title),
-                extra: { 
-                        longClick: [
-                            {
-                                title: (ypj)+'云搜索', 
-                                js: $.toString((title,ypj)=>{ 
-                                    //return 'hiker://search?s=' + title + '&rule='+(ypj.length <= 5 ?'云盘君':'云盘君(推送)')
-                                    return $('hiker://empty#noRecordHistory#').lazyRule((title,ypj)=>{
-                                        return 'hiker://page/soup?p=fypage&rule='+(ypj)+'&pageTitle=搜索 '+title
-                                    },title,ypj);
-                                
-                                },title,ypj),
-                                extra:{
-                                    pageTitle: "搜索 " + title,
-                                    key: title
-                                }
-                            },
-                            {
-                                title: JSON.parse(getRule()).title+'搜索', 
-                                js: $.toString((title)=>{ 
-                                    //return 'hiker://search?s=' + title + '&rule='+JSON.parse(getRule()).title
-                                    var link = 'hiker://empty#noRecordHistory#$$$hiker://files/rules/xyq/hikermovie.json$$$' + title + '$$$fypage$$$';
-                                    //log(link);
-                                    return $(link).rule(() => {
-                                        setPageTitle('搜索');
-                                        eval(fetch('hiker://files/rules/xyq/hikermovie.js'));
-                                        hiksearch();
-                                    });
-                                },title),
-                                extra:{
-                                    pageTitle: "搜索"
-                                }
-                            }       
-                       ],
-                       key: title
-                },
-                col_type: 'movie_3_marquee'
-            });
-        }
+        //setError(list.length);
 
+        for (var i = 0; i < list.length; i++) {
+            //图片
+            try {
+                if (/auete|haozhansou|wwgz|bdys|xlys/.test(MY_URL)) {
+                    var img = pdfh(list[i], 'img&&src||data-echo');
+                } else if (/kunyu77|tyun77/.test(MY_URL)) {
+                    var img = list[i].videoCover;
+                } else if (/md5key/.test(MY_URL)) {
+                    var img = list[i].vod_pic.replace('mac://', 'https://');
+                } else if (/module-list/.test(html) && /module-item/.test(html)) {
+                    var img = pdfh(list[i], ".lazyloaded||.lazyload||.lazy&&data-src||data-6.66a.vipal");
+                } else if (/vbox/.test(list[i]) && /vbox_t/.test(list[i])) {
+                    var img = pdfh(list[i], "a&&style||data-6.66a.vipal");
+                } else {
+                    var img = pd(list[i], '.lazy||.lazyload||.lazyloaded||.mo-situ-pics||.mo-lazy-load||.fed-list-pics||.img-responsive||.eclazy||.video-pic||.hl-lazy||.leo-lazy&&data-6.66a.vipal||data-src||data-bg||data-original');
+                }
+                if (img.substring(0, 4) == 'http') {
+                    img = img;
+                } else {
+                    img = spl + img
+                }
+            } catch (e) {}
+
+            //描述
+            try {
+                if (/class="jidi"|class="hdinfo"|class="qr"/.test(list[i])) {
+                    var desc = pdfh(list[i], '.jidi||.hdinfo||.qr&&Text');
+                } else if (/kunyu77|tyun77/.test(MY_URL)) {
+                    var desc = list[i].msg;
+                } else if (/md5key/.test(MY_URL)) {
+                    var desc = list[i].vod_remarks;
+                } else if (/class="type"|class="time"/.test(list[i])) {
+                    var typ = pdfh(list[i], '.type&&Text');
+                    var tim = pdfh(list[i], '.time&&Text');
+                    var desc = typ + ' ' + tim;
+                } else if (/module-item-text/.test(list[i]) && /module-item-caption/.test(list[i])) {
+                    var desc = pdfh(list[i], '.module-item-text&&Text');
+                } else if (/mo-lazy-wind/.test(list[i]) && /dc-west/.test(list[i])) {
+                    var desc = pdfh(list[i], '.dc-west&&Text');
+                } else {
+                    var desc = pdfh(list[i], '.pic-text||.pic_text||.mo-situ-rema||.fed-list-remarks||.continu||.newname||.v_note||.pack-prb||.note||.pic-tag-left||.pic-tag-top||.hl-pic-text||.hdtag||.other||.zhuangtai||.module-item-text||.module-item-caption||.module-item-note||.list-remarks||.sBottom||.public-list-prb||.ribbon-bookmark||span&&Text');
+                }
+            } catch (e) {}
+
+            //标题
+            if (/czzzu|czys|cz01|czzy|magedn|subaibai|nfyingshi|renrenmi|bdys|xlys/.test(MY_URL)) {
+                var title = pdfh(list[i], "h3&&Text");
+            } else if (/kunyu77|tyun77/.test(MY_URL)) {
+                var title = list[i].title;
+            } else if (/md5key/.test(MY_URL)) {
+                var title = list[i].vod_name;
+            } else if (/mo-situ-name/.test(list[i])) {
+                var title = pdfh(list[i], '.mo-situ-name&&Text');
+            } else if (/fed-list-title/.test(list[i])) {
+                var title = pdfh(list[i], '.fed-list-title&&Text');
+            } else if (/ff-text-right|cell_imform|zoomOverlay|mo-lazy-wind/.test(list[i])) {
+                var title = pdfh(list[i], 'img&&alt');
+            } else if (/video-model-title/.test(list[i])) {
+                var title = pdfh(list[i], '.video-model-title&&Text');
+            } else if (/txtA/.test(list[i])) {
+                var title = pdfh(list[i], '.txtA&&Text');
+            } else {
+                var title = pdfh(list[i], 'a[title]&&title');
+            }
+
+            //链接
+            if (/kunyu77|tyun77/.test(MY_URL)) {
+                //var url = 'http://api.kunyu77.com/api.php/provide/videoPlaylist?ids=' + list[i].id;
+                var url = 'hiker://empty##' + spl + '/api.php/provide##' + list[i].id;
+            } else if (/md5key/.test(MY_URL)) {
+                if (/nyafun|moefun|aowu/.test(spl)) {
+                    var url = spl + '/bangumi/' + list[i].vod_id + '.html';
+                } else if (/netflixgc/.test(spl)) {
+                    var url = spl + '/detail/' + list[i].vod_id + '.html';
+                } else {
+                    var url = spl + '/index.php/vod/detail/id/' + list[i].vod_id + '.html';
+                }
+            } else if (/hgyx/.test(spl)) {
+                var zykurl = pdfh(list[i], "a&&href");
+                var url = spl + zykurl.replace('/detail/', '/play/').replace('.html', '/sid/1/nid/1.html');
+            } else {
+                var url = pd(list[i], 'a&&href');
+            }
+            if (/xy1080|ysgc/.test(spl)) {
+                url = url + ';get;utf-8;{User-Agent@.js:MOBILE_UA&&accept@text/html}';
+            }
+            //分类片单无图的
+            if (!img) {
+                d.push({
+                    title: title,
+                    //url: ((url.substring(0, 4) == 'http' || url.substring(0, 4) == 'hike') ? url : spl + url) + `@rule=js:eval(fetch('hiker://files/rules/xyq/hikermovie.js'));omerj();`,
+                    url: $(((url.substring(0, 4) == 'http' || url.substring(0, 4) == 'hike') ? url : spl + url)).rule((MOVtitle) => {
+                        eval(fetch('hiker://files/rules/xyq/hikermovie.js'));
+                        omerj();
+                    }, title),
+                    desc: desc,
+                    extra: {
+                        longClick: [{
+                                title: (ypj) + '搜索',
+                                js: $.toString((title, ypj) => {
+                                    //return 'hiker://search?s=' + title + '&rule='+(ypj.length <= 5 ?'云盘君':'云盘君(推送)')
+                                    return $('hiker://empty#noRecordHistory#').lazyRule((title, ypj) => {
+                                        return 'hiker://page/soup?p=fypage&rule=' + (ypj) + '&pageTitle=搜索 ' + title
+                                    }, title, ypj);
+
+                                }, title, ypj),
+                                extra: {
+                                    pageTitle: "搜索 " + title,
+                                    key: title
+                                }
+                            },
+                            {
+                                title: JSON.parse(getRule()).title + '搜索',
+                                js: $.toString((title) => {
+                                    //return 'hiker://search?s=' + title + '&rule='+JSON.parse(getRule()).title
+                                    var link = 'hiker://empty#noRecordHistory#$$$hiker://files/rules/xyq/hikermovie.json$$$' + title + '$$$fypage$$$';
+                                    //log(link);
+                                    return $(link).rule(() => {
+                                        setPageTitle('搜索');
+                                        eval(fetch('hiker://files/rules/xyq/hikermovie.js'));
+                                        hiksearch();
+                                    });
+                                }, title),
+                                extra: {
+                                    pageTitle: "搜索"
+                                }
+                            }
+                        ],
+                        key: title
+                    },
+                    col_type: 'text_center_1'
+                });
+            }
+            //分类片单有图的
+            else {
+                if (/imgdb/.test(img)) {
+                    var tup = img + '@Referer=';
+                } else if (/cocomanga/.test(spl)) {
+                    var tup = img + '@Referer=' + spl + '@User-Agent=' + MOBILE_UA;
+                } else if (/look4you/.test(img)) {
+                    var tup = img + '@Referer=' + spl;
+                } else {
+                    var tup = img + '@Referer=' + img
+                }
+                d.push({
+                    title: title,
+                    pic_url: tup,
+                    desc: desc,
+                    //url: ((url.substring(0, 4) == 'http' || url.substring(0, 4) == 'hike') ? url : spl + url) + `@rule=js:eval(fetch('hiker://files/rules/xyq/hikermovie.js'));omerj();`,
+                    url: $(((url.substring(0, 4) == 'http' || url.substring(0, 4) == 'hike') ? url : spl + url)).rule((MOVtitle) => {
+                        eval(fetch('hiker://files/rules/xyq/hikermovie.js'));
+                        omerj();
+                    }, title),
+                    extra: {
+                        longClick: [{
+                                title: (ypj) + '云搜索',
+                                js: $.toString((title, ypj) => {
+                                    //return 'hiker://search?s=' + title + '&rule='+(ypj.length <= 5 ?'云盘君':'云盘君(推送)')
+                                    return $('hiker://empty#noRecordHistory#').lazyRule((title, ypj) => {
+                                        return 'hiker://page/soup?p=fypage&rule=' + (ypj) + '&pageTitle=搜索 ' + title
+                                    }, title, ypj);
+
+                                }, title, ypj),
+                                extra: {
+                                    pageTitle: "搜索 " + title,
+                                    key: title
+                                }
+                            },
+                            {
+                                title: JSON.parse(getRule()).title + '搜索',
+                                js: $.toString((title) => {
+                                    //return 'hiker://search?s=' + title + '&rule='+JSON.parse(getRule()).title
+                                    var link = 'hiker://empty#noRecordHistory#$$$hiker://files/rules/xyq/hikermovie.json$$$' + title + '$$$fypage$$$';
+                                    //log(link);
+                                    return $(link).rule(() => {
+                                        setPageTitle('搜索');
+                                        eval(fetch('hiker://files/rules/xyq/hikermovie.js'));
+                                        hiksearch();
+                                    });
+                                }, title),
+                                extra: {
+                                    pageTitle: "搜索"
+                                }
+                            }
+                        ],
+                        key: title
+                    },
+                    col_type: 'movie_3_marquee'
+                });
+            }
+
+        }
     }
-    //}
     res.data = d;
     setHomeResult(res);
 
@@ -1308,7 +1345,7 @@ function hiksearch() {
     var urlph = $.toString(() => {
         //rss接口
         if (/ysgc/.test(url)) {
-        url = url + '/index.php/rss/index.xml?wd=' + spl[2];
+            url = url + '/index.php/rss/index.xml?wd=' + spl[2];
         }
         //suggest接口
         else if (url.search(/yingkuya|9eguoyu|smdyy|maolvys/) != -1) {
@@ -1326,9 +1363,9 @@ function hiksearch() {
         } else if (/dianyi\.ng/.test(url)) {
             url = url + '/search-' + spl[2] + '----------fypage---.html';
         } else if (/kankanju/.test(url)) {
-            url = url + '/vodsearch'+spl[2]+'/page/fypage.html';
+            url = url + '/vodsearch' + spl[2] + '/page/fypage.html';
         } else if (/libvio|moefun|aowu|dmla/.test(url)) {
-            url = url + '/search/'+spl[2]+'----------fypage---.html';
+            url = url + '/search/' + spl[2] + '----------fypage---.html';
         } else if (/oftens|wwys/.test(url)) {
             url = url + '/oftenssearch/' + spl[2] + '----------fypage---.html';
         } else if (/magedn|nfyingshi/.test(url)) {
@@ -1342,27 +1379,27 @@ function hiksearch() {
         } else if (/viptv|vipmv|zjdr\.vip|zhuijudr|9eguoyu/.test(url)) {
             url = url + '/vod/search/page/fypage/wd/' + spl[2] + '.html';
         } else if (/netflixgc/.test(url)) {
-            url = url + '/vod/search/'+spl[2]+'----------fypage---.html';
+            url = url + '/vod/search/' + spl[2] + '----------fypage---.html';
         } else if (/nkvod/.test(url)) {
-            url = url + '/nk/'+spl[2]+'----------fypage---.html';
+            url = url + '/nk/' + spl[2] + '----------fypage---.html';
         } else if (/smdyy|fantuanhd/.test(url)) {
             url = url + '/search/page/fypage/wd/' + spl[2] + '.html';
         } else if (/nyafun/.test(url)) {
-            url = url + '/search/wd/'+spl[2]+'/page/fypage.html';
+            url = url + '/search/wd/' + spl[2] + '/page/fypage.html';
         } else if (/cs1369/.test(spl)) {
-           url = url + '/search.html?wd='+spl[2];
+            url = url + '/search.html?wd=' + spl[2];
         } else if (/1010dy/.test(url)) {
-            url = url + '/search/page/fypage/wd/'+spl[2]+'/';
+            url = url + '/search/page/fypage/wd/' + spl[2] + '/';
         } else if (/qkan8|unss|aiyy|jiuku|shigys|v\.t-ui|bulei|sbdm|xxjio/.test(url)) {
             url = url + '/index.php/vod/search/page/fypage/wd/' + spl[2] + '.html';
         } else if (/dsxys/.test(url)) {
             url = url + '/sb/kemksmaksdl7nhZe3c1' + spl[2] + '-/page/fypage.html';
         } else if (/saohuo|shdy3|shdy2/.test(url)) {
-            url = url + '/s-'+spl[2]+'---------fypage.html';
-        } else if(/7xdy/.test(url)){
-        url=url+'/search.php?page=fypage&searchword='+spl[2]+'&searchtype=';
-        }else if (/lezhutv/.test(url)) {
-            url = url + '/search-pg-fypage-wd-'+spl[2]+'.html';
+            url = url + '/s-' + spl[2] + '---------fypage.html';
+        } else if (/7xdy/.test(url)) {
+            url = url + '/search.php?page=fypage&searchword=' + spl[2] + '&searchtype=';
+        } else if (/lezhutv/.test(url)) {
+            url = url + '/search-pg-fypage-wd-' + spl[2] + '.html';
         } else if (/auete|haozhansou/.test(url)) {
             url = url + '/auete4so.php?searchword=' + spl[2];
         } else if (/kunyu77|tyun77/.test(url)) {
@@ -1380,9 +1417,9 @@ function hiksearch() {
         } else if (/wwgz/.test(url)) {
             url = url + '/index.php？？m=vod-search?wd=' + spl[2];
         } else if (/kykyy/.test(url)) {
-            url = url + '/index.php?m=vod-search-pg-fypage-wd-'+spl[2]+'.html';
+            url = url + '/index.php?m=vod-search-pg-fypage-wd-' + spl[2] + '.html';
         } else if (/bdys|xlys/.test(url)) {
-            url = url + '/search/'+spl[2]+'/fypage';
+            url = url + '/search/' + spl[2] + '/fypage';
         }
     });
     //代码开始
@@ -1417,15 +1454,15 @@ function hiksearch() {
                                 if (/kunyu77|tyun77/.test(Url)) {
                                     let key = Url.split("&pg=")[0].split("searchName=")[1];
                                     let qqtime = parseInt(new Date().getTime() / 1000) + '';
-                                    let qqtok = md5("/api.php/provide/searchVideorealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android"+ "010110003"+"1"+encodeURIComponent(key)+qqtime +"android10"+"2.3.6"+ qqtime +"XSpeUFjJ");
+                                    let qqtok = md5("/api.php/provide/searchVideorealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android" + "010110003" + "1" + encodeURIComponent(key) + qqtime + "android10" + "2.3.6" + qqtime + "XSpeUFjJ");
                                     Data.push({
-                                        url: Url+"&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime,
+                                        url: Url + "&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj=" + qqtime,
                                         options: {
                                             headers: {
                                                 "User-Agent": 'okhttp/3.12.0',
                                                 "t": qqtime,
                                                 "TK": qqtok,
-                                                "oaid":"b29c7a601c6f0657"
+                                                "oaid": "b29c7a601c6f0657"
                                             },
                                             timeout: tout
                                         }
@@ -1447,7 +1484,7 @@ function hiksearch() {
                                         options: {
                                             headers: {
                                                 "User-Agent": MOBILE_UA,
-                                                "Cookie": fetch("hiker://files/rules/xyq/xqyscookie/" + title + "cookie.txt", {})+"; filter_robot_dd=301"
+                                                "Cookie": fetch("hiker://files/rules/xyq/xqyscookie/" + title + "cookie.txt", {}) + "; filter_robot_dd=301"
                                             },
                                             timeout: tout
                                         }
@@ -1524,7 +1561,7 @@ function hiksearch() {
                         for (let k in Data) {
                             let it = Data[k];
                             tasks.push({
-                                func: function (param) {
+                                func: function(param) {
                                     let d = [];
                                     var sear = $('').rule((cktitle) => {
                                         eval(fetch('hiker://files/rules/xyq/hikermovie.js'));
@@ -1584,7 +1621,7 @@ function hiksearch() {
                                                 }
                                             });
                                         };
-                                        if (html.includes('js=click_html')||html.includes('_guard/auto.js')) {
+                                        if (html.includes('js=click_html') || html.includes('_guard/auto.js')) {
                                             //log(getCookie(MY_URL));
                                             var _0x486ax7 = {
                                                 "x": 616,
@@ -1631,10 +1668,11 @@ function hiksearch() {
                                                 }
                                             });
                                         };
-                                        if (/moefun|aowu/.test(param.it.url)&&html.includes('_guard/auto.js')) {
+                                        if (/moefun|aowu/.test(param.it.url) && html.includes('_guard/auto.js')) {
                                             //log(getCookie(MY_URL));
                                             var cook = "";
                                             var aa = getCookie(param.it.url);
+
                                             function setRet(guard) {
                                                 let jsf = request(spl + "/_guard/encrypt.js");
                                                 eval(jsf);
@@ -1651,7 +1689,7 @@ function hiksearch() {
                                                 });
                                                 cook = "guardret=" + _0x92c9xd.toString();
                                             }
-                                    
+
                                             function t() {
                                                 //var co = JSON.parse(aa).toString().split("guard=");
                                                 var co = aa.split("guard=");
@@ -1672,8 +1710,9 @@ function hiksearch() {
                                                 }
                                             });
                                         };
-                                        if (html.includes("请稍等5秒钟左右")&&html.includes("提供DDoS防护")){
-                                            eval(pdfh(html,'head&&script&&Html').split('function')[0]);
+                                        if (html.includes("请稍等5秒钟左右") && html.includes("提供DDoS防护")) {
+                                            eval(pdfh(html, 'head&&script&&Html').split('function')[0]);
+
                                             function loadFunc() {
                                                 var e = getCookie(param.it.url);
                                                 //log(e);
@@ -1695,7 +1734,7 @@ function hiksearch() {
                                                             headers: {
                                                                 'X-GE-UA-Step': step,
                                                                 'Referer': param.it.url,
-                                                                'Cookie': 'ge_ua_p='+n
+                                                                'Cookie': 'ge_ua_p=' + n
                                                             },
                                                             body: "sum=" + a + "&nonce=" + nonce,
                                                             method: 'POST'
@@ -1706,13 +1745,13 @@ function hiksearch() {
                                             }
                                             loadFunc();
                                             html = request(param.it.url, {
-                                                    headers: {
-                                                        "Cookie": getCookie(param.it.url),
-                                                        "Referer": param.it.url
-                                                    }
-                                                });
+                                                headers: {
+                                                    "Cookie": getCookie(param.it.url),
+                                                    "Referer": param.it.url
+                                                }
+                                            });
                                         };
-                                        
+
                                         eval(fetch('hiker://files/rules/xyq/hikermovie.js'));
                                         ssjiex();
 
@@ -1728,7 +1767,7 @@ function hiksearch() {
                         }
 
                         batchExecute(tasks, {
-                            func: function (param, id, error, result) {
+                            func: function(param, id, error, result) {
                                 //log("listener: " + (result || []).length)
                                 param.i = param.i + 1;
                                 if (result) {
@@ -1791,7 +1830,7 @@ function hiksearch() {
                 if (/zhenbuka|ikandy|3443|cokemv|viptv|saohuo|shdy3|shdy2|kanju77|tegouys|tkznp|ak1080|lezhutv|nkvod|7xdy/.test(url)) {
                     var link = url + ';get;utf-8;{User-Agent@.js:MOBILE_UA&&Cookie@.js:fetch("hiker://files/rules/xyq/xqyscookie/' + list[j].title + 'cookie.txt", {})}';
                 } else if (/kunyu77|tyun77/.test(url)) {
-                    var link = 'hiker://empty'+url;
+                    var link = 'hiker://empty' + url;
                 } else if (/wwgz/.test(url)) {
                     var link = url + ';post;utf-8;{User-Agent@.js:MOBILE_UA}';
                 } else if (/wuwuabc/.test(url)) {
@@ -1806,7 +1845,7 @@ function hiksearch() {
                 d.push({
                     title: list[j].title,
                     img: list[j].ico,
-                    url: $(link+'#noHistory#').rule((cktitle) => {
+                    url: $(link + '#noHistory#').rule((cktitle) => {
                         eval(fetch('hiker://files/rules/xyq/hikermovie.js'));
                         hikseaerji();
                     }, list[j].title),
@@ -1831,7 +1870,7 @@ function ssjiex() {
             var list = JSON.parse(html).list;
         } else if (/kunyu77|tyun77/.test(spl)) {
             var list = JSON.parse(html).data;
-        } else if (/public-list-box/.test(html)&&/public-list-prb|search-box/.test(html)) {
+        } else if (/public-list-box/.test(html) && /public-list-prb|search-box/.test(html)) {
             var list = pdfa(html, 'body&&.search-box');
         } else if (/search_list/.test(html)) {
             var list = pdfa(html, '.search_list&&li');
@@ -1914,16 +1953,16 @@ function ssjiex() {
         } else {
             for (var i = 0; i < list.length; i++) {
                 var cont = '',
-                desc = '';
+                    desc = '';
                 if (/yingkuya|9eguoyu|smdyy|maolvys/.test(spl)) {
                     //suggest搜索数据
                     var title = list[i].name;
                     var img = list[i].pic;
                     if (/smdyy/.test(spl)) {
                         var url = spl + '/kan/' + list[i].id + '.html';
-                    } else if(/maolvys/.test(spl)){
-                    var url= spl+'/vod/detail/id/'+list[i].id+'/';
-                    }else {
+                    } else if (/maolvys/.test(spl)) {
+                        var url = spl + '/vod/detail/id/' + list[i].id + '/';
+                    } else {
                         var url = spl + '/voddetail/' + list[i].id + '.html';
                     }
                 } else if (/<rss/.test(html) && /<generator>/.test(html)) {
@@ -2018,7 +2057,7 @@ function ssjiex() {
                     } else if (/hgyx/.test(spl)) {
                         var zykurl = pdfh(list[i], "a&&href");
                         var url = spl + zykurl.replace('/detail/', '/play/').replace('.html', '/sid/1/nid/1.html');
-                    } else if(/duanju5/.test(spl)){
+                    } else if (/duanju5/.test(spl)) {
                         var url = pdfh(list[i], 'h3&&a&&href');
                     } else {
                         var url = pdfh(list[i], 'a&&href');
@@ -2032,7 +2071,10 @@ function ssjiex() {
                         d.push({
                             title: '““' + title + '””',
                             //url: ((url.substring(0, 4) == 'http' || url.substring(0, 4) == 'hike') ? url : spl + url) + `@rule=js:eval(fetch('hiker://files/rules/xyq/hikermovie.js'));omerj();`,
-                            url:$(((url.substring(0, 4) == 'http' || url.substring(0, 4) == 'hike') ? url : spl + url)).rule((MOVtitle)=>{eval(fetch('hiker://files/rules/xyq/hikermovie.js'));omerj();},title),
+                            url: $(((url.substring(0, 4) == 'http' || url.substring(0, 4) == 'hike') ? url : spl + url)).rule((MOVtitle) => {
+                                eval(fetch('hiker://files/rules/xyq/hikermovie.js'));
+                                omerj();
+                            }, title),
                             desc: cont + ' ' + tkt,
                             pic_url: "",
                             col_type: 'text_1'
@@ -2072,7 +2114,10 @@ function ssjiex() {
                             title: '““' + title + '””' + '\n' + desc + '\n' + tkt,
                             pic_url: tup,
                             //url: ((url.substring(0, 4) == 'http' || url.substring(0, 4) == 'hike') ? url : spl + url) + `@rule=js:eval(fetch('hiker://files/rules/xyq/hikermovie.js'));omerj();`,
-                            url:$(((url.substring(0, 4) == 'http' || url.substring(0, 4) == 'hike') ? url : spl + url)).rule((MOVtitle)=>{eval(fetch('hiker://files/rules/xyq/hikermovie.js'));omerj();},title),
+                            url: $(((url.substring(0, 4) == 'http' || url.substring(0, 4) == 'hike') ? url : spl + url)).rule((MOVtitle) => {
+                                eval(fetch('hiker://files/rules/xyq/hikermovie.js'));
+                                omerj();
+                            }, title),
                             desc: cont,
                             col_type: 'movie_1_vertical_pic'
                         });
@@ -2116,29 +2161,29 @@ function hikseaerji() {
     var html = getResCode();
     var json = JSON.parse(fetch('hiker://files/rules/xyq/hikermovie.json', {}));
     var ssmd = getItem('ssmode', '1');
-    
-    if(/kunyu77|tyun77/.test(MY_URL)){
+
+    if (/kunyu77|tyun77/.test(MY_URL)) {
         MY_URL = getResCode();
         let key = MY_URL.split("&pg=")[0].split("searchName=")[1];
         let qqtime = parseInt(new Date().getTime() / 1000) + '';
-        if(MY_PAGE == 1){
-          let qqtok1 = md5("/api.php/provide/getDomainrealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android" +"24010110003"+ qqtime +"android10"+"2.3.6"+ qqtime +"XSpeUFjJ");
-          fetch(spl + "/getDomain?pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
-              headers: {
-                  "User-Agent": "okhttp/3.12.0",
-                  "t": qqtime,
-                  "TK": qqtok1,
-                  "oaid":"b29c7a601c6f0657"
-              }
-          });
+        if (MY_PAGE == 1) {
+            let qqtok1 = md5("/api.php/provide/getDomainrealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android" + "24010110003" + qqtime + "android10" + "2.3.6" + qqtime + "XSpeUFjJ");
+            fetch(spl + "/getDomain?pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj=" + qqtime, {
+                headers: {
+                    "User-Agent": "okhttp/3.12.0",
+                    "t": qqtime,
+                    "TK": qqtok1,
+                    "oaid": "b29c7a601c6f0657"
+                }
+            });
         }
-        let qqtok = md5("/api.php/provide/searchVideorealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android"+ "010110003"+MY_PAGE+encodeURIComponent(key)+qqtime +"android10"+"2.3.6"+ qqtime +"XSpeUFjJ");
-        var html = fetch(MY_URL +"&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime,{
+        let qqtok = md5("/api.php/provide/searchVideorealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android" + "010110003" + MY_PAGE + encodeURIComponent(key) + qqtime + "android10" + "2.3.6" + qqtime + "XSpeUFjJ");
+        var html = fetch(MY_URL + "&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj=" + qqtime, {
             headers: {
                 "User-Agent": 'okhttp/3.12.0',
                 "t": qqtime,
                 "TK": qqtok,
-                "oaid":"b29c7a601c6f0657"
+                "oaid": "b29c7a601c6f0657"
             }
         });
     }
@@ -2171,7 +2216,7 @@ function hikseaerji() {
             }
         });
     };
-    if (html.includes('js=click_html')||html.includes('_guard/auto.js')) {
+    if (html.includes('js=click_html') || html.includes('_guard/auto.js')) {
         //log(getCookie(MY_URL));
         var _0x486ax7 = {
             "x": 616,
@@ -2218,10 +2263,11 @@ function hikseaerji() {
             }
         });
     };
-    if (/moefun|aowu/.test(MY_URL)&&html.includes('_guard/auto.js')) {
+    if (/moefun|aowu/.test(MY_URL) && html.includes('_guard/auto.js')) {
         //log(getCookie(MY_URL));
         var cook = "";
         var aa = getCookie(MY_URL);
+
         function setRet(guard) {
             let jsf = request(spl + "/_guard/encrypt.js");
             eval(jsf);
@@ -2259,45 +2305,46 @@ function hikseaerji() {
             }
         });
     };
-    if (html.includes("请稍等5秒钟左右")&&html.includes("提供DDoS防护")){
-      eval(pdfh(html,'head&&script&&Html').split('function')[0]);
-      function loadFunc() {
-          var e = getCookie(MY_URL);
-          //log(e);
-          if (null != e) {
-              for (var t = e.toString().split(";"), n = "", o = 0; o < t.length; o++) {
-                  var i = (e = t[o].trim()).split("=");
-                  if (2 == i.length && i[0] == cpk) {
-                      n = i[1];
-                      break
-                  }
-              }
-              if (0 != n.length) {
-                  for (var a = 0, o = 0; o < n.length; o++) {
-                      var d = n[o];
-                      /^[a-zA-Z0-9]$/.test(d) && (a += n.charCodeAt(o) * (nonce + o))
-                  }
-                  //log("sum=" + a + "&nonce=" + nonce);
-                  let jum = request(MY_URL, {
-                      headers: {
-                          'X-GE-UA-Step': step,
-                          'Referer': MY_URL,
-                          'Cookie': 'ge_ua_p='+n
-                      },
-                      body: "sum=" + a + "&nonce=" + nonce,
-                      method: 'POST'
-                  });
-                  log(jum);
-              }
-          }
-      }
-      loadFunc();
-      var html = request(MY_URL, {
-              headers: {
-                  "Cookie": getCookie(MY_URL),
-                  "Referer": MY_URL
-              }
-          });
+    if (html.includes("请稍等5秒钟左右") && html.includes("提供DDoS防护")) {
+        eval(pdfh(html, 'head&&script&&Html').split('function')[0]);
+
+        function loadFunc() {
+            var e = getCookie(MY_URL);
+            //log(e);
+            if (null != e) {
+                for (var t = e.toString().split(";"), n = "", o = 0; o < t.length; o++) {
+                    var i = (e = t[o].trim()).split("=");
+                    if (2 == i.length && i[0] == cpk) {
+                        n = i[1];
+                        break
+                    }
+                }
+                if (0 != n.length) {
+                    for (var a = 0, o = 0; o < n.length; o++) {
+                        var d = n[o];
+                        /^[a-zA-Z0-9]$/.test(d) && (a += n.charCodeAt(o) * (nonce + o))
+                    }
+                    //log("sum=" + a + "&nonce=" + nonce);
+                    let jum = request(MY_URL, {
+                        headers: {
+                            'X-GE-UA-Step': step,
+                            'Referer': MY_URL,
+                            'Cookie': 'ge_ua_p=' + n
+                        },
+                        body: "sum=" + a + "&nonce=" + nonce,
+                        method: 'POST'
+                    });
+                    log(jum);
+                }
+            }
+        }
+        loadFunc();
+        var html = request(MY_URL, {
+            headers: {
+                "Cookie": getCookie(MY_URL),
+                "Referer": MY_URL
+            }
+        });
     };
     //log(spl);
     //处理搜索验证
@@ -2309,7 +2356,7 @@ function hikseaerji() {
                 var coklink = spl + '/vodsearch/xqyszbk----------1---/';
             } else if (spl.search(/ikandy/) != -1) {
                 var coklink = spl + '/vodsearch/xqysikand----------1---/';
-            }else if (spl.search(/nkvod/) != -1) {
+            } else if (spl.search(/nkvod/) != -1) {
                 var coklink = spl + '/nk/xqysnkvod----------1---.html';
             }
             d.push({
@@ -2331,7 +2378,7 @@ function hikseaerji() {
                                 fy_bridge_app.writeFile('hiker://files/rules/xyq/xqyscookie/爱看影视cookie.txt', document.cookie);
                                 fy_bridge_app.refreshPage(false);
                             }
-                        }else if (/nkvod/.test(window.location.host)) {
+                        } else if (/nkvod/.test(window.location.host)) {
                             if (document.querySelector('div.head-search').innerHTML.indexOf('xqysnkvod') >= 0) {
                                 fy_bridge_app.writeFile('hiker://files/rules/xyq/xqyscookie/nkvodcookie.txt', document.cookie);
                                 fy_bridge_app.writeFile('hiker://files/rules/xyq/xqyscookie/耐看点播cookie.txt', document.cookie);
@@ -2358,12 +2405,12 @@ function hikseaerji() {
             }
             //取cookie
             var cok = JSON.parse(fetchCookie(imglin, {
-                        headers: {
-                            'User-Agent': MOBILE_UA
-                        },
-                        method: 'GET',
-                        withHeaders: true
-                    })).join(';');
+                headers: {
+                    'User-Agent': MOBILE_UA
+                },
+                method: 'GET',
+                withHeaders: true
+            })).join(';');
 
             //显示验证码
             //var img = spl + '/index.php/verify/index.html?' + Math.random() + '@User-Agent=' + MOBILE_UA + '@Cookie=' + cok;
@@ -2409,14 +2456,14 @@ function hikseaerji() {
                             method: 'POST'
                         });
                     } else if (spl.search(/bdys|xlys/) != -1) {
-                        var html = fetch(input + '?code='+cod, {
+                        var html = fetch(input + '?code=' + cod, {
                             headers: {
                                 'User-Agent': MOBILE_UA,
                                 'Cookie': cok
                             }
                         });
                     } else if (spl.search(/lezhu/) != -1) {
-                        var html = JSON.parse(fetch(spl + '/inc/ajax.php?ac=code_check&type=search&code='+cod, {
+                        var html = JSON.parse(fetch(spl + '/inc/ajax.php?ac=code_check&type=search&code=' + cod, {
                             headers: {
                                 'User-Agent': MOBILE_UA,
                                 'Cookie': cok
@@ -2424,14 +2471,14 @@ function hikseaerji() {
                         }));
                     } else {
                         var html = JSON.parse(fetch(spl + '/index.php/ajax/verify_check?type=search&verify=' + cod, {
-                                    headers: {
-                                        'X-Requested-With': 'XMLHttpRequest',
-                                        'User-Agent': MOBILE_UA,
-                                        'Cookie': cok
-                                    },
-                                    body: '',
-                                    method: 'POST'
-                                }));
+                            headers: {
+                                'X-Requested-With': 'XMLHttpRequest',
+                                'User-Agent': MOBILE_UA,
+                                'Cookie': cok
+                            },
+                            body: '',
+                            method: 'POST'
+                        }));
                     };
                     //对验证进行判断
                     if (spl.search(/98bbw/) != -1) {
@@ -2502,20 +2549,20 @@ function omerj() {
         col_type: 'x5_webview_single'
     });
     refreshX5WebView('');
-    let ypj = fetch("hiker://home@云盘君(推送)").length <= 5 ?'云盘君':'云盘君(推送)';
+    let ypj = fetch("hiker://home@云盘君(推送)").length <= 5 ? '云盘君' : '云盘君(推送)';
     d.push({
-        title: (ypj)+'搜索',
+        title: (ypj) + '搜索',
         desc: '',
-        url: $('hiker://empty#noRecordHistory#').lazyRule((MOVtitle,ypj)=>{
-            return 'hiker://page/soup?p=fypage&rule='+(ypj)
-        },MOVtitle,ypj),
+        url: $('hiker://empty#noRecordHistory#').lazyRule((MOVtitle, ypj) => {
+            return 'hiker://page/soup?p=fypage&rule=' + (ypj)
+        }, MOVtitle, ypj),
         extra: {
             pageTitle: "搜索 " + MOVtitle,
             key: MOVtitle
         },
         col_type: 'flex_button'
-    },{
-        title: JSON.parse(getRule()).title+'搜索',
+    }, {
+        title: JSON.parse(getRule()).title + '搜索',
         desc: '',
         /*url: $('hiker://empty#noRecordHistory#').lazyRule((MOVtitle)=>{
             return 'hiker://search?s=' + MOVtitle + '&rule='+JSON.parse(getRule()).title
@@ -2529,26 +2576,26 @@ function omerj() {
         },
         col_type: 'flex_button'
     });
-        //log(MY_URL);
-    var html = getResCode().replace(/<!--([\S\s]*?)-->/g,'');
-    if (MY_URL.includes("kunyu77")||MY_URL.includes("tyun77")) {
+    //log(MY_URL);
+    var html = getResCode().replace(/<!--([\S\s]*?)-->/g, '');
+    if (MY_URL.includes("kunyu77") || MY_URL.includes("tyun77")) {
         MY_URL = html.split("##")[1] + "/";
         //log(MY_URL);
         let vid = html.split("##")[2];
         let qqtime = parseInt(new Date().getTime() / 1000) + '';
-        let qqtok = md5('/api.php/provide/videoPlaylistrealme4ac3fe96a6133de96904b8d3c8cfe16d'+vid+'RMX1931com.sevenVideo.app.android010110003'+ qqtime +'android102.3.6'+ qqtime +'XSpeUFjJ');
-        html = fetch(MY_URL+"videoPlaylist?ids="+vid+"&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
+        let qqtok = md5('/api.php/provide/videoPlaylistrealme4ac3fe96a6133de96904b8d3c8cfe16d' + vid + 'RMX1931com.sevenVideo.app.android010110003' + qqtime + 'android102.3.6' + qqtime + 'XSpeUFjJ');
+        html = fetch(MY_URL + "videoPlaylist?ids=" + vid + "&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj=" + qqtime, {
             headers: {
                 "User-Agent": "okhttp/3.12.0",
                 "t": qqtime,
                 "TK": qqtok,
-                "oaid":"b29c7a601c6f0657"
+                "oaid": "b29c7a601c6f0657"
             }
-        }); 
+        });
     }
-    if(MY_URL.includes("nmvod")){
-    html=request(parseDom(html,'.page-btn&&a&&href'));
-    eval(pdfh(html,'.detailPosterIntro&&script&&Html'));
+    if (MY_URL.includes("nmvod")) {
+        html = request(parseDom(html, '.page-btn&&a&&href'));
+        eval(pdfh(html, '.detailPosterIntro&&script&&Html'));
     }
     if (html.indexOf('检测中') != -1) {
         /*let cook = JSON.parse(fetchCookie(MY_URL, {
@@ -2715,16 +2762,16 @@ function omerj() {
     }
 
     //setError(conts);
-    if(/duanju5/.test(omdomin)){
-    let nnn=MY_URL.match(/voddetail\/(.*?)\.htm/)[1];
-    let phtml = request(omdomin+'/txt/'+nnn+'.txt', {});
-    //eval(parseDomForHtml(phtml, ".player-box-main&&script&&Html").replace(/player_.*?={/, 'player_data={'));
-    //let djurll = unescape(base64Decode(player_data.url));
-    let djurll=phtml.split('\n')[0];
-    var djqian = djurll.substring(0, djurll.lastIndexOf('/') + 1);
-    var djhou = djurll.substring(djurll.lastIndexOf('.'));
-    var cent = djurll.split(djqian)[1].split(djhou)[0];
-    var ncent = cent.match(/\d+/)[0];
+    if (/duanju5/.test(omdomin)) {
+        let nnn = MY_URL.match(/voddetail\/(.*?)\.htm/)[1];
+        let phtml = request(omdomin + '/txt/' + nnn + '.txt', {});
+        //eval(parseDomForHtml(phtml, ".player-box-main&&script&&Html").replace(/player_.*?={/, 'player_data={'));
+        //let djurll = unescape(base64Decode(player_data.url));
+        let djurll = phtml.split('\n')[0];
+        var djqian = djurll.substring(0, djurll.lastIndexOf('/') + 1);
+        var djhou = djurll.substring(djurll.lastIndexOf('.'));
+        var cent = djurll.split(djqian)[1].split(djhou)[0];
+        var ncent = cent.match(/\d+/)[0];
     }
     //-----华丽的分割线-----
     if (conts || tabs) {
@@ -2743,9 +2790,9 @@ function omerj() {
             } else {
                 var list = pdfa(conts[i], 'body&&a:not(a:contains(展开全部))');
             }
-            
-            if(/nmvod/.test(omdomin)){
-            list=mac_url.split('#');
+
+            if (/nmvod/.test(omdomin)) {
+                list = mac_url.split('#');
             }
 
             if (/lezhutv|saohuo|shdy3|shdy2|wwgz/.test(omdomin)) {
@@ -2805,12 +2852,12 @@ function omerj() {
                 } else if (/renrenmi/.test(omdomin)) {
                     var title = list[j].split('copy_text\">')[1].split('<')[0];
                     var link = list[j].split('$')[1].split('<')[0].replace('amp;', '');
-                } else if(/duanju5/.test(omdomin)){
+                } else if (/duanju5/.test(omdomin)) {
                     var title = pdfh(list[j], "a&&Text");
-                    var link = djqian + cent.replace(/\d+/,[parseInt(ncent)+j].toString()) + djhou + ';{Referer@https://m.duanju5.com/}';
-                } else if(/nmvod/.test(omdomin)){
-                var title=list[j].split('$')[0];
-                var link='https://api.cnmcom.com/webcloud/nmm.php?url='+list[j].split('$')[1];
+                    var link = djqian + cent.replace(/\d+/, [parseInt(ncent) + j].toString()) + djhou + ';{Referer@https://m.duanju5.com/}';
+                } else if (/nmvod/.test(omdomin)) {
+                    var title = list[j].split('$')[0];
+                    var link = 'https://api.cnmcom.com/webcloud/nmm.php?url=' + list[j].split('$')[1];
                 } else {
                     var title = pdfh(list[j], "a&&Text");
                     var link = pd(list[j], "a&&href");
@@ -2820,8 +2867,8 @@ function omerj() {
                 } catch (e) {
                     title = title
                 }
-                if(/duanju/.test(omdomin)){
-                title = title.replace('VIP','').replace('最新','');
+                if (/duanju/.test(omdomin)) {
+                    title = title.replace('VIP', '').replace('最新', '');
                 }
                 //setError(MY_URL);
                 //显示选集
@@ -2836,40 +2883,52 @@ function omerj() {
                     extra: {
                         blockRules: ['.css', '.gif', '.jpeg', '.png', '.ico', 'cnzz', '.51.la', 'google', 'xn--*:*', 'hm.baidu.com', '/ads/*.js'],
                         referer: omdomin,
-                        js:"if(/maolvys|g5t2pn47dj2h/.test(window.location.host)){document.getElementsByClassName('swal-button swal-button--confirm')[0].click()};if(/api\\.cnmcom/.test(window.location.host)){document.getElementsByClassName('line')[0].onclick()}",
+                        js: "if(/maolvys|g5t2pn47dj2h/.test(window.location.host)){document.getElementsByClassName('swal-button swal-button--confirm')[0].click()};if(/api\\.cnmcom/.test(window.location.host)){document.getElementsByClassName('line')[0].onclick()}",
                         id: 'hiker://empty$$$' + omdomin + '$$$' + link + '$$$' + title + '$$$',
-                        longClick:[{
-                                   title: (getItem('singlepush', '') == '1' ? '已开单推' : '已关单推'),
-                                   js: $.toString(()=>{getItem('singlepush','0')=='1'?setItem('singlepush','0'):setItem('singlepush','1');getItem('singlepush','0')=='1'?setItem('enabledpush','1'):'';refreshPage(false);return 'toast://切换成功！'})
-                                  },
-                                  {
-                                   title: (getItem('enabledpush', '') == '1' ? '已开推送' : '已关推送'),
-                                   js: $.toString(()=>{getItem('enabledpush','0')=='1'?setItem('enabledpush','0'):setItem('enabledpush','1');getItem('enabledpush','0')=='0'?setItem('singlepush','0'):'';refreshPage(false);'toast://切换成功！'}),
-                                  },
-                                  {
-                                   title:'推送到TVBox',
-                                   js:$.toString((title,tabt,link,omdomin)=>{
-                                   if(omdomin.includes('kunyu77')){
-                                   let playurls = JSON.parse(link);
-                                    for (let i in playurls) {
-                                        let from = playurls[i].playfrom;
-                                        let playurl = playurls[i].playurl;
-                                        if (i < 1) {
-                                            link = from + "$" + playurl;
-                                        } else {
-                                            link += "#" + from + "$" + playurl;
+                        longClick: [{
+                                title: (getItem('singlepush', '') == '1' ? '已开单推' : '已关单推'),
+                                js: $.toString(() => {
+                                    getItem('singlepush', '0') == '1' ? setItem('singlepush', '0') : setItem('singlepush', '1');
+                                    getItem('singlepush', '0') == '1' ? setItem('enabledpush', '1') : '';
+                                    refreshPage(false);
+                                    return 'toast://切换成功！'
+                                })
+                            },
+                            {
+                                title: (getItem('enabledpush', '') == '1' ? '已开推送' : '已关推送'),
+                                js: $.toString(() => {
+                                    getItem('enabledpush', '0') == '1' ? setItem('enabledpush', '0') : setItem('enabledpush', '1');
+                                    getItem('enabledpush', '0') == '0' ? setItem('singlepush', '0') : '';
+                                    refreshPage(false);
+                                    'toast://切换成功！'
+                                }),
+                            },
+                            {
+                                title: '推送到TVBox',
+                                js: $.toString((title, tabt, link, omdomin) => {
+                                    if (omdomin.includes('kunyu77')) {
+                                        let playurls = JSON.parse(link);
+                                        for (let i in playurls) {
+                                            let from = playurls[i].playfrom;
+                                            let playurl = playurls[i].playurl;
+                                            if (i < 1) {
+                                                link = from + "$" + playurl;
+                                            } else {
+                                                link += "#" + from + "$" + playurl;
+                                            }
                                         }
-                                    }
-                                   };
-                                   return 'hiker://page/push?rule=XYQ推送&pushurl=' + encodeURIComponent(JSON.stringify({
+                                    };
+                                    return 'hiker://page/push?rule=XYQ推送&pushurl=' + encodeURIComponent(JSON.stringify({
                                         "name": getPageTitle() + '-' + title,
                                         "from": tabt,
-                                        "manual":"1",
-                                        "format":".m3u8#.mp4#.flv#video/tos#item/video#video_mp4#type=m3u8#pt=m3u8#stariverpan.com:9096/ipfs#x-oss-signature=#data.aliyundrive#m3u8?stream_id",
-                                        "filters":"?url=http#.htm#?v=http#.m3u8.tv#.m3u8.pw#.m3u8zy.fun",
-                                        "url": omdomin.includes('kunyu77')?link:title+'$'+link
-                                    }))},title,tabt,link,omdomin)
-                                  }]
+                                        "manual": "1",
+                                        "format": ".m3u8#.mp4#.flv#video/tos#item/video#video_mp4#type=m3u8#pt=m3u8#stariverpan.com:9096/ipfs#x-oss-signature=#data.aliyundrive#m3u8?stream_id",
+                                        "filters": "?url=http#.htm#?v=http#.m3u8.tv#.m3u8.pw#.m3u8zy.fun",
+                                        "url": omdomin.includes('kunyu77') ? link : title + '$' + link
+                                    }))
+                                }, title, tabt, link, omdomin)
+                            }
+                        ]
                     },
                     col_type: clt
                 });
@@ -2951,11 +3010,11 @@ function omerj() {
                 d.push({
                     title: pdfh(dnli[i], "a&&Text"),
                     col_type: 'text_center_1',
-                    url: pd(dnli[i], "a&&href")+";{Referer@https://www.xlys01.com/}"
+                    url: pd(dnli[i], "a&&href") + ";{Referer@https://www.xlys01.com/}"
                 });
             }
         }
-        
+
     } //end 下载
 
     //log();
@@ -2972,9 +3031,9 @@ function omerj() {
                     //"pic":"https://img.zcool.cn/community/0123545c74c5aea801213f261297df.png",
                     "content": pgdesc,
                     "from": tpush[i],
-                    "manual":"1",
-                    "format":".m3u8#.mp4#.flv#video/tos#video_mp4#type=m3u8#pt=m3u8#stariverpan.com:9096/ipfs",
-                    "filters":"?url=http#.htm#?v=http#m3u8.tv#m3u8.pw",
+                    "manual": "1",
+                    "format": ".m3u8#.mp4#.flv#video/tos#video_mp4#type=m3u8#pt=m3u8#stariverpan.com:9096/ipfs",
+                    "filters": "?url=http#.htm#?v=http#m3u8.tv#m3u8.pw",
                     "url": mpush[i].join('#')
                 }).replace(/\&/g, '＆＆');
 
@@ -2982,7 +3041,7 @@ function omerj() {
                     title: "推送列表" + (i + 1) + "到TVBox",
                     url: $('hiker://empty#noHistory#').lazyRule((push) => {
                         return 'hiker://page/push?rule=XYQ推送&pushurl=' + encodeURIComponent(push);
-                    },push),
+                    }, push),
                     col_type: "scroll_button"
                 });
             }
@@ -3014,20 +3073,20 @@ function omerj() {
 function hikchapter() {
     var chp = [];
     try {
-        var html = getResCode().replace(/<!--([\S\s]*?)-->/g,'');
-        if (MY_URL.includes("kunyu77")||MY_URL.includes("tyun77")) {
+        var html = getResCode().replace(/<!--([\S\s]*?)-->/g, '');
+        if (MY_URL.includes("kunyu77") || MY_URL.includes("tyun77")) {
             MY_URL = html.split("##")[1] + "/";
             let vid = html.split("##")[2];
             let qqtime = parseInt(new Date().getTime() / 1000) + '';
-            let qqtok = md5('/api.php/provide/videoPlaylistrealme4ac3fe96a6133de96904b8d3c8cfe16d'+vid+'RMX1931com.sevenVideo.app.android010110003'+ qqtime +'android102.3.6'+ qqtime +'XSpeUFjJ');
-            html = fetch(MY_URL+"videoPlaylist?ids="+vid+"&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
+            let qqtok = md5('/api.php/provide/videoPlaylistrealme4ac3fe96a6133de96904b8d3c8cfe16d' + vid + 'RMX1931com.sevenVideo.app.android010110003' + qqtime + 'android102.3.6' + qqtime + 'XSpeUFjJ');
+            html = fetch(MY_URL + "videoPlaylist?ids=" + vid + "&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj=" + qqtime, {
                 headers: {
                     "User-Agent": "okhttp/3.12.0",
                     "t": qqtime,
                     "TK": qqtok,
-                    "oaid":"b29c7a601c6f0657"
+                    "oaid": "b29c7a601c6f0657"
                 }
-            }); 
+            });
         }
         if (html.indexOf('检测中') != -1) {
             /*
@@ -3132,7 +3191,7 @@ function hikchapter() {
         } else if (/align-items-center/.test(html) && /card-body/.test(html)) {
             var conts = pdfa(html, 'body&&#play-list');
         } else if (/playlist-tab/.test(html) && /con_c2_list/.test(html)) {
-          var conts = pdfa(html, 'body&&.con_c2_list');
+            var conts = pdfa(html, 'body&&.con_c2_list');
         }
 
         for (var i = 0; i < conts.length; i++) {
@@ -3165,24 +3224,24 @@ function omlazy() {
     var srcurl = input.split('$$$')[2];
     var epititle = input.split('$$$')[3];
     var pgt = getPageTitle() + '-' + epititle;
-    getItem('enabledpush','0')=='0'?setItem('singlepush','0'):'';
+    getItem('enabledpush', '0') == '0' ? setItem('singlepush', '0') : '';
     var singpush = getItem('singlepush', '') == '1' ? true : false;
     try {
         function singlepush(urls) {
             if (singpush) {
                 return 'hiker://page/push?rule=XYQ推送&pushurl=' + encodeURIComponent(JSON.stringify({
-                        "name": pgt,
-                        "url": urls
-                    }));
+                    "name": pgt,
+                    "url": urls
+                }));
             } else {
-                if((urls.includes("vip.ffzy")||urls.includes("vip.lz")||urls.includes("hd.lz")||urls.includes("suonizy")) && urls.includes("index.m3u8")&&!urls.includes("\"urls\"")){
-                   log("去切片广告");
-                   let m3u8 = fetch(urls);
-                   if(m3u8.includes('EXT-X-STREAM-INF')){
-                     let houz = m3u8.split("\n")[2];
-                     urls = urls.replace("index.m3u8",houz);
-                   }
-                   urls=clearM3u8(urls);
+                if ((urls.includes("vip.ffzy") || urls.includes("vip.lz") || urls.includes("hd.lz") || urls.includes("suonizy")) && urls.includes("index.m3u8") && !urls.includes("\"urls\"")) {
+                    log("去切片广告");
+                    let m3u8 = fetch(urls);
+                    if (m3u8.includes('EXT-X-STREAM-INF')) {
+                        let houz = m3u8.split("\n")[2];
+                        urls = urls.replace("index.m3u8", houz);
+                    }
+                    urls = clearM3u8(urls);
                 }
                 return urls
             }
@@ -3233,17 +3292,17 @@ function omlazy() {
             };
             if (singpush) {
                 return 'hiker://page/push?rule=XYQ推送&pushurl=' + encodeURIComponent(JSON.stringify({
-                        "name": pgt,
-                        "url": play
-                    }));
+                    "name": pgt,
+                    "url": play
+                }));
             } else {
-                if((play.includes("vip.ffzy")||play.includes("vip.lz")||play.includes("hd.lz")||play.includes(".cdnlz")||play.includes("suonizy")) && play.includes("index.m3u8")){
-                   let m3u8 = fetch(play);
-                   if(m3u8.includes('EXT-X-STREAM-INF')){
-                     let houz = m3u8.split("\n")[2];
-                     play = play.replace("index.m3u8",houz);
-                   }
-                   play=clearM3u8(play);
+                if ((play.includes("vip.ffzy") || play.includes("vip.lz") || play.includes("hd.lz") || play.includes(".cdnlz") || play.includes("suonizy")) && play.includes("index.m3u8")) {
+                    let m3u8 = fetch(play);
+                    if (m3u8.includes('EXT-X-STREAM-INF')) {
+                        let houz = m3u8.split("\n")[2];
+                        play = play.replace("index.m3u8", houz);
+                    }
+                    play = clearM3u8(play);
                 }
                 return play
             }
@@ -3264,7 +3323,7 @@ function omlazy() {
                 }
                 window.__count = window.__count + 1;
                 if (window.__count > 1 && window.__count <= 3 && window.__count != null && window.__count != undefined) {
-                    if (document.querySelector('body').innerText.search(/触发了防盗链|未授权|接口防盗/) != -1&&!document.querySelector('body').innerText.search(/出现域名未授权/)) {
+                    if (document.querySelector('body').innerText.search(/触发了防盗链|未授权|接口防盗/) != -1 && !document.querySelector('body').innerText.search(/出现域名未授权/)) {
                         if (window.__count == 2) {
                             fba.log('尝试跳防盗验证一');
                             location.href = location.href;
@@ -3279,7 +3338,7 @@ function omlazy() {
                         return 'toast://访问失败，可能链接已失效。';
                     } else if (urls.length == 1) {
                         fba.log('尝试打开直链与JSON解析');
-                        if (urls[0].match(/dycdn\-tos\.pstatp|\.m3u8|\.mp4|\.flv|netease\.com|video_mp4|type\=m3u8|\/video\/tos\//) && !urls[0].match(/\.html|\.m3u8\.tv|\.m3u8\.pw|\&next|ac\=dm|\=http|https\:\/\/[\d]\.m3u8|\?url\=\/m3u8/)&&!urls[i].match(/banyung/)) {
+                        if (urls[0].match(/dycdn\-tos\.pstatp|\.m3u8|\.mp4|\.flv|netease\.com|video_mp4|type\=m3u8|\/video\/tos\//) && !urls[0].match(/\.html|\.m3u8\.tv|\.m3u8\.pw|\&next|ac\=dm|\=http|https\:\/\/[\d]\.m3u8|\?url\=\/m3u8/) && !urls[i].match(/banyung/)) {
                             //fy_bridge_app.log(urls[0])
                             if (urls[0].indexOf('bilivideo') != -1) {
                                 let play = urls[0] + ';{Referer@https://www.bilibili.com&&User-Agent@Mozilla/5.0}';
@@ -3290,28 +3349,28 @@ function omlazy() {
                             };
                             if (singpush) {
                                 return 'hiker://page/push?rule=XYQ推送&pushurl=' + encodeURIComponent(JSON.stringify({
-                                        "name": pgt,
-                                        "url": play
-                                    }));
+                                    "name": pgt,
+                                    "url": play
+                                }));
                             } else {
                                 return play;
                             }
-                        } else if(urls[0].match(/from\=https\:\/\/banyung\.pw/)){
+                        } else if (urls[0].match(/from\=https\:\/\/banyung\.pw/)) {
                             //单独处理搬运工线路视频
-                            if(singpush){
-                              return 'hiker://page/push?rule=XYQ推送&pushurl=' + encodeURIComponent(JSON.stringify({
-                                        "name": pgt,
-                                        "url": urls[0]
-                                    }));
-                            }else{
-                              return urls[0]
+                            if (singpush) {
+                                return 'hiker://page/push?rule=XYQ推送&pushurl=' + encodeURIComponent(JSON.stringify({
+                                    "name": pgt,
+                                    "url": urls[0]
+                                }));
+                            } else {
+                                return urls[0]
                             }
                         } else if (location.href.match(/dycdn\-tos\.pstatp|\.m3u8|\.mp4|\.flv|netease\.com|video_mp4|type\=m3u8|\/video\/tos\//) && !location.href.match(/html|\.m3u8\.tv|\.m3u8\.pw|\&next|ac\=dm|\=http|https\:\/\/[\d]\.m3u8|\?url\=\/m3u8/)) {
                             if (singpush) {
                                 return 'hiker://page/push?rule=XYQ推送&pushurl=' + encodeURIComponent(JSON.stringify({
-                                        "name": pgt,
-                                        "url": location.href
-                                    }));
+                                    "name": pgt,
+                                    "url": location.href
+                                }));
                             } else {
                                 return location.href
                             }
@@ -3321,9 +3380,9 @@ function omlazy() {
                                 let play = JSON.parse(html).url;
                                 if (singpush) {
                                     return 'hiker://page/push?rule=XYQ推送&pushurl=' + encodeURIComponent(JSON.stringify({
-                                            "name": pgt,
-                                            "url": play
-                                        }));
+                                        "name": pgt,
+                                        "url": play
+                                    }));
                                 } else {
                                     return play;
                                 }
@@ -3334,28 +3393,28 @@ function omlazy() {
                     } else {
                         fba.log('网页加载日志检索' + window.__count + '');
                         for (var i in urls) {
-                            if (urls[i].match(/miued\.com\/m3|obj\/tos\-alisg|dycdn\-tos\.pstatp|\.m3u8|\.mp4|\.flv|netease\.com|video_mp4|type\=m3u8|\?pt\=m3u8|\/video\/tos\/|item\/video|stariverpan\.com\:9096\/ipfs|vod\.shihuocdn\./) && !urls[i].match(/html|\.m3u8\.|\.m3u8zy\.fun|\&next|ac\=dm|\=http|https\:\/\/[\d]\.m3u8|\?url\=\/m3u8|name\=fyjson/)&&!urls[i].match(/banyung/)) {
+                            if (urls[i].match(/miued\.com\/m3|obj\/tos\-alisg|dycdn\-tos\.pstatp|\.m3u8|\.mp4|\.flv|netease\.com|video_mp4|type\=m3u8|\?pt\=m3u8|\/video\/tos\/|item\/video|stariverpan\.com\:9096\/ipfs|vod\.shihuocdn\./) && !urls[i].match(/html|\.m3u8\.|\.m3u8zy\.fun|\&next|ac\=dm|\=http|https\:\/\/[\d]\.m3u8|\?url\=\/m3u8|name\=fyjson/) && !urls[i].match(/banyung/)) {
                                 fy_bridge_app.log(urls[i])
                                 fba.hideLoading();
                                 if (fy_bridge_app.getHeaderUrl) {
                                     if (singpush) {
                                         let play = fy_bridge_app.getHeaderUrl(urls[i]).replace(";{", "#ignoreImg=true##isVideo=true#;{");
                                         return 'hiker://page/push?rule=XYQ推送&pushurl=' + encodeURIComponent(JSON.stringify({
-                                                "name": pgt,
-                                                "url": play
-                                            }));
+                                            "name": pgt,
+                                            "url": play
+                                        }));
                                     } else {
                                         //为新版函数占个坑
-                                        if(fy_bridge_app.clearM3u8Ad){
-                                         if((urls[i].includes("vip.ffzy")||urls[i].includes("vip.lz")||urls[i].includes("hd.lz")||urls[i].includes(".cdnlz")||urls[i].includes("suonizy")) && urls[i].includes("index.m3u8")&&!urls[i].includes("=http")){
-                                             //fy_bridge_app.log("尝试去视频广告");
-                                             let url = urls[i];
-                                             let m3u8 = fba.fetch(url);
-                                             if(m3u8.includes('EXT-X-STREAM-INF')){
-                                               let houz = m3u8.split("\n")[2];
-                                               url = urls[i].replace("index.m3u8",houz);
-                                             }
-                                             // return fy_bridge_app.parseLazyRule($$$(url).lazyRule(()=>{
+                                        if (fy_bridge_app.clearM3u8Ad) {
+                                            if ((urls[i].includes("vip.ffzy") || urls[i].includes("vip.lz") || urls[i].includes("hd.lz") || urls[i].includes(".cdnlz") || urls[i].includes("suonizy")) && urls[i].includes("index.m3u8") && !urls[i].includes("=http")) {
+                                                //fy_bridge_app.log("尝试去视频广告");
+                                                let url = urls[i];
+                                                let m3u8 = fba.fetch(url);
+                                                if (m3u8.includes('EXT-X-STREAM-INF')) {
+                                                    let houz = m3u8.split("\n")[2];
+                                                    url = urls[i].replace("index.m3u8", houz);
+                                                }
+                                                // return fy_bridge_app.parseLazyRule($$$(url).lazyRule(()=>{
                                                 // toast('尝试去除视频广告中，请稍等。');
                                                 // let f = cacheM3u8(input);
                                                 // let c = readFile(f.split("##")[0]);
@@ -3363,9 +3422,9 @@ function omlazy() {
                                                 // //c = c.replace(/#EXT-X-DISCONTINUITY\r*\n*#EXTINF\:(7\.400000|6\.666667)\,[\s\S]*?#EXT-X-DISCONTINUITY|#EXTINF.*?\s+.*?p1ayer.*?\.ts\s+|#EXTINF.*?\s+.*?\/video\/6.66a.vipal.*?\.ts\s+/g,'');
                                                 // writeFile(f.split("##")[0], c);
                                                 // return f;
-                                             // }));
-                                             return url;
-                                         }
+                                                // }));
+                                                return url;
+                                            }
                                         }
                                         return fy_bridge_app.getHeaderUrl(urls[i]).replace(";{", "#ignoreImg=true##isVideo=true#;{");
                                     }
@@ -3387,33 +3446,33 @@ function omlazy() {
                                     }
                                     if (singpush) {
                                         return 'hiker://page/push?rule=XYQ推送&pushurl=' + encodeURIComponent(JSON.stringify({
-                                                "name": pgt,
-                                                "url": play
-                                            }));
+                                            "name": pgt,
+                                            "url": play
+                                        }));
                                     } else {
                                         return play;
                                     }
                                 }
-                            } else if(urls[i].match(/from\=https\:\/\/banyung\.pw|m3u8\.pw\/Cache|getm3u8\?url|\/ftn_handler\//)){
-                            //单独处理搬运工线路视频
-                                if(fy_bridge_app.getHeaderUrl){
+                            } else if (urls[i].match(/from\=https\:\/\/banyung\.pw|m3u8\.pw\/Cache|getm3u8\?url|\/ftn_handler\//)) {
+                                //单独处理搬运工线路视频
+                                if (fy_bridge_app.getHeaderUrl) {
                                     if (singpush) {
                                         let play = fy_bridge_app.getHeaderUrl(urls[i]).replace(";{", "#ignoreImg=true##isVideo=true#;{");
                                         return 'hiker://page/push?rule=XYQ推送&pushurl=' + encodeURIComponent(JSON.stringify({
-                                                "name": pgt,
-                                                "url": play
-                                            }));
+                                            "name": pgt,
+                                            "url": play
+                                        }));
                                     } else {
                                         return fy_bridge_app.getHeaderUrl(urls[i]).replace(";{", "#ignoreImg=true##isVideo=true#;{");
                                     }
-                                }else{
-                                    if(singpush){
-                                      return 'hiker://page/push?rule=XYQ推送&pushurl=' + encodeURIComponent(JSON.stringify({
-                                                "name": pgt,
-                                                "url": urls[i]
-                                            }));
-                                    }else{
-                                      return urls[i]
+                                } else {
+                                    if (singpush) {
+                                        return 'hiker://page/push?rule=XYQ推送&pushurl=' + encodeURIComponent(JSON.stringify({
+                                            "name": pgt,
+                                            "url": urls[i]
+                                        }));
+                                    } else {
+                                        return urls[i]
                                     }
                                 }
                             }
@@ -3435,63 +3494,63 @@ function omlazy() {
         } else if (/wwgz|wuwuabc|aiyy|shigys|v\.t-ui|dadou|kykyy|oftens|wwys|nkvod|7xdy/.test(myurl)) {
             //直接网页嗅探
             return x5rule(srcurl, srcurl);
-        } else if(/bdys|xlys|newfii/.test(myurl)){
-            return 'video://'+srcurl;
-        } else if(/duanju5/.test(myurl)){
-          return singlepush(srcurl);
+        } else if (/bdys|xlys|newfii/.test(myurl)) {
+            return 'video://' + srcurl;
+        } else if (/duanju5/.test(myurl)) {
+            return singlepush(srcurl);
         }
         //77影视
         else if (/kunyu77|tyun77/.test(myurl)) {
             var playurls = JSON.parse(srcurl);
             var tab = [],
-            mult = [],
-            hean = [];
+                mult = [],
+                hean = [];
             for (var i in playurls) {
                 var from = playurls[i].playfrom;
                 var playurl = playurls[i].playurl;
                 if (playurl != "" && from != "alivc") {
-                  try {
-                    if(playurl.startsWith("http")){
-                    if(playurl.includes("GetDownUrl")){
-                    playurl=playurl;
-                    }else{
-                    let parurl = myurl + "/api.php/provide/parseDicturl";
-                    let qqtime = parseInt(new Date().getTime() / 1000) + '';
-                    let qqtok = md5('/api.php/provide/parseDicturlrealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android010110003'+ qqtime +'android10'+playurl+'2.3.6'+ qqtime +'XSpeUFjJ');
-                    let html = fetch(parurl+"?url="+playurl+"&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
-                        headers: {
-                            "User-Agent": "okhttp/3.12.0",
-                            "t": qqtime,
-                            "TK": qqtok,
-                            "oaid":"b29c7a601c6f0657"
+                    try {
+                        if (playurl.startsWith("http")) {
+                            if (playurl.includes("GetDownUrl")) {
+                                playurl = playurl;
+                            } else {
+                                let parurl = myurl + "/api.php/provide/parseDicturl";
+                                let qqtime = parseInt(new Date().getTime() / 1000) + '';
+                                let qqtok = md5('/api.php/provide/parseDicturlrealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android010110003' + qqtime + 'android10' + playurl + '2.3.6' + qqtime + 'XSpeUFjJ');
+                                let html = fetch(parurl + "?url=" + playurl + "&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj=" + qqtime, {
+                                    headers: {
+                                        "User-Agent": "okhttp/3.12.0",
+                                        "t": qqtime,
+                                        "TK": qqtok,
+                                        "oaid": "b29c7a601c6f0657"
+                                    }
+                                });
+                                playurl = JSON.parse(html).url;
+                            }
+                        } else {
+                            let parurl = myurl + "/api.php/provide/parseFirsturl";
+                            let qqtime = parseInt(new Date().getTime() / 1000) + '';
+                            let qqtok = md5('/api.php/provide/parseFirsturlrealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android010110003' + qqtime + 'android10' + playurl + '2.3.6' + qqtime + 'XSpeUFjJ');
+                            let html = fetch(parurl + "?url=" + playurl + "&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj=" + qqtime, {
+                                headers: {
+                                    "User-Agent": "okhttp/3.12.0",
+                                    "t": qqtime,
+                                    "TK": qqtok,
+                                    "oaid": "b29c7a601c6f0657"
+                                }
+                            });
+                            playurl = JSON.parse(html).url;
                         }
-                    });
-                    playurl=JSON.parse(html).url;
-                    }
-                    }else{
-                    let parurl = myurl + "/api.php/provide/parseFirsturl";
-                    let qqtime = parseInt(new Date().getTime() / 1000) + '';
-                    let qqtok = md5('/api.php/provide/parseFirsturlrealme4ac3fe96a6133de96904b8d3c8cfe16dRMX1931com.sevenVideo.app.android010110003'+ qqtime +'android10'+playurl+'2.3.6'+ qqtime +'XSpeUFjJ');
-                    let html = fetch(parurl+"?url="+playurl+"&pcode=010110003&version=2.3.6&devid=4ac3fe96a6133de96904b8d3c8cfe16d&package=com.sevenVideo.app.android&sys=android&sysver=10&brand=realme&model=RMX1931&sj="+qqtime, {
-                        headers: {
-                            "User-Agent": "okhttp/3.12.0",
-                            "t": qqtime,
-                            "TK": qqtok,
-                            "oaid":"b29c7a601c6f0657"
-                        }
-                    });
-                    playurl=JSON.parse(html).url;
-                    }
-                  } catch (e) {}
-                  
+                    } catch (e) {}
+
                 };
                 var head = {
                     'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1'
                 };
-                if(from != "alivc"){
-                mult.push(playurl);
-                tab.push(from);
-                hean.push(head);
+                if (from != "alivc") {
+                    mult.push(playurl);
+                    tab.push(from);
+                    hean.push(head);
                 }
             };
             let play = JSON.stringify({
@@ -3501,9 +3560,9 @@ function omlazy() {
             });
             if (singpush) {
                 return 'hiker://page/push?rule=XYQ推送&pushurl=' + encodeURIComponent(JSON.stringify({
-                        "name": pgt,
-                        "url": play.replace(/video\:\/\//g, '')
-                    }));
+                    "name": pgt,
+                    "url": play.replace(/video\:\/\//g, '')
+                }));
             } else {
                 return play
             }
@@ -3520,12 +3579,12 @@ function omlazy() {
             if (/.m3u8|.mp4|obj\/tos/.test(urll) && /http/.test(urll)) {
                 if (urll.indexOf('cqzyw') != -1) {
                     var ul = JSON.parse(fetch(urll, {
-                                headers: {
-                                    "User-Agent": "Dalvik/2.1.0"
-                                },
-                                redirect: false,
-                                withHeaders: true
-                            }));
+                        headers: {
+                            "User-Agent": "Dalvik/2.1.0"
+                        },
+                        redirect: false,
+                        withHeaders: true
+                    }));
                     if (ul.statusCode == "302") {
                         return singlepush(ul.headers.location[0]);
                     } else {
@@ -3560,10 +3619,10 @@ function omlazy() {
                     if (html.indexOf('purl') != -1) {
                         var kjjx = pdfh(html, 'body&&Html').match(/var purl = \'(.*?)\'/)[1];
                         // var html = fetch('https://qkan8.com' + kjjx, {
-                            // headers: {
-                                // "User-Agent": MOBILE_UA,
-                                // "Referer": "https://qkan8.com/"
-                            // }
+                        // headers: {
+                        // "User-Agent": MOBILE_UA,
+                        // "Referer": "https://qkan8.com/"
+                        // }
                         // })
                         return x5rule(kjjx, srcurl);
                     };
@@ -3609,7 +3668,7 @@ function omlazy() {
                 eval(scrpt.replace(/md5/g, 'CryptoJS').replace('eval', 'var data = '));
                 var UL = data.match(/url:.*?[\'\"](.*?)[\'\"]/)[1];
                 if (UL.search(/\.m3u8|\.mp4/) != -1) {
-                    return singlepush(UL.replace('https://wy', 'http://wy') + "#isVideo=true#" + ';{Origin@'+myurl+'&&Cookie@myannoun=1}');
+                    return singlepush(UL.replace('https://wy', 'http://wy') + "#isVideo=true#" + ';{Origin@' + myurl + '&&Cookie@myannoun=1}');
                 } else {
                     return refreshX5WebView(UL)
                 };
@@ -3652,10 +3711,10 @@ function omlazy() {
             });
             if (phtml.indexOf('检测中') != -1) {
                 let cook = JSON.parse(fetchCookie(srcurl, {
-                            headers: {
-                                "User-Agent": MOBILE_UA
-                            }
-                        })).join(';');
+                    headers: {
+                        "User-Agent": MOBILE_UA
+                    }
+                })).join(';');
                 phtml = fetch(srcurl + '?btwaf' + phtml.match(/btwaf(.*?)\"/)[1], {
                     headers: {
                         "User-Agent": MOBILE_UA,
@@ -3683,18 +3742,18 @@ function omlazy() {
                 return singlepush(tow.match(/url: \"(.*?)\"/)[1]);
             } else if (fro == 'bkm3u8') {
                 var link = JSON.parse(request('https://good-vip.mmiyue.com/zhenbuka2/api/dymp4.php?video_id=' + urll, {
-                            headers: {
-                                'Referer': myurl
-                            },
-                            redirect: false,
-                            withHeaders: true
-                        })).headers.location[0];
+                    headers: {
+                        'Referer': myurl
+                    },
+                    redirect: false,
+                    withHeaders: true
+                })).headers.location[0];
                 return singlepush(link + '#isVideo=true#');
             } else if (urll.indexOf('m3u8') != -1) {
                 return singlepush(urll);
             } else {
                 var jiek = fetch(myurl + '/static/player/' + fro + '.js?v=' + new Date()
-                        .getTime() + '', {
+                    .getTime() + '', {
                         headers: {
                             "User-Agent": MOBILE_UA
                         }
@@ -3754,7 +3813,7 @@ function omlazy() {
                 var psurl = 'https://play.hhplayer.com/hhjx/api.php'
             }
             var cc = pdfh(request(src, {}), 'body&&script,0&&Html').split('var act')[0];
-            cc=cc.replace('atob','base64Decode').replace(/const/g,'let');
+            cc = cc.replace('atob', 'base64Decode').replace(/const/g, 'let');
             eval(cc);
             var cs = 'url=' + url + '&t=' + t + '&key=' + key + '&act=0&play=1';
             var fc = fetch(psurl, {
@@ -3793,16 +3852,16 @@ function omlazy() {
                 var parnet = 'https://datas-s8pwfqdu9yystn90fb----------------cache.haozhansou.com/' + now;
                 if (singpush) {
                     return 'hiker://page/push?rule=XYQ推送&pushurl=' + encodeURIComponent(JSON.stringify({
-                            "name": pgt,
-                            "url": parnet
-                        }));
+                        "name": pgt,
+                        "url": parnet
+                    }));
                 } else {
                     return cacheM3u8(parnet)
                 }
             }
         }
         //乐猪
-        else if(/lezhutv/.test(myurl)){
+        else if (/lezhutv/.test(myurl)) {
             var phtml = request(srcurl, {});
             var scrpt = ('var view_flag' + phtml.split('var view_flag')[1].split('</script>')[0]);
             eval(scrpt);
@@ -3811,13 +3870,13 @@ function omlazy() {
             //log(fro+urll);
             var jconf = pd(phtml, ".mplayer&&script,1&&src");
             eval(request(jconf, {
-                    headers: {
-                        "Referer": myurl
-                    }
-                }));
-            if(mac_play_list[fro].ps == "1") {
+                headers: {
+                    "Referer": myurl
+                }
+            }));
+            if (mac_play_list[fro].ps == "1") {
                 var jiek = mac_play_list[fro].parse;
-            }else{
+            } else {
                 return singlepush(urll);
             }
             if (jiek != '') {
@@ -3829,8 +3888,8 @@ function omlazy() {
                     jiek = myurl + jiek
                 }
             }
-           let video = request(jiek+urll).match(/\"url\":\"(.*?)\"/)[1].replace(/\\/g,'');
-           return singlepush(video);
+            let video = request(jiek + urll).match(/\"url\":\"(.*?)\"/)[1].replace(/\\/g, '');
+            return singlepush(video);
         }
         //看看剧
         else if (/kankanju/.test(myurl)) {
@@ -3851,7 +3910,11 @@ function omlazy() {
                 urll = unescape(base64Decode(urll));
             };
             var jvs = parseDom(phtml, "body&&script[src^=/static/js/playerconfig]&&src");
-            eval(request(jvs, {headers:{"Cookie": 'filter_robot_dd=301'}}));
+            eval(request(jvs, {
+                headers: {
+                    "Cookie": 'filter_robot_dd=301'
+                }
+            }));
             var jiek = '';
             if (MacPlayerConfig.player_list[fro].ps == "1") {
                 //jiek = MacPlayerConfig.player_list[fro].parse == '' ? MacPlayerConfig.parse : MacPlayerConfig.player_list[fro].parse;
@@ -3875,7 +3938,7 @@ function omlazy() {
         else if (/dsxys|unss|xifanys|kanju77|vipmv|zjdr\.vip|zhuijudr|cccu|haokanju|yingkuya|98bbw|1090ys|miniku|1080p|ysgc|3443|ak1080|tkznp|4kcz|smdyy|tegouys|lekkan|gfvod|bulei|sbdm|xy1080|moefun|aowu|jukankan|cs1369|duanju|dmla|xxjio/.test(myurl)) {
             var phtml = fetch(srcurl, {
                 headers: {
-                    "accept":"text/html",
+                    "accept": "text/html",
                     "User-Agent": MOBILE_UA,
                     "Sec-Fetch-Site": "none",
                     "Sec-Fetch-Mode": "navigate",
@@ -3885,10 +3948,10 @@ function omlazy() {
             });
             if (phtml.indexOf('检测中') != -1) {
                 let cook = JSON.parse(fetchCookie(srcurl, {
-                            headers: {
-                                "User-Agent": MOBILE_UA
-                            }
-                        })).join(';');
+                    headers: {
+                        "User-Agent": MOBILE_UA
+                    }
+                })).join(';');
                 phtml = fetch(srcurl + '?btwaf' + phtml.match(/btwaf(.*?)\"/)[1], {
                     headers: {
                         "User-Agent": MOBILE_UA,
@@ -3939,18 +4002,18 @@ function omlazy() {
             else {
                 var jconf = pd(phtml, "body&&script[src^=/static/js/playerconfig]&&src");
                 eval(request(jconf, {
-                        headers: {
-                            "accept":"text/html",
-                            "Referer": myurl
-                        }
-                    }));
-                if (MacPlayerConfig.player_list[fro]){
-                    if(MacPlayerConfig.player_list[fro].ps == "1") {
-                    var jiek = MacPlayerConfig.player_list[fro].parse == '' ? MacPlayerConfig.parse : MacPlayerConfig.player_list[fro].parse;
-                    }else {
-                    var jiek = request(myurl + '/static/player/' + fro + '.js', {}).match(/src=\"(.*?)\"/)[1].split("'")[0];
+                    headers: {
+                        "accept": "text/html",
+                        "Referer": myurl
                     }
-                }else {
+                }));
+                if (MacPlayerConfig.player_list[fro]) {
+                    if (MacPlayerConfig.player_list[fro].ps == "1") {
+                        var jiek = MacPlayerConfig.player_list[fro].parse == '' ? MacPlayerConfig.parse : MacPlayerConfig.player_list[fro].parse;
+                    } else {
+                        var jiek = request(myurl + '/static/player/' + fro + '.js', {}).match(/src=\"(.*?)\"/)[1].split("'")[0];
+                    }
+                } else {
                     var jiek = request(myurl + '/static/player/' + fro + '.js', {}).match(/src=\"(.*?)\"/)[1].split("'")[0];
                 }
                 if (jiek != '') {
@@ -3970,7 +4033,7 @@ function omlazy() {
                 } else if (/xy1080/.test(myurl)) {
                     log(epititle);
                     //return refreshX5WebView(jiek + urll);
-                    return "video://"+jiek+urll;
+                    return "video://" + jiek + urll;
                 } else {
                     if (jiek.substring(0, 4) != 'http') {
                         return x5rule(srcurl, srcurl);
@@ -4035,13 +4098,13 @@ function omlazy() {
             if (/.m3u8|.mp4|obj\/tos/.test(urll) && /http/.test(urll)) {
                 if (urll.search(/cqzyw|GetDownUrlTx/) != -1) {
                     var ul = JSON.parse(fetch(urll, {
-                                headers: {
-                                    "User-Agent": "Dalvik/2.1.0",
-                                    "Referer": myurl
-                                },
-                                redirect: false,
-                                withHeaders: true
-                            }));
+                        headers: {
+                            "User-Agent": "Dalvik/2.1.0",
+                            "Referer": myurl
+                        },
+                        redirect: false,
+                        withHeaders: true
+                    }));
                     if (ul.statusCode == "302") {
                         return singlepush(ul.headers.location[0]);
                     } else {
@@ -4049,11 +4112,15 @@ function omlazy() {
                     };
                 } else if (/kkju/.test(myurl)) {
                     return x5rule(srcurl, srcurl);
-                } else if(/nyafun/.test(myurl)){
-                    let jxurl=myurl+'/addons/dp/player/dp.php?key=0&from=&id='+player_data.id+'&api=&url='+urll+'&jump=';
-                    let nfhtml=request(jxurl,{headers: {"Referer": myurl}});
+                } else if (/nyafun/.test(myurl)) {
+                    let jxurl = myurl + '/addons/dp/player/dp.php?key=0&from=&id=' + player_data.id + '&api=&url=' + urll + '&jump=';
+                    let nfhtml = request(jxurl, {
+                        headers: {
+                            "Referer": myurl
+                        }
+                    });
                     let play = nfhtml.match(/\"url\".*?\"(.*?)\"/)[1];
-                    return singlepush(play+ ';{Referer@https://www.nyafun.net/}');
+                    return singlepush(play + ';{Referer@https://www.nyafun.net/}');
                 } else {
                     return singlepush(urll + '#isVideo=true#')
                 };
@@ -4078,28 +4145,28 @@ function omlazy() {
                 let resultv2 = ifrwy.match(/var result_v2 = {(.*?)};/)[1];
                 let data = JSON.parse('{' + resultv2 + '}').data;
                 let code = data.split('').reverse().join('')
-                    let temp = ''
-                    for (let i = 0x0; i < code.length; i = i + 0x2) {
-                        temp += String.fromCharCode(parseInt(code[i] + code[i + 0x1], 0x10))
-                    }
-                    return temp.substring(0x0, (temp.length - 0x7) / 0x2) + temp.substring((temp.length - 0x7) / 0x2 + 0x7);
+                let temp = ''
+                for (let i = 0x0; i < code.length; i = i + 0x2) {
+                    temp += String.fromCharCode(parseInt(code[i] + code[i + 0x1], 0x10))
+                }
+                return temp.substring(0x0, (temp.length - 0x7) / 0x2) + temp.substring((temp.length - 0x7) / 0x2 + 0x7);
 
             } else if (/juhuang/.test(myurl)) {
                 var jiek = 'https://web-webapi-tsjqsvyzyx.cn-shenzhen.fcapp.run/?url=';
                 return singlepush(JSON.parse(request(jiek + encodeURIComponent(base64Decode(urll)), {})).play_url);
             } else {
                 eval(request(myurl + '/static/js/playerconfig.js', {
-                        headers: {
-                            "Referer": myurl
-                        }
-                    }));
-                if (MacPlayerConfig.player_list[fro]){
-                    if(MacPlayerConfig.player_list[fro].ps == "1") {
-                    var jiek = MacPlayerConfig.player_list[fro].parse == '' ? MacPlayerConfig.parse : MacPlayerConfig.player_list[fro].parse;
-                    }else {
-                    var jiek = request(myurl + '/static/player/' + fro + '.js', {}).match(/src=\"(.*?)\"/)[1].split("'")[0];
+                    headers: {
+                        "Referer": myurl
                     }
-                }else {
+                }));
+                if (MacPlayerConfig.player_list[fro]) {
+                    if (MacPlayerConfig.player_list[fro].ps == "1") {
+                        var jiek = MacPlayerConfig.player_list[fro].parse == '' ? MacPlayerConfig.parse : MacPlayerConfig.player_list[fro].parse;
+                    } else {
+                        var jiek = request(myurl + '/static/player/' + fro + '.js', {}).match(/src=\"(.*?)\"/)[1].split("'")[0];
+                    }
+                } else {
                     var jiek = request(myurl + '/static/player/' + fro + '.js', {}).match(/src=\"(.*?)\"/)[1].split("'")[0];
                 }
                 if (jiek != '') {
@@ -4131,7 +4198,7 @@ function omlazy() {
                     log(epititle);
                     //return refreshX5WebView(jiek + urll);
                     var title = parseDomForHtml(html, 'head&&title&&Text');
-                    return "video://"+jiek+urll+ '&image=' + player_data.vod_data.vod_thumb + '&next=' + player_data.link_next + '&title=' + title.split("-")[0];
+                    return "video://" + jiek + urll + '&image=' + player_data.vod_data.vod_thumb + '&next=' + player_data.link_next + '&title=' + title.split("-")[0];
                 } else {
                     if (player_data.link_next != '') {
                         return x5rule(jiek + urll + "&next=" + nxt, srcurl);
