@@ -1416,7 +1416,7 @@ function hiksearch() {
             url = url + '/vod-search-wd-' + spl[2] + '-p-fypage.html';
         } else if (/wwgz/.test(url)) {
             url = url + '/index.php？？m=vod-search?wd=' + spl[2];
-        } else if (/kykyy/.test(url)) {
+        } else if (/kykyy|kanyikanys/.test(url)) {
             url = url + '/index.php?m=vod-search-pg-fypage-wd-' + spl[2] + '.html';
         } else if (/bdys|xlys/.test(url)) {
             url = url + '/search/' + spl[2] + '/fypage';
@@ -3491,7 +3491,7 @@ function omlazy() {
             return "toast://请等待加载选集！";
         } else if (srcurl.indexOf("/share/") != -1) {
             return zywyun(srcurl);
-        } else if (/wwgz|wuwuabc|aiyy|shigys|v\.t-ui|dadou|kykyy|oftens|wwys|nkvod|7xdy/.test(myurl)) {
+        } else if (/wwgz|wuwuabc|aiyy|shigys|v\.t-ui|dadou|kykyy|kanyikanys|oftens|wwys|nkvod|7xdy/.test(myurl)) {
             //直接网页嗅探
             return x5rule(srcurl, srcurl);
         } else if (/bdys|xlys|newfii/.test(myurl)) {
