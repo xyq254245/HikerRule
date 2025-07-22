@@ -312,7 +312,6 @@ function hikhmrule() {
 function hikhmerj() {
     var res = {};
     var d = [];
-    let ypj = fetch("hiker://home@云盘君(推送)").length <= 5 ? '云盘君' : '云盘君(推送)';
     var spl = MY_URL.split('$$')[1];
     var pn = MY_URL.split('$$')[2];
     var vtype = MY_URL.split('$$')[3];
@@ -795,20 +794,6 @@ function hikhmerj() {
                         desc: desc,
                         extra: {
                             longClick: [{
-                                    title: (ypj) + '搜索',
-                                    js: $.toString((title, ypj) => {
-                                        //return 'hiker://search?s=' + title + '&rule='+(ypj.length <= 5 ?'云盘君':'云盘君(推送)')
-                                        return $('hiker://empty#noRecordHistory#').lazyRule((title, ypj) => {
-                                            return 'hiker://page/soup?p=fypage&rule=' + (ypj) + '&pageTitle=搜索 ' + title
-                                        }, title, ypj);
-
-                                    }, title, ypj),
-                                    extra: {
-                                        pageTitle: "搜索 " + title,
-                                        key: title
-                                    }
-                                },
-                                {
                                     title: JSON.parse(getRule()).title + '搜索',
                                     js: $.toString((title) => {
                                         //return 'hiker://search?s=' + title + '&rule='+JSON.parse(getRule()).title
@@ -852,20 +837,6 @@ function hikhmerj() {
                         desc: desc,
                         extra: {
                             longClick: [{
-                                    title: (ypj) + '搜索',
-                                    js: $.toString((title, ypj) => {
-                                        //return 'hiker://search?s=' + title + '&rule='+(ypj.length <= 5 ?'云盘君':'云盘君(推送)')
-                                        return $('hiker://empty#noRecordHistory#').lazyRule((title, ypj) => {
-                                            return 'hiker://page/soup?p=fypage&rule=' + (ypj) + '&pageTitle=搜索 ' + title
-                                        }, title, ypj);
-
-                                    }, title, ypj),
-                                    extra: {
-                                        pageTitle: "搜索 " + title,
-                                        key: title
-                                    }
-                                },
-                                {
                                     title: JSON.parse(getRule()).title + '搜索',
                                     js: $.toString((title) => {
                                         //return 'hiker://search?s=' + title + '&rule='+JSON.parse(getRule()).title
@@ -901,7 +872,6 @@ function clsrule() {
     var res = {};
     var d = [];
     var html = getResCode();
-    let ypj = fetch("hiker://home@云盘君(推送)").length <= 5 ? '云盘君' : '云盘君(推送)';
     var timesta = parseInt(new Date().getTime() / 1000) + '';
     var md5k = md5("DS" + timesta + "DCC147D11943AF75");
     if (/md5key/.test(MY_URL)) {
@@ -1240,20 +1210,6 @@ function clsrule() {
                     desc: desc,
                     extra: {
                         longClick: [{
-                                title: (ypj) + '搜索',
-                                js: $.toString((title, ypj) => {
-                                    //return 'hiker://search?s=' + title + '&rule='+(ypj.length <= 5 ?'云盘君':'云盘君(推送)')
-                                    return $('hiker://empty#noRecordHistory#').lazyRule((title, ypj) => {
-                                        return 'hiker://page/soup?p=fypage&rule=' + (ypj) + '&pageTitle=搜索 ' + title
-                                    }, title, ypj);
-
-                                }, title, ypj),
-                                extra: {
-                                    pageTitle: "搜索 " + title,
-                                    key: title
-                                }
-                            },
-                            {
                                 title: JSON.parse(getRule()).title + '搜索',
                                 js: $.toString((title) => {
                                     //return 'hiker://search?s=' + title + '&rule='+JSON.parse(getRule()).title
@@ -1297,20 +1253,6 @@ function clsrule() {
                     }, title),
                     extra: {
                         longClick: [{
-                                title: (ypj) + '云搜索',
-                                js: $.toString((title, ypj) => {
-                                    //return 'hiker://search?s=' + title + '&rule='+(ypj.length <= 5 ?'云盘君':'云盘君(推送)')
-                                    return $('hiker://empty#noRecordHistory#').lazyRule((title, ypj) => {
-                                        return 'hiker://page/soup?p=fypage&rule=' + (ypj) + '&pageTitle=搜索 ' + title
-                                    }, title, ypj);
-
-                                }, title, ypj),
-                                extra: {
-                                    pageTitle: "搜索 " + title,
-                                    key: title
-                                }
-                            },
-                            {
                                 title: JSON.parse(getRule()).title + '搜索',
                                 js: $.toString((title) => {
                                     //return 'hiker://search?s=' + title + '&rule='+JSON.parse(getRule()).title
@@ -2549,19 +2491,7 @@ function omerj() {
         col_type: 'x5_webview_single'
     });
     refreshX5WebView('');
-    let ypj = fetch("hiker://home@云盘君(推送)").length <= 5 ? '云盘君' : '云盘君(推送)';
     d.push({
-        title: (ypj) + '搜索',
-        desc: '',
-        url: $('hiker://empty#noRecordHistory#').lazyRule((MOVtitle, ypj) => {
-            return 'hiker://page/soup?p=fypage&rule=' + (ypj)
-        }, MOVtitle, ypj),
-        extra: {
-            pageTitle: "搜索 " + MOVtitle,
-            key: MOVtitle
-        },
-        col_type: 'flex_button'
-    }, {
         title: JSON.parse(getRule()).title + '搜索',
         desc: '',
         /*url: $('hiker://empty#noRecordHistory#').lazyRule((MOVtitle)=>{
