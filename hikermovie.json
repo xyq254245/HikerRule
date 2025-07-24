@@ -69,11 +69,11 @@
                     "url": "https://www.libvio.fun"
                 },
                 {
-                    "title": "影视工场",
-                    "vodtype": "电影&电视剧&综艺&动漫&纪录片&电视直播&动作片&喜剧片&爱情片&科幻片&恐怖片&悬疑片&剧情片&战争片&动画片&国产剧&港台剧&日韩剧",
-                    "vodhref": "1&2&3&4&24&30&6&7&8&9&10&28&11&12&25&13&14&15",
-                    "ico": "https://www.ysgc.fun/template/mytheme/statics/image/20230123/1764f5143.ico",
-                    "url": "https://www.ysgc.fun"
+                    "title": "电影盒子",
+                    "vodtype": "电影&电视剧&综艺&动漫",
+                    "vodhref": "1&2&4&3",
+                    "ico": "http://80kp.com/favicon.ico",
+                    "url": "http://80kp.com"
                 },
                 {
                     "title": "趣映坊",

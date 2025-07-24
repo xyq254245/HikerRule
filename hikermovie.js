@@ -389,6 +389,8 @@ function hikhmerj() {
                     var url = spl + '/type/' + clsu[i] + '_type_fypage.html[firstPage=' + spl + '/type/' + clsu[i] + '_type.html]';
                 } else if (/dmla/.test(spl)) {
                     var url = spl + '/type/' + clsu[i] + '-fypage.html[firstPage=' + spl + '/type/' + clsu[i] + '.html]';
+                } else if (/80kp/.test(spl)) {
+                    var url = spl + '/films/' + clsu[i] + '_fypage.html[firstPage=' + spl + '/films/' + clsu[i] + '.html]';
                 } else if (/kanju77/.test(spl)) {
                     var url = spl + '/ve/' + clsu[i] + '-fypage/';
                 } else if (/kankanju/.test(spl)) {
@@ -1173,6 +1175,8 @@ function clsrule() {
                 var title = pdfh(list[i], '.video-model-title&&Text');
             } else if (/txtA/.test(list[i])) {
                 var title = pdfh(list[i], '.txtA&&Text');
+            } else if (/stui-vodlist__detail/.test(list[i])) {
+                var title = pdfh(list[i], 'a[title],-1&&title');
             } else {
                 var title = pdfh(list[i], 'a[title]&&title');
             }
@@ -1338,7 +1342,7 @@ function hiksearch() {
             url = url + '/sb/kemksmaksdl7nhZe3c1' + spl[2] + '-/page/fypage.html';
         } else if (/saohuo|shdy3|shdy2/.test(url)) {
             url = url + '/s-' + spl[2] + '---------fypage.html';
-        } else if (/7xdy/.test(url)) {
+        } else if (/7xdy|80kp/.test(url)) {
             url = url + '/search.php?page=fypage&searchword=' + spl[2] + '&searchtype=';
         } else if (/lezhutv/.test(url)) {
             url = url + '/search-pg-fypage-wd-' + spl[2] + '.html';
@@ -1442,7 +1446,7 @@ function hiksearch() {
                                             timeout: tout
                                         }
                                     });
-                                } else if (/wwgz/.test(Url)) {
+                                } else if (/wwgz|80kp/.test(Url)) {
                                     Data.push({
                                         url: Url.split('?')[0].replace('？？', '?'),
                                         options: {
@@ -1773,7 +1777,7 @@ function hiksearch() {
                     var link = url + ';get;utf-8;{User-Agent@.js:MOBILE_UA&&Cookie@.js:fetch("hiker://files/rules/xyq/xqyscookie/' + list[j].title + 'cookie.txt", {})}';
                 } else if (/kunyu77|tyun77/.test(url)) {
                     var link = 'hiker://empty' + url;
-                } else if (/wwgz/.test(url)) {
+                } else if (/wwgz|80kp/.test(url)) {
                     var link = url + ';post;utf-8;{User-Agent@.js:MOBILE_UA}';
                 } else if (/wuwuabc/.test(url)) {
                     var link = url + ';get;utf-8;{User-Agent@.js:MOBILE_UA&&Cookie@searchneed=ok}';
@@ -2585,7 +2589,9 @@ function omerj() {
     } else if (/nav-tabs/.test(html) && /#con_playlist/.test(html)) {
         var tabs = pdfa(html, "body&&.nav-tabs&&.gico");
     } else if (/stui-content__detail/.test(html) && /stui-content__playlist/.test(html)) {
-        if (/fa-youtube-play|pull-right/.test(html)) {
+        if(/data-toggle\=\"tab/.test(html)){
+            var tabs = pdfa(html, ".nav-tabs&&li");
+        } else if (/fa-youtube-play|pull-right/.test(html)) {
             var tabs = pdfa(html, "body&&.stui-pannel__head||.stui-vodlist__head");
         } else if (/s-playsite/.test(html)) {
             var tabs = pdfa(html, "body&&.js-list&&li");
@@ -3421,7 +3427,7 @@ function omlazy() {
             return "toast://请等待加载选集！";
         } else if (srcurl.indexOf("/share/") != -1) {
             return zywyun(srcurl);
-        } else if (/wwgz|wuwuabc|aiyy|shigys|v\.t-ui|dadou|kykyy|kanyikanys|oftens|wwys|nkvod|7xdy/.test(myurl)) {
+        } else if (/wwgz|wuwuabc|aiyy|shigys|v\.t-ui|dadou|kykyy|kanyikanys|oftens|wwys|nkvod|7xdy|80kp/.test(myurl)) {
             //直接网页嗅探
             return x5rule(srcurl, srcurl);
         } else if (/bdys|xlys|newfii/.test(myurl)) {
