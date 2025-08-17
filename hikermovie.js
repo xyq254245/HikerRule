@@ -2731,7 +2731,7 @@ function omerj() {
                 list = mac_url.split('#');
             }
 
-            if (/lezhutv|saohuo|shdy3|shdy2|wwgz/.test(omdomin)) {
+            if (/lezhutv|saohuo|shdy3|shdy2|dm84|wwgz/.test(omdomin)) {
                 list = list.reverse();
             }
 
