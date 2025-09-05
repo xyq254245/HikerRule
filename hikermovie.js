@@ -397,7 +397,7 @@ function hikhmerj() {
                     var url = spl + '/type/' + clsu[i] + '-fypage.html;get;utf-8;{User-Agent@.js:MOBILE_UA&&Cookie@filter_robot_dd=301}';
                 } else if (/jiuku|v\.t-ui|dadou/.test(spl)) {
                     var url = 'hiker://empty' + spl + '/index.php/api/vod?type=' + clsu[i] + '&page=fypage&time=timestam&key=md5key';
-                } else if (/moefun|aowu|netflixgc/.test(spl)) {
+                } else if (/moefun|aowu|netflixgc|xiaoh/.test(spl)) {
                     var url = 'hiker://empty' + spl + '/index.php/api/vod?type=' + clsu[i] + '&class=&area=&lang=&version=&state=&letter=&page=fypage&time=timestam&key=md5key';
                 } else if (/fositv/.test(spl)) {
                     var url = spl + '/vod__________________________type/' + clsu[i] + '-fypage.html';
@@ -1190,6 +1190,8 @@ function clsrule() {
                     var url = spl + '/bangumi/' + list[i].vod_id + '.html';
                 } else if (/netflixgc/.test(spl)) {
                     var url = spl + '/detail/' + list[i].vod_id + '.html';
+                } else if (/xiaoh/.test(spl)) {
+                    var url = spl + '/detail/' + list[i].vod_id + '/';
                 } else {
                     var url = spl + '/index.php/vod/detail/id/' + list[i].vod_id + '.html';
                 }
@@ -1338,8 +1340,8 @@ function hiksearch() {
             url = url + '/search/page/fypage/wd/' + spl[2] + '/';
         } else if (/qkan8|unss|aiyy|jiuku|shigys|v\.t-ui|bulei|sbdm|xxjio/.test(url)) {
             url = url + '/index.php/vod/search/page/fypage/wd/' + spl[2] + '.html';
-        } else if (/dsxys/.test(url)) {
-            url = url + '/sb/kemksmaksdl7nhZe3c1' + spl[2] + '-/page/fypage.html';
+        } else if (/xiaoh/.test(url)) {
+            url = url + '/search'+spl[2]+'/page/fypage/';
         } else if (/saohuo|shdy3|shdy2/.test(url)) {
             url = url + '/s-' + spl[2] + '---------fypage.html';
         } else if (/7xdy|80kp/.test(url)) {
@@ -3427,7 +3429,7 @@ function omlazy() {
             return "toast://请等待加载选集！";
         } else if (srcurl.indexOf("/share/") != -1) {
             return zywyun(srcurl);
-        } else if (/wwgz|wuwuabc|aiyy|shigys|v\.t-ui|dadou|kykyy|kanyikanys|oftens|wwys|nkvod|7xdy|80kp/.test(myurl)) {
+        } else if (/wwgz|wuwuabc|aiyy|shigys|v\.t-ui|dadou|kykyy|kanyikanys|oftens|wwys|nkvod|7xdy|80kp|xiaoh/.test(myurl)) {
             //直接网页嗅探
             return x5rule(srcurl, srcurl);
         } else if (/bdys|xlys|newfii/.test(myurl)) {

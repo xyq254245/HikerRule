@@ -20,7 +20,11 @@
     "regex": [
       "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF.*?66667,[\\s\\S]*?#EXT-X-DISCONTINUITY",
       "#EXTINF.*?\\s+.*?08646.*?\\.ts",
+      "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF.*?6\\.667,[\\s\\S]*?#EXT-X-DISCONTINUITY",
+      "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF.*?7\\.067,[\\s\\S]*?#EXT-X-DISCONTINUITY",
+      "#EXTINF.*?\\s+.*?48234.*?\\.ts",
       "17.19",
+      "19.12",
       "19.63"
     ]
   },
