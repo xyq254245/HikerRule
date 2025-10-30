@@ -300,6 +300,16 @@ function hikhmrule() {
 
                 col_type: 'text_2'
             });
+            d.push({
+                title: '↓TVBox规则订阅地址(点击可复制)↓',
+                col_type: 'text_center_1'
+            });
+            let dingyue='https://gh.jasonzeng.dev/https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json';
+            d.push({
+                title: dingyue,
+                url: 'copy://'+dingyue,
+                col_type: 'long_text'
+            });
             setResult(d)
         }),
         col_type: 'scroll_button'
