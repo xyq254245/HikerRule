@@ -308,7 +308,7 @@ function hikhmrule() {
             d.push({
                 title: dingyue,
                 url: 'copy://'+dingyue,
-                col_type: 'long_text'
+                col_type: 'text_1'
             });
             setResult(d)
         }),
