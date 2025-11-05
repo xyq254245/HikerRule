@@ -397,7 +397,7 @@ function hikhmerj() {
                     var url = 'hiker://empty' + spl + '/playtop?channel=' + clsu[i] + '&rate=3&page=fypage&pagesize=21';
                 } else if (/juhuang/.test(spl)) {
                     var url = spl + '/type/' + clsu[i] + '_type_fypage.html[firstPage=' + spl + '/type/' + clsu[i] + '_type.html]';
-                } else if (/dmla/.test(spl)) {
+                } else if (/dmla|tt776b/.test(spl)) {
                     var url = spl + '/type/' + clsu[i] + '-fypage.html[firstPage=' + spl + '/type/' + clsu[i] + '.html]';
                 } else if (/80kp/.test(spl)) {
                     var url = spl + '/films/' + clsu[i] + '_fypage.html[firstPage=' + spl + '/films/' + clsu[i] + '.html]';
@@ -1322,7 +1322,7 @@ function hiksearch() {
             url = url + '/search-' + spl[2] + '----------fypage---.html';
         } else if (/kankanju/.test(url)) {
             url = url + '/vodsearch' + spl[2] + '/page/fypage.html';
-        } else if (/libvio|moefun|aowu|dmla/.test(url)) {
+        } else if (/libvio|moefun|aowu|dmla|tt776b/.test(url)) {
             url = url + '/search/' + spl[2] + '----------fypage---.html';
         } else if (/oftens|wwys/.test(url)) {
             url = url + '/oftenssearch/' + spl[2] + '----------fypage---.html';
@@ -3883,7 +3883,7 @@ function omlazy() {
             return x5rule(jiek + urll, srcurl);
         }
         //大师兄&BD电影&思古&爱迪&极品&迪迪&九州&饭团
-        else if (/dsxys|unss|xifanys|kanju77|vipmv|zjdr\.vip|zhuijudr|cccu|haokanju|yingkuya|98bbw|1090ys|miniku|1080p|ysgc|3443|ak1080|tkznp|4kcz|smdyy|tegouys|lekkan|gfvod|bulei|sbdm|xy1080|moefun|aowu|jukankan|cs1369|duanju|dmla|xxjio/.test(myurl)) {
+        else if (/dsxys|unss|xifanys|kanju77|vipmv|zjdr\.vip|zhuijudr|cccu|haokanju|yingkuya|98bbw|1090ys|miniku|1080p|ysgc|3443|ak1080|tkznp|4kcz|smdyy|tegouys|lekkan|gfvod|bulei|sbdm|xy1080|moefun|aowu|jukankan|cs1369|duanju|dmla|tt776b|xxjio/.test(myurl)) {
             var phtml = fetch(srcurl, {
                 headers: {
                     "accept": "text/html",
