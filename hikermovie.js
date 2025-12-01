@@ -407,8 +407,10 @@ function hikhmerj() {
                     var url = spl + '/type/' + clsu[i] + '-fypage.html;get;utf-8;{User-Agent@.js:MOBILE_UA&&Cookie@filter_robot_dd=301}';
                 } else if (/jiuku|v\.t-ui|dadou/.test(spl)) {
                     var url = 'hiker://empty' + spl + '/index.php/api/vod?type=' + clsu[i] + '&page=fypage&time=timestam&key=md5key';
-                } else if (/moefun|aowu|netflixgc|xiaoh/.test(spl)) {
+                } else if (/moefun|netflixgc|xiaoh/.test(spl)) {
                     var url = 'hiker://empty' + spl + '/index.php/api/vod?type=' + clsu[i] + '&class=&area=&lang=&version=&state=&letter=&page=fypage&time=timestam&key=md5key';
+                } else if (/aowu/.test(spl)) {
+                    var url = 'hiker://empty' + spl + '/index.php/ds_api/vod?type=' + clsu[i] + '&class=&area=&year=&lang=&version=&state=&letter=&time=&level=0&weekday=&by=time&page=fypage';
                 } else if (/fositv/.test(spl)) {
                     var url = spl + '/vod__________________________type/' + clsu[i] + '-fypage.html';
                 } else if (/fenggou/.test(spl)) {
@@ -899,6 +901,20 @@ function clsrule() {
             method: 'POST',
             timeout: 3000
         });
+    } if (/aowu/.test(MY_URL)) {
+        MY_URL = getResCode();
+        var spll = MY_URL.match(/([\S]*?:\/\/[\S]*?)\//)[1];
+        html = request(spll + '/index.php/ds_api/vod', {
+            headers: {
+                'accept': 'text/html',
+                'referer': spll,
+                'origin': spll,
+                'x-requested-with': 'XMLHttpRequest'
+            },
+            body: MY_URL.split('vod?')[1].replace('timestam', timesta).replace('md5key', md5k),
+            method: 'POST',
+            timeout: 3000
+        });
     } else if (/kunyu77|tyun77/.test(MY_URL)) {
         MY_URL = getResCode();
         let tid = MY_URL.split("&rate")[0].split("channel=")[1];
@@ -1055,7 +1071,7 @@ function clsrule() {
         //取分类片单列表
         if (/kunyu77|tyun77/.test(MY_URL)) {
             var list = JSON.parse(html).data.list;
-        } else if (/md5key/.test(MY_URL)) {
+        } else if (/md5key|aowu/.test(MY_URL)) {
             var list = JSON.parse(html).list;
         } else if (/czzzu|czys|cz01|czzy|magedn|subaibai|nfyingshi/.test(MY_URL)) {
             var list = pdfa(html, '.bt_img&&li');
@@ -1131,7 +1147,7 @@ function clsrule() {
                     var img = pdfh(list[i], 'img&&src||data-echo');
                 } else if (/kunyu77|tyun77/.test(MY_URL)) {
                     var img = list[i].videoCover;
-                } else if (/md5key/.test(MY_URL)) {
+                } else if (/md5key|aowu/.test(MY_URL)) {
                     var img = list[i].vod_pic.replace('mac://', 'https://');
                 } else if (/module-list/.test(html) && /module-item/.test(html)) {
                     var img = pdfh(list[i], ".lazyloaded||.lazyload||.lazy&&data-src||data-6.66a.vipal");
@@ -1153,7 +1169,7 @@ function clsrule() {
                     var desc = pdfh(list[i], '.jidi||.hdinfo||.qr&&Text');
                 } else if (/kunyu77|tyun77/.test(MY_URL)) {
                     var desc = list[i].msg;
-                } else if (/md5key/.test(MY_URL)) {
+                } else if (/md5key|aowu/.test(MY_URL)) {
                     var desc = list[i].vod_remarks;
                 } else if (/class="type"|class="time"/.test(list[i])) {
                     var typ = pdfh(list[i], '.type&&Text');
@@ -1173,7 +1189,7 @@ function clsrule() {
                 var title = pdfh(list[i], "h3&&Text");
             } else if (/kunyu77|tyun77/.test(MY_URL)) {
                 var title = list[i].title;
-            } else if (/md5key/.test(MY_URL)) {
+            } else if (/md5key|aowu/.test(MY_URL)) {
                 var title = list[i].vod_name;
             } else if (/mo-situ-name/.test(list[i])) {
                 var title = pdfh(list[i], '.mo-situ-name&&Text');
@@ -1195,9 +1211,11 @@ function clsrule() {
             if (/kunyu77|tyun77/.test(MY_URL)) {
                 //var url = 'http://api.kunyu77.com/api.php/provide/videoPlaylist?ids=' + list[i].id;
                 var url = 'hiker://empty##' + spl + '/api.php/provide##' + list[i].id;
-            } else if (/md5key/.test(MY_URL)) {
-                if (/nyafun|moefun|aowu/.test(spl)) {
+            } else if (/md5key|aowu/.test(MY_URL)) {
+                if (/nyafun|moefun/.test(spl)) {
                     var url = spl + '/bangumi/' + list[i].vod_id + '.html';
+                } else if (/aowu/.test(spl)) {
+                    var url = spl + list[i].url;
                 } else if (/netflixgc/.test(spl)) {
                     var url = spl + '/detail/' + list[i].vod_id + '.html';
                 } else if (/xiaoh/.test(spl)) {
