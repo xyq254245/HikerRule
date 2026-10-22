@@ -3774,14 +3774,16 @@ function omlazy() {
             } else if (/hkjx\.hhplayer/.test(src)) {
                 var psurl = 'https://hkjx.hhplayer.com/api.php';
             } else if (/hhjx\.hhplayer/.test(src)) {
-                var psurl = 'https://hhjx.hhplayer.com/api.php';
+                var psurl = 'https://hhjx.hhplayer.com/api/parse';
             } else if (/play\.hhplayer/.test(src)) {
                 var psurl = 'https://play.hhplayer.com/hhjx/api.php'
             }
-            var cc = 'function OKOK'+pdfh(request(src, {}), 'body&&script,0&&Html').split('var act')[0].split('function OKOK')[1];
-            cc = cc.replace('atob', 'base64Decode').replace(/const/g, 'let');
-            eval(cc);
-            var cs = 'url=' + url + '&t=' + t + '&key=' + key + '&act=0&play=1';
+            //var cc = 'function OKOK'+pdfh(request(src, {}), 'body&&script,0&&Html').split('var act')[0].split('function OKOK')[1];
+            //cc = cc.replace('atob', 'base64Decode').replace(/const/g, 'let');
+            //eval(cc);
+            var cc=pdfh(request(src, {}), 'body&&script,0&&Html').split('__HHJX_BOOTSTRAP__=')[1].split(';')[0];
+            //var cs = 'url=' + url + '&t=' + t + '&key=' + key + '&act=0&play=1';
+            var cs='{"url":"'+JSON.parse(cc).url+'","t":'+JSON.parse(cc).t+',"key":"'+JSON.parse(cc).key+'","client_fallback":false}';
             var fc = fetch(psurl, {
                 headers: {
                     'User-Agent': MOBILE_UA,
