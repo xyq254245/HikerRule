@@ -265,7 +265,7 @@ function hikhmrule() {
                         dns: "https://dns.alidns.com/dns-query"
                     });
                     if (rulejs.search(/lazyRule/) == -1) {
-                        rulejs = fetch('https://github.moeyy.xyz/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.js', {});
+                        rulejs = fetch('https://gh.chjina.com/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.js', {});
                     }
                     if (rulejs.search(/lazyRule/) != -1) {
                         writeFile("hiker://files/rules/xyq/hikermovie.js", rulejs);
@@ -274,7 +274,7 @@ function hikhmrule() {
                         dns: "https://dns.alidns.com/dns-query"
                     });
                     if (rulejson.search(/\"vodhref\"/) == -1) {
-                        rulejson = fetch('https://github.moeyy.xyz/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.json', {});
+                        rulejson = fetch('https://gh.chjina.com/https://raw.githubusercontent.com/xyq254245/HikerRule/main/hikermovie.json', {});
                     }
                     if (rulejson.search(/\"vodhref\"/) != -1) {
                         writeFile("hiker://files/rules/xyq/hikermovie.json", rulejson);
@@ -304,7 +304,7 @@ function hikhmrule() {
                 title: '↓TVBox规则订阅地址(点击可复制)↓',
                 col_type: 'text_center_1'
             });
-            let dingyue='https://gh.jasonzeng.dev/https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json';
+            let dingyue='https://gh.chjina.com/https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json';
             d.push({
                 title: dingyue,
                 url: 'copy://'+dingyue,
