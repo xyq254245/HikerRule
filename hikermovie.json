@@ -14,81 +14,11 @@
                     "url": "https://vip.wwgz.cn:5200"
                 },
                 {
-                    "title": "TVB云播",
-                    "vodtype": "电影&电视剧&综艺&动漫&动作片&喜剧片&爱情片&科幻片&恐怖片&剧情片&战争片&国产剧&港台剧&日韩剧&欧美剧&短剧",
-                    "vodhref": "1&2&3&4&6&7&8&9&10&11&12&13&14&15&16&19",
-                    "ico": "http://www.viptv03.com//logo.png",
-                    "url": "http://www.viptv03.com/"
-                },
-                {
-                    "title": "嗷呜动漫",
-                    "vodtype": "新剧&番剧&剧场",
-                    "vodhref": "20&21&22",
-                    "ico": "https://www.aowu.tv/upload/site/20231009-1/223ec5606cf2b1d2e541b3ef930cb79c.png",
-                    "url": "https://www.aowu.tv"
-                },
-                {
-                    "title": "鸭奈飞",
-                    "vodtype": "电影&连续剧&综艺&动漫",
-                    "vodhref": "1&2&3&4",
-                    "ico": "https://www.netflixgc.com/upload/mxprocms/20230331-1/1362b3640334c876948d91690f850f80.png",
-                    "url": "https://www.netflixgc.com"
-                },
-                {
                     "title": "骚火影视",
                     "vodtype": "电影&电视剧&动漫&喜剧&爱情&恐怖&动作&科幻&战争&犯罪&动画&奇幻&剧情&冒险&悬疑&惊悚&其它片&大陆&TVB&韩剧&美剧&日剧&英剧&台剧&其它剧",
                     "vodhref": "1&2&4&6&7&8&9&10&11&12&13&14&15&16&17&18&19&20&21&22&23&24&25&26&27",
                     "ico": "https://shdy2.com/favicon.ico",
                     "url": "https://shdy2.com"
-                },
-                {
-                    "title": "在线之家",
-                    "vodtype": "电影&美剧&韩剧&日剧&泰剧&动漫",
-                    "vodhref": "1&2&3&4&5&6",
-                    "ico": "https://zxzjbackup.oss-cn-shenzhen.aliyuncs.com/logo_min.png",
-                    "url": "https://www.zxzjhd.com"
-                },
-                {
-                    "title": "Auete",
-                    "vodtype": "电影&电视剧&综艺&动漫",
-                    "vodhref": "Movie&Tv&Zy&Dm",
-                    "ico": "https://auete.cc/statics/picture/logo.png",
-                    "url": "https://auete.cc"
-                },
-                {
-                    "title": "LIBVIO",
-                    "vodtype": "电影&连续剧&动漫&日韩剧&欧美剧&即将上线",
-                    "vodhref": "1&2&4&15&16&27",
-                    "ico": "https://xiaoxiaojia.oss-accelerate.aliyuncs.com/statics/img/favicon.ico",
-                    "url": "https://www.libvio.cc"
-                },
-                {
-                    "title": "看一看",
-                    "vodtype": "电影&连续剧&综艺&动漫&动作片&喜剧片&爱情片&科幻片&恐怖片&剧情片&战争片&纪录片&微电影&惊悚片&悬疑片&国产剧&港台剧&日韩剧&欧美剧&泰剧&海外剧&TV综艺&音乐MV&TV版&电影版&剧场版&国语经典",
-                    "vodhref": "1&2&3&4&5&6&7&8&9&10&11&16&18&20&21&12&13&14&15&19&32&26&31&23&24&25&36",
-                    "ico": "https://www.kanyikanys.cc/template/blank/Images/logo.png",
-                    "url": "https://www.kanyikanys.cc"
-                },
-                {
-                    "title": "哔嘀影视",
-                    "vodtype": "不限&电影&电视剧",
-                    "vodhref": "&?type=0&?type=1",
-                    "ico": "https://wecounty-1300407952.file.myqcloud.com/app/svg/2022/5/20220523150310196THO.svg?images_logo1_svg",
-                    "url": "https://v.xlys.ltd.ua"
-                },
-                {
-                    "title": "厂长资源",
-                    "vodtype": "全部&高分影视&最新电影&电视剧&国产剧&美剧&韩剧&番剧&动漫&会员专区&俄罗斯电影&加拿大电影&动画&华语电影&印度电影&国产剧&日剧&日本电影&欧美电影&法国电影&海外剧（其他）&电影&电视剧&站长推荐&美剧&英国电影&韩剧&韩国电影",
-                    "vodhref": "movie_bt&zuixindianying/gaofenyingshi&zuixindianying&dsj&gcj&meijutt&hanjutv&fanju&dm&movie_bt_series/huiyuanzhuanqu&movie_bt_series/eluosidianying&movie_bt_series/jianadadianying&movie_bt_series/dohua&movie_bt_series/huayudianying&movie_bt_series/yindudianying&movie_bt_series/guochanju&movie_bt_series/rj&movie_bt_series/ribendianying&movie_bt_series/meiguodianying&movie_bt_series/faguodianying&movie_bt_series/hwj&movie_bt_series/dyy&movie_bt_series/dianshiju&movie_bt_series/zhanchangtuijian&movie_bt_series/mj&movie_bt_series/yingguodianying&movie_bt_series/hj&movie_bt_series/hanguodianying",
-                    "ico": "https://img.py1080p.com/2020/05/cropped-90b07fe57d6142-192x192.png",
-                    "url": "https://www.czzymovie.com"
-                },
-                {
-                    "title": "奈菲影视",
-                    "vodtype": "全部&动画&动画电影&日剧&泰剧&电影&电视剧&真人秀&纪录片&美剧&美漫&英剧&西班牙剧&韩剧",
-                    "vodhref": "movie_bt&movie_bt_series/%e5%8a%a8%e7%94%bb&movie_bt_series/%e5%8a%a8%e7%94%bb%e7%94%b5%e5%bd%b1&movie_bt_series/riju&movie_bt_series/taiju&movie_bt_series/dianying&movie_bt_series/dianshiju&movie_bt_series/%e7%9c%9f%e4%ba%ba%e7%a7%80&movie_bt_series/jilupian&movie_bt_series/meiju&movie_bt_series/%e7%be%8e%e6%bc%ab/&movie_bt_series/%e8%8b%b1%e5%89%a7&movie_bt_series/xibanyaju&movie_bt_series/hanju",
-                    "ico": "https://www.nfyingshi.com/wp-content/themes/mibt/favicon.ico",
-                    "url": "https://www.nfyingshi.com"
                 },
                 {
                     "title": "去看吧",
