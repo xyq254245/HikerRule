@@ -3793,6 +3793,18 @@ function omlazy() {
                 method: 'POST'
             });
             var playlink = JSON.parse(fc).url;
+            if(playlink.substring(0, 4) != 'http'){
+            cs='{"url":"'+JSON.parse(cc).url+'","t":'+JSON.parse(cc).t+',"key":"'+JSON.parse(cc).key+'","client_fallback":true}';
+            fc = fetch(psurl, {
+                headers: {
+                    'User-Agent': MOBILE_UA,
+                    'referer': src
+                },
+                body: cs,
+                method: 'POST'
+            });
+            playlink = JSON.parse(fc).url;
+            }
             if (/obj\/tos/.test(playlink)) {
                 return singlepush(playlink + '#isVideo=true#');
             } else {
